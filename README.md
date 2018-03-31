@@ -2,6 +2,9 @@
 
 ##Table of Contents
 
+<!---
+1 | [PROBLEM NAME](PROBLEM LINK) 		| [Java](FILE DIRECTORY) , [C++](FILE DIRECTORY)
+-->
 |  #  | Title           |  Solution       |
 |-----|---------------- | --------------- |
 1 | [Two Sum](https://leetcode.com/problems/two-sum) 		| [Java](./Leetcode/1.%20Two%20Sum/Solution.java) , [C++]
