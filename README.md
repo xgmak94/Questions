@@ -1,6 +1,6 @@
-#[Questions]
+# Questions
 
-##Table of Contents
+## Table of Contents
 
 <!---
 1 | [PROBLEM NAME](PROBLEM LINK) 		| [Java](FILE DIRECTORY) , [C++](FILE DIRECTORY)
