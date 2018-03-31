@@ -1,6 +1,6 @@
-Questions
+# Questions
 
-Table of Contents
+## Table of Contents
 
 |  #  | Title           |  Solution       |
 |-----|---------------- | --------------- |
