@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/decode-ways/description/
+/* https://leetcode.com/problems/decode-ways
 
 A message containing letters from A-Z is being encoded to numbers using the following mapping:
 
