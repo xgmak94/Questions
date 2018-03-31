@@ -1,7 +1,5 @@
 # Questions
 
-# Questions
-
 ## Table of Contents
 
 <!---
