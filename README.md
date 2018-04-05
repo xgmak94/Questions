@@ -7,234 +7,234 @@
 -->
 |  #  | Title           |  Solution       | 
 |-----|---------------- | --------------- |
-1 | [Two Sum](https://leetcode.com/problems/two-sum) 		| [Java](./Leetcode/1.%20Two%20Sum/Solution.java) [C++](./Leetcode/1.%20Two%20Sum/Solution.cpp)
-2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-11 | [Container with Most Water](https://leetcode.com/problems/container-with-most-water) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-15 | [3Sum](https://leetcode.com/problems/3sum)		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-27 | [Remove Element](https://leetcode.com/problems/remove-element) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]()
-28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr)		| [Java]() [C++]()
-33 | [Search in A Rotated Array](https://leetcode.com/problems/search-in-rotated-sorted-array)		| [Java]() [C++]()
-34 | [Search for a Range](https://leetcode.com/problems/search-for-a-range)		| [Java]() [C++]()
-35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position)		| [Java]() [C++]()
-36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku)		| [Java]() [C++]()
-42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)		| [Java]() [C++]()
-46 | [Permutations](https://leetcode.com/problems/permutations)		| [Java]() [C++]()
-48 | [Rotate Image](https://leetcode.com/problems/rotate-image)		| [Java]() [C++]()
-53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)		| [Java]() [C++]()
-54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)		| [Java]() [C++]()
-56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals)		| [Java]() [C++]()
-57 | [Insert Interval](https://leetcode.com/problems/insert-interval)		| [Java]() [C++]()
-59 | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)		| [Java]() [C++]()
-62 | [Unique Paths](https://leetcode.com/problems/unique-paths)		| [Java]() [C++]()
-63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii)		| [Java]() [C++]()
-66 | [Plus One](https://leetcode.com/problems/plus-one)		| [Java]() [C++]()
-67 | [Add Binary](https://leetcode.com/problems/add-binary)		| [Java]() [C++]()
-70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)	| [Java]() [C++]()
-72 | [Edit Distance](https://leetcode.com/problems/edit-distance)		| [Java]() [C++]()
-73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes)		| [Java]() [C++]()
-75 | [Sort Colors](https://leetcode.com/problems/sort-colors)		| [Java]() [C++]()
-79 | [Word Search](https://leetcode.com/problems/word-search)		| [Java]() [C++]()
-80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)		| [Java]() [C++]()
-81 | [Search in a Rotated Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii)		| [Java]() [C++]()
-82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii)		| [Java]() [C++]()
-83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list)		| [Java]() [C++]()
-86 | [Partition List](https://leetcode.com/problems/partition-list)		| [Java]() [C++]()
-88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)		| [Java]() [C++]()
-91 | [Decode Ways](https://leetcode.com/problems/decode-ways)		| [Java]() [C++]()
-94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)		| [Java]() [C++]()
-98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)		| [Java]() [C++]()
-100 | [Same Tree](https://leetcode.com/problems/same-tree)		| [Java]() [C++]()
-101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree) 		| [Java]() [C++]()
-102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)		| [Java]() [C++]()
-103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal)		| [Java]() [C++]()
-104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)		| [Java]() [C++]()
-107 | [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii) 		| [Java]() [C++]()
-108 | [Converted Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)		| [Java]() [C++]()
-109 | [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree)		| [Java]() [C++]()
-110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)		| [Java]() [C++]()
-111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)		| [Java]() [C++]()
-112 | [Path Sum](https://leetcode.com/problems/path-sum)		| [Java]() [C++]()
-116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node)		| [Java]() [C++]()
-118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)		| [Java]() [C++]()
-119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii)		| [Java]() [C++]()
-121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)		| [Java]() [C++]()
-122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)		| [Java]() [C++]()
-125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)		| [Java]() [C++]()
-128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence)		| [Java]() [C++]()
-136 | [Single Number](https://leetcode.com/problems/single-number)		| [Java]() [C++]()
-137 | [Single Number II](https://leetcode.com/problems/single-number-ii)		| [Java]() [C++]()
-141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)		| [Java]() [C++]()
-142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii)		| [Java]() [C++]()
-144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)		| [Java]() [C++]()
-145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal)		| [Java]() [C++]()
-147 | [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list)		| [Java]() [C++]()
-153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)		| [Java]() [C++]()
-154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)		| [Java]() [C++]()
-160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists)		| [Java]() [C++]()
-162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element)		| [Java]() | [C++]()
-167 | [Two Sum II - Input Array is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)		| [Java]() [C++]()
-168 | [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title)		| [Java]() [C++]()
-169 | [Majority Element](https://leetcode.com/problems/majority-element)		| [Java]() [C++]()
-171 | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number)	| [Java]() [C++]()
-179 | [Largest Number](https://leetcode.com/problems/largest-number)		| [Java]() [C++]()
-189 | [Rotate Array](https://leetcode.com/problems/rotate-array)		| [Java]() [C++]()
-198 | [House Robber](https://leetcode.com/problems/house-robber)		| [Java]() [C++]()
-200 | [Number of Islands](https://leetcode.com/problems/number-of-islands)		| [Java]() [C++]()
-202 | [Happy Number](https://leetcode.com/problems/happy-number)		| [Java]() [C++]()
-203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements)		| [Java]() [C++]()
-204 | [Count Primes](https://leetcode.com/problems/count-primes)		| [Java]() [C++]()
-205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings)		| [Java]() [C++]()
-206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)		| [Java]() [C++]()
-213 | [House Robber](https://leetcode.com/problems/house-robber-ii)		| [Java]() [C++]()
-217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)		| [Java]() [C++]()
-219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/)	| [Java]() [C++]()
-225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)	| [Java]() [C++]()
-226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)		| [Java]() [C++]()
-228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/description/)		| [Java]() [C++]()
-229 | [Majority Element II](https://leetcode.com/problems/majority-element-ii/description/)		| [Java]() [C++]()
-230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)		| [Java]() [C++]()
-232 | [Implement Queue using Stacks](https://leetcode.com/problems/i)		| [Java]() [C++]()
-234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/description/)		| [Java]() [C++]()
-235 | [Lowest Common Ancesor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)		| [Java]() [C++]()
-238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)		| [Java]() [C++]()
-239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/description/)		| [Java]() [C++]()
-240 | [Search a 2D Matrix II](<head></head>ttps://leetcode.com/problems/search-a-2d-matrix-ii/description/)		| [Java]() [C++]()
-242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)		| [Java]() [C++]()
-257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/description/)		| [Java]() [C++]()
-258 | [Add Digits](https://leetcode.com/problems/add-digits/description/)		| [Java]() [C++]()
-260 | [Single Number III](https://leetcode.com/problems/single-number-iii/description/)		| [Java]() [C++]()
-268 | [Missing Number](https://leetcode.com/problems/missing-number/description/)		| [Java]() [C++]()
-278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/description/)		| [Java]() [C++]()
-279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/description/)		| [Java]() [C++]()
-283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/description/)		| [Java]() [C++]()
-289 | [Game of Life](https://leetcode.com/problems/game-of-life/)		| [Java]() [C++]()
-290 | [Word Pattern](https://leetcode.com/problems/word-pattern/description/)		| [Java]() [C++]()
-292 | [Nim Game](https://leetcode.com/problems/nim-game/description/) 		| [Java]() [C++]()
-299 | [Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/)		| [Java]() [C++]()
-300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)		| [Java]() [C++]()
-303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/description/)		| [Java]() [C++]()
-304 | [Range Sum Query 2D - Immutable]()		| [Java]() [C++]()
-307 | [Range Sum Query - Mutable]()		| [Java]() [C++]()
-328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)		| [Java]() [C++]()
-334 | [Increasing Triplet Subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/description/) 		| [Java]() [C++]()
-338 | [Counting Bits](https://leetcode.com/problems/counting-bits/description/)		| [Java]() [C++]()
-343 | [Integer Break](https://leetcode.com/problems/integer-break/description/)		| [Java]() [C++]()
-344 | [Reverse String](https://leetcode.com/problems/reverse-string/description/)		| [Java]() [C++]()
-345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/description/)		| [Java]() [C++]()
-347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)		| [Java]() [C++]()
-349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)		| [Java]() [C++]()
-350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)		| [Java]() [C++]()
-357 | [Count Numbers with Unique Digits](https://leetcode.com/problems/count-numbers-with-unique-digits/)		| [Java]() [C++]()
-367 | [Valid Perfect Suare](https://leetcode.com/problems/valid-perfect-square/description/)		| [Java]() [C++]()
-374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/description/)		| [Java]() [C++]()
-378 | [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/)		| [Java]() [C++]()
-383 | [Ransom Note](https://leetcode.com/problems/ransom-note/description/)		| [Java]() [C++]()
-384 | [Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/description/)		| [Java]() [C++]()
-387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)		| [Java]() [C++]()
-389 | [Find the Difference](https://leetcode.com/problems/find-the-difference/description/)		| [Java]() [C++]()
-392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/description/)		| [Java]() [C++]()
-404 | [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/description/)		| [Java]() [C++]()
-409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/description/)		| [Java]() [C++]()
-412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/)		| [Java]() [C++]()
-413 | [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/)		| [Java]() [C++]()
-414 | [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/description/)		| [Java]() [C++]()
-434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/description/)		| [Java]() [C++]()
-441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/description/)		| [Java]() [C++]()
-442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/description/)		| [Java]() [C++]()
-443 | [String Compression](https://leetcode.com/problems/string-compression/description/)		| [Java]() [C++]()
-445 | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/description/)		| [Java]() [C++]()
-447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/description/)		| [Java]() [C++]()
-448 | [Find All Numbers in a Dissapeared Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/)		| [Java]() [C++]()
-451 | [Sorted Characters by Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)		| [Java]() [C++]()
-452 | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/)		| [Java]() [C++]()
-453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/)		| [Java]() [C++]()
-454 | [4Sum II](https://leetcode.com/problems/4sum-ii/description/)		| [Java]() [C++]()
-455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/)		| [Java]() [C++]()
-461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/description/)		| [Java]() [C++]()
-463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/description/)		| [Java]() [C++]()
-485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)		| [Java]() [C++]()
-492 | [Construct the Rectangle](https://leetcode.com/problems/construct-the-rectangle/description/) 		| [Java]() [C++]()
-495 | [Teemo Attacking](https://leetcode.com/problems/teemo-attacking/description/)		| [Java]() [C++]()
-496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/description/)		| [Java]() [C++]()
-500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/description/)		| [Java]() [C++]()
-501 | [Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/description/)		| [Java]() [C++]()
-503 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/description/)		| [Java]() [C++]()
-507 | [Perfect Number](https://leetcode.com/problems/perfect-number/description/)		| [Java]() [C++]()
-508 | [Most Frequent Subtree Sum](https://leetcode.com/problems/most-frequent-subtree-sum/description/) 		| [Java]() [C++]()
-513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/description/)		| [Java]() [C++]()
-515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/)		| [Java]() [C++]()
-520 | [Detect Capital](https://leetcode.com/problems/detect-capital/description/)		| [Java]() [C++]()
-521 | [Longest Uncommon Subsequence I](https://leetcode.com/problems/longest-uncommon-subsequence-i/description/)		| [Java]() [C++]()
-523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/description/)		| [Java]() [C++]()
-530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/)		| [Java]() [C++]()
-532 | [K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/description/)		| [Java]() [C++]()
-537 | [Complex Number Multiplication](https://leetcode.com/problems/complex-number-multiplication/description/)		| [Java]() [C++]()
-541 | [Reverse String II](https://leetcode.com/problems/reverse-string-ii/description/)		| [Java]() [C++]()
-543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/description/)		| [Java]() [C++]()
-551 | [Student Attendence Record I](https://leetcode.com/problems/student-attendance-record-i/description/)		| [Java]() [C++]()
-553 | [Optimal Division](https://leetcode.com/problems/optimal-division/description/)		| [Java]() [C++]()
-554 | [Brick Wall](https://leetcode.com/problems/brick-wall/description/)		| [Java]() [C++]()
-557 | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)		| [Java]() [C++]()
-560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description/)		| [Java]() [C++]()
-565 | [Array Nesting](https://leetcode.com/problems/array-nesting/description/)		| [Java]() [C++]()
-572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/description/)		| [Java]() [C++]()
-575 | [Distribute Candies](https://leetcode.com/problems/distribute-candies/description/)		| [Java]() [C++]()
-581 | [Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/)		| [Java]() [C++]()
-583 | [Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/description/)		| [Java]() [C++]()
-593 | [Valid Square](https://leetcode.com/problems/valid-square/description/)		| [Java]() [C++]()
-594 | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/description/)		| [Java]() [C++]()
-598 | [Range Addition II](https://leetcode.com/problems/range-addition-ii/description/)		| [Java]() [C++]()
-599 | [Minimum Index Sum of Two Lists](https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/)		| [Java]() [C++]()
-606 | [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/description/)		| [Java]() [C++]()
-617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/)		| [Java]() [C++]()
-628 | [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/description/)		| [Java]() [C++]()
-637 | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/)		| [Java]() [C++]()
-643 | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/description/)		| [Java]() [C++]()
-645 | [Set Mismatch](https://leetcode.com/problems/set-mismatch/description/)		| [Java]() [C++]()
-646 | [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/description/)		| [Java]() [C++]()
-647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)		| [Java]() [C++]()
-653 | [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/)		| [Java]() [C++]()
-654 | [Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/description/)		| [Java]() [C++]()
-661 | [Image Smoother](https://leetcode.com/problems/image-smoother/description/)		| [Java]() [C++]()
-669 | [Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/description/)		| [Java]() [C++]()
-671 | [Second Minimum Node in a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/)		| [Java]() [C++]()
-674 | [Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/)		| [Java]() [C++]()
-677 | [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs/description/)		| [Java]() [C++]()
-680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/description/)		| [Java]() [C++]()
-682 | [Baseball Game](https://leetcode.com/problems/baseball-game/)		| [Java]() [C++]()
-686 | [Repeated String Match](https://leetcode.com/problems/repeated-string-match/description/)		| [Java]() [C++]()
-687 | [Longest Univalue Path](https://leetcode.com/problems/longest-univalue-path/description/)		| [Java]() [C++]()
-690 | [Employee Importance](https://leetcode.com/problems/employee-importance/description/)		| [Java]() [C++]()
-693 | [Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/description/)		| [Java]() [C++]()
-695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)		| [Java]() [C++]()
-696 | [Count Binary Subtrings](https://leetcode.com/problems/count-binary-substrings/description/)		| [Java]() [C++]()
-697 | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/description/)		| [Java]() [C++]()
-718 | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/)		| [Java]() [C++]()
-724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/description/)		| [Java]() [C++]()
-725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/description/) 		| [Java]() [C++]()
-733 | [Flood Fill](https://leetcode.com/problems/flood-fill/description/)		| [Java]() [C++]()
-734 | [Sentence Similarity]		| [Java]() [C++]()
-735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/description/) 		| [Java]() [C++]()
-744 | [Find Smallest Letter Greater than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)		| [Java]() [C++]()
-746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/)		| [Java]() [C++]()
-747 | [Largest Number Greater than Twice of Other](https://leetcode.com/problems/largest-number-at-least-twice-of-others/description/)		| [Java]() [C++]()
-760 | [Find Anagram Mappings]		| [Java]() [C++]()
-766 | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/description/)		| [Java]() [C++]()
-771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/description/) 		| [Java]() [C++]()
-783 | [Minimum Distance between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/)		| [Java]() [C++]()
-796 | [Rotate String](https://leetcode.com/problems/rotate-string/description/)		| [Java]() [C++]()
-804 | [Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/)		| [Java]() [C++]()
-806 | [Number of Lines to Write String](https://leetcode.com/problems/number-of-lines-to-write-string/description/)		| [Java]() [C++]()
+1 | [Two Sum](https://leetcode.com/problems/two-sum) 		| [Java](./Leetcode/1.%20Two%20Sum/Solution.java) [C++]
+2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]
+3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) 		| [Java](./Leetcode/) [C++]
+5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) 		| [Java](./Leetcode/) [C++]
+7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer) 		| [Java](./Leetcode/) [C++]
+9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number) 		| [Java](./Leetcode/) [C++]
+11 | [Container with Most Water](https://leetcode.com/problems/container-with-most-water) 		| [Java](./Leetcode/) [C++]
+12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman) 		| [Java](./Leetcode/) [C++]
+14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) 		| [Java](./Leetcode/) [C++]
+15 | [3Sum](https://leetcode.com/problems/3sum)		| [Java](./Leetcode/) [C++]
+16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest) 		| [Java](./Leetcode/) [C++]
+19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) 		| [Java](./Leetcode/) [C++]
+20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses) 		| [Java](./Leetcode/) [C++]
+21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) 		| [Java](./Leetcode/) [C++]
+22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses) 		| [Java](./Leetcode/) [C++]
+24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs) 		| [Java](./Leetcode/) [C++]
+26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) 		| [Java](./Leetcode/) [C++]
+27 | [Remove Element](https://leetcode.com/problems/remove-element) 		| [Java](./Leetcode/) [C++]
+28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr)		| [Java](./Leetcode/) [C++]
+33 | [Search in A Rotated Array](https://leetcode.com/problems/search-in-rotated-sorted-array)		| [Java](./Leetcode/) [C++]
+34 | [Search for a Range](https://leetcode.com/problems/search-for-a-range)		| [Java](./Leetcode/) [C++]
+35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position)		| [Java](./Leetcode/) [C++]
+36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku)		| [Java](./Leetcode/) [C++]
+42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)		| [Java](./Leetcode/) [C++]
+46 | [Permutations](https://leetcode.com/problems/permutations)		| [Java](./Leetcode/) [C++]
+48 | [Rotate Image](https://leetcode.com/problems/rotate-image)		| [Java](./Leetcode/) [C++]
+53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)		| [Java](./Leetcode/) [C++]
+54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)		| [Java](./Leetcode/) [C++]
+56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals)		| [Java](./Leetcode/) [C++]
+57 | [Insert Interval](https://leetcode.com/problems/insert-interval)		| [Java](./Leetcode/) [C++]
+59 | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)		| [Java](./Leetcode/) [C++]
+62 | [Unique Paths](https://leetcode.com/problems/unique-paths)		| [Java](./Leetcode/) [C++]
+63 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii)		| [Java](./Leetcode/) [C++]
+66 | [Plus One](https://leetcode.com/problems/plus-one)		| [Java](./Leetcode/) [C++]
+67 | [Add Binary](https://leetcode.com/problems/add-binary)		| [Java](./Leetcode/) [C++]
+70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)	| [Java](./Leetcode/) [C++]
+72 | [Edit Distance](https://leetcode.com/problems/edit-distance)		| [Java](./Leetcode/) [C++]
+73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes)		| [Java](./Leetcode/) [C++]
+75 | [Sort Colors](https://leetcode.com/problems/sort-colors)		| [Java](./Leetcode/) [C++]
+79 | [Word Search](https://leetcode.com/problems/word-search)		| [Java](./Leetcode/) [C++]
+80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)		| [Java](./Leetcode/) [C++]
+81 | [Search in a Rotated Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii)		| [Java](./Leetcode/) [C++]
+82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii)		| [Java](./Leetcode/) [C++]
+83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list)		| [Java](./Leetcode/) [C++]
+86 | [Partition List](https://leetcode.com/problems/partition-list)		| [Java](./Leetcode/) [C++]
+88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)		| [Java](./Leetcode/) [C++]
+91 | [Decode Ways](https://leetcode.com/problems/decode-ways)		| [Java](./Leetcode/) [C++]
+94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)		| [Java](./Leetcode/) [C++]
+98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)		| [Java](./Leetcode/) [C++]
+100 | [Same Tree](https://leetcode.com/problems/same-tree)		| [Java](./Leetcode/) [C++]
+101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree) 		| [Java](./Leetcode/) [C++]
+102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)		| [Java](./Leetcode/) [C++]
+103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal)		| [Java](./Leetcode/) [C++]
+104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)		| [Java](./Leetcode/) [C++]
+107 | [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii) 		| [Java](./Leetcode/) [C++]
+108 | [Converted Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)		| [Java](./Leetcode/) [C++]
+109 | [Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree)		| [Java](./Leetcode/) [C++]
+110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)		| [Java](./Leetcode/) [C++]
+111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)		| [Java](./Leetcode/) [C++]
+112 | [Path Sum](https://leetcode.com/problems/path-sum)		| [Java](./Leetcode/) [C++]
+116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node)		| [Java](./Leetcode/) [C++]
+118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)		| [Java](./Leetcode/) [C++]
+119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii)		| [Java](./Leetcode/) [C++]
+121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)		| [Java](./Leetcode/) [C++]
+122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)		| [Java](./Leetcode/) [C++]
+125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)		| [Java](./Leetcode/) [C++]
+128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence)		| [Java](./Leetcode/) [C++]
+136 | [Single Number](https://leetcode.com/problems/single-number)		| [Java](./Leetcode/) [C++]
+137 | [Single Number II](https://leetcode.com/problems/single-number-ii)		| [Java](./Leetcode/) [C++]
+141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)		| [Java](./Leetcode/) [C++]
+142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii)		| [Java](./Leetcode/) [C++]
+144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)		| [Java](./Leetcode/) [C++]
+145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal)		| [Java](./Leetcode/) [C++]
+147 | [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list)		| [Java](./Leetcode/) [C++]
+153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)		| [Java](./Leetcode/) [C++]
+154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii)		| [Java](./Leetcode/) [C++]
+160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists)		| [Java](./Leetcode/) [C++]
+162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element)		| [Java](./Leetcode/) | [C++]
+167 | [Two Sum II - Input Array is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)		| [Java](./Leetcode/) [C++]
+168 | [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title)		| [Java](./Leetcode/) [C++]
+169 | [Majority Element](https://leetcode.com/problems/majority-element)		| [Java](./Leetcode/) [C++]
+171 | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number)	| [Java](./Leetcode/) [C++]
+179 | [Largest Number](https://leetcode.com/problems/largest-number)		| [Java](./Leetcode/) [C++]
+189 | [Rotate Array](https://leetcode.com/problems/rotate-array)		| [Java](./Leetcode/) [C++]
+198 | [House Robber](https://leetcode.com/problems/house-robber)		| [Java](./Leetcode/) [C++]
+200 | [Number of Islands](https://leetcode.com/problems/number-of-islands)		| [Java](./Leetcode/) [C++]
+202 | [Happy Number](https://leetcode.com/problems/happy-number)		| [Java](./Leetcode/) [C++]
+203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements)		| [Java](./Leetcode/) [C++]
+204 | [Count Primes](https://leetcode.com/problems/count-primes)		| [Java](./Leetcode/) [C++]
+205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings)		| [Java](./Leetcode/) [C++]
+206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)		| [Java](./Leetcode/) [C++]
+213 | [House Robber](https://leetcode.com/problems/house-robber-ii)		| [Java](./Leetcode/) [C++]
+217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)		| [Java](./Leetcode/) [C++]
+219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/)	| [Java](./Leetcode/) [C++]
+225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)	| [Java](./Leetcode/) [C++]
+226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)		| [Java](./Leetcode/) [C++]
+228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/description/)		| [Java](./Leetcode/) [C++]
+229 | [Majority Element II](https://leetcode.com/problems/majority-element-ii/description/)		| [Java](./Leetcode/) [C++]
+230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)		| [Java](./Leetcode/) [C++]
+232 | [Implement Queue using Stacks](https://leetcode.com/problems/i)		| [Java](./Leetcode/) [C++]
+234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/description/)		| [Java](./Leetcode/) [C++]
+235 | [Lowest Common Ancesor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)		| [Java](./Leetcode/) [C++]
+238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/)		| [Java](./Leetcode/) [C++]
+239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/description/)		| [Java](./Leetcode/) [C++]
+240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/)		| [Java](./Leetcode/) [C++]
+242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)		| [Java](./Leetcode/) [C++]
+257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/description/)		| [Java](./Leetcode/) [C++]
+258 | [Add Digits](https://leetcode.com/problems/add-digits/description/)		| [Java](./Leetcode/) [C++]
+260 | [Single Number III](https://leetcode.com/problems/single-number-iii/description/)		| [Java](./Leetcode/) [C++]
+268 | [Missing Number](https://leetcode.com/problems/missing-number/description/)		| [Java](./Leetcode/) [C++]
+278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/description/)		| [Java](./Leetcode/) [C++]
+279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/description/)		| [Java](./Leetcode/) [C++]
+283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/description/)		| [Java](./Leetcode/) [C++]
+289 | [Game of Life](https://leetcode.com/problems/game-of-life/)		| [Java](./Leetcode/) [C++]
+290 | [Word Pattern](https://leetcode.com/problems/word-pattern/description/)		| [Java](./Leetcode/) [C++]
+292 | [Nim Game](https://leetcode.com/problems/nim-game/description/) 		| [Java](./Leetcode/) [C++]
+299 | [Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/)		| [Java](./Leetcode/) [C++]
+300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)		| [Java](./Leetcode/) [C++]
+303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/description/)		| [Java](./Leetcode/) [C++]
+304 | [Range Sum Query 2D - Immutable]		| [Java](./Leetcode/) [C++]
+307 | [Range Sum Query - Mutable]		| [Java](./Leetcode/) [C++]
+328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)		| [Java](./Leetcode/) [C++]
+334 | [Increasing Triplet Subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/description/) 		| [Java](./Leetcode/) [C++]
+338 | [Counting Bits](https://leetcode.com/problems/counting-bits/description/)		| [Java](./Leetcode/) [C++]
+343 | [Integer Break](https://leetcode.com/problems/integer-break/description/)		| [Java](./Leetcode/) [C++]
+344 | [Reverse String](https://leetcode.com/problems/reverse-string/description/)		| [Java](./Leetcode/) [C++]
+345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/description/)		| [Java](./Leetcode/) [C++]
+347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)		| [Java](./Leetcode/) [C++]
+349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)		| [Java](./Leetcode/) [C++]
+350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)		| [Java](./Leetcode/) [C++]
+357 | [Count Numbers with Unique Digits](https://leetcode.com/problems/count-numbers-with-unique-digits/)		| [Java](./Leetcode/) [C++]
+367 | [Valid Perfect Suare](https://leetcode.com/problems/valid-perfect-square/description/)		| [Java](./Leetcode/) [C++]
+374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/description/)		| [Java](./Leetcode/) [C++]
+378 | [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/)		| [Java](./Leetcode/) [C++]
+383 | [Ransom Note](https://leetcode.com/problems/ransom-note/description/)		| [Java](./Leetcode/) [C++]
+384 | [Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/description/)		| [Java](./Leetcode/) [C++]
+387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)		| [Java](./Leetcode/) [C++]
+389 | [Find the Difference](https://leetcode.com/problems/find-the-difference/description/)		| [Java](./Leetcode/) [C++]
+392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/description/)		| [Java](./Leetcode/) [C++]
+404 | [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/description/)		| [Java](./Leetcode/) [C++]
+409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/description/)		| [Java](./Leetcode/) [C++]
+412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/)		| [Java](./Leetcode/) [C++]
+413 | [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/)		| [Java](./Leetcode/) [C++]
+414 | [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/description/)		| [Java](./Leetcode/) [C++]
+434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/description/)		| [Java](./Leetcode/) [C++]
+441 | [Arranging Coins](https://leetcode.com/problems/arranging-coins/description/)		| [Java](./Leetcode/) [C++]
+442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/description/)		| [Java](./Leetcode/) [C++]
+443 | [String Compression](https://leetcode.com/problems/string-compression/description/)		| [Java](./Leetcode/) [C++]
+445 | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/description/)		| [Java](./Leetcode/) [C++]
+447 | [Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/description/)		| [Java](./Leetcode/) [C++]
+448 | [Find All Numbers in a Dissapeared Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/)		| [Java](./Leetcode/) [C++]
+451 | [Sorted Characters by Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)		| [Java](./Leetcode/) [C++]
+452 | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/)		| [Java](./Leetcode/) [C++]
+453 | [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/description/)		| [Java](./Leetcode/) [C++]
+454 | [4Sum II](https://leetcode.com/problems/4sum-ii/description/)		| [Java](./Leetcode/) [C++]
+455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/)		| [Java](./Leetcode/) [C++]
+461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/description/)		| [Java](./Leetcode/) [C++]
+463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/description/)		| [Java](./Leetcode/) [C++]
+485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)		| [Java](./Leetcode/) [C++]
+492 | [Construct the Rectangle](https://leetcode.com/problems/construct-the-rectangle/description/) 		| [Java](./Leetcode/) [C++]
+495 | [Teemo Attacking](https://leetcode.com/problems/teemo-attacking/description/)		| [Java](./Leetcode/) [C++]
+496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/description/)		| [Java](./Leetcode/) [C++]
+500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/description/)		| [Java](./Leetcode/) [C++]
+501 | [Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/description/)		| [Java](./Leetcode/) [C++]
+503 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/description/)		| [Java](./Leetcode/) [C++]
+507 | [Perfect Number](https://leetcode.com/problems/perfect-number/description/)		| [Java](./Leetcode/) [C++]
+508 | [Most Frequent Subtree Sum](https://leetcode.com/problems/most-frequent-subtree-sum/description/) 		| [Java](./Leetcode/) [C++]
+513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/description/)		| [Java](./Leetcode/) [C++]
+515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/)		| [Java](./Leetcode/) [C++]
+520 | [Detect Capital](https://leetcode.com/problems/detect-capital/description/)		| [Java](./Leetcode/) [C++]
+521 | [Longest Uncommon Subsequence I](https://leetcode.com/problems/longest-uncommon-subsequence-i/description/)		| [Java](./Leetcode/) [C++]
+523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/description/)		| [Java](./Leetcode/) [C++]
+530 | [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/)		| [Java](./Leetcode/) [C++]
+532 | [K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/description/)		| [Java](./Leetcode/) [C++]
+537 | [Complex Number Multiplication](https://leetcode.com/problems/complex-number-multiplication/description/)		| [Java](./Leetcode/) [C++]
+541 | [Reverse String II](https://leetcode.com/problems/reverse-string-ii/description/)		| [Java](./Leetcode/) [C++]
+543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/description/)		| [Java](./Leetcode/) [C++]
+551 | [Student Attendence Record I](https://leetcode.com/problems/student-attendance-record-i/description/)		| [Java](./Leetcode/) [C++]
+553 | [Optimal Division](https://leetcode.com/problems/optimal-division/description/)		| [Java](./Leetcode/) [C++]
+554 | [Brick Wall](https://leetcode.com/problems/brick-wall/description/)		| [Java](./Leetcode/) [C++]
+557 | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)		| [Java](./Leetcode/) [C++]
+560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description/)		| [Java](./Leetcode/) [C++]
+565 | [Array Nesting](https://leetcode.com/problems/array-nesting/description/)		| [Java](./Leetcode/) [C++]
+572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/description/)		| [Java](./Leetcode/) [C++]
+575 | [Distribute Candies](https://leetcode.com/problems/distribute-candies/description/)		| [Java](./Leetcode/) [C++]
+581 | [Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/)		| [Java](./Leetcode/) [C++]
+583 | [Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/description/)		| [Java](./Leetcode/) [C++]
+593 | [Valid Square](https://leetcode.com/problems/valid-square/description/)		| [Java](./Leetcode/) [C++]
+594 | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/description/)		| [Java](./Leetcode/) [C++]
+598 | [Range Addition II](https://leetcode.com/problems/range-addition-ii/description/)		| [Java](./Leetcode/) [C++]
+599 | [Minimum Index Sum of Two Lists](https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/)		| [Java](./Leetcode/) [C++]
+606 | [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/description/)		| [Java](./Leetcode/) [C++]
+617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/description/)		| [Java](./Leetcode/) [C++]
+628 | [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/description/)		| [Java](./Leetcode/) [C++]
+637 | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/)		| [Java](./Leetcode/) [C++]
+643 | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/description/)		| [Java](./Leetcode/) [C++]
+645 | [Set Mismatch](https://leetcode.com/problems/set-mismatch/description/)		| [Java](./Leetcode/) [C++]
+646 | [Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/description/)		| [Java](./Leetcode/) [C++]
+647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)		| [Java](./Leetcode/) [C++]
+653 | [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/)		| [Java](./Leetcode/) [C++]
+654 | [Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/description/)		| [Java](./Leetcode/) [C++]
+661 | [Image Smoother](https://leetcode.com/problems/image-smoother/description/)		| [Java](./Leetcode/) [C++]
+669 | [Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/description/)		| [Java](./Leetcode/) [C++]
+671 | [Second Minimum Node in a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/)		| [Java](./Leetcode/) [C++]
+674 | [Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/)		| [Java](./Leetcode/) [C++]
+677 | [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs/description/)		| [Java](./Leetcode/) [C++]
+680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/description/)		| [Java](./Leetcode/) [C++]
+682 | [Baseball Game](https://leetcode.com/problems/baseball-game/)		| [Java](./Leetcode/) [C++]
+686 | [Repeated String Match](https://leetcode.com/problems/repeated-string-match/description/)		| [Java](./Leetcode/) [C++]
+687 | [Longest Univalue Path](https://leetcode.com/problems/longest-univalue-path/description/)		| [Java](./Leetcode/) [C++]
+690 | [Employee Importance](https://leetcode.com/problems/employee-importance/description/)		| [Java](./Leetcode/) [C++]
+693 | [Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/description/)		| [Java](./Leetcode/) [C++]
+695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)		| [Java](./Leetcode/) [C++]
+696 | [Count Binary Subtrings](https://leetcode.com/problems/count-binary-substrings/description/)		| [Java](./Leetcode/) [C++]
+697 | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/description/)		| [Java](./Leetcode/) [C++]
+718 | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/)		| [Java](./Leetcode/) [C++]
+724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/description/)		| [Java](./Leetcode/) [C++]
+725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/description/) 		| [Java](./Leetcode/) [C++]
+733 | [Flood Fill](https://leetcode.com/problems/flood-fill/description/)		| [Java](./Leetcode/) [C++]
+734 | Sentence Similarity		| [Java](./Leetcode/) [C++]
+735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/description/) 		| [Java](./Leetcode/) [C++]
+744 | [Find Smallest Letter Greater than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)		| [Java](./Leetcode/) [C++]
+746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/)		| [Java](./Leetcode/) [C++]
+747 | [Largest Number Greater than Twice of Other](https://leetcode.com/problems/largest-number-at-least-twice-of-others/description/)		| [Java](./Leetcode/) [C++]
+760 | Find Anagram Mappings		| [Java](./Leetcode/) [C++]
+766 | [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/description/)		| [Java](./Leetcode/) [C++]
+771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/description/) 		| [Java](./Leetcode/) [C++]
+783 | [Minimum Distance between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/)		| [Java](./Leetcode/) [C++]
+796 | [Rotate String](https://leetcode.com/problems/rotate-string/description/)		| [Java](./Leetcode/) [C++]
+804 | [Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/description/)		| [Java](./Leetcode/) [C++]
+806 | [Number of Lines to Write String](https://leetcode.com/problems/number-of-lines-to-write-string/description/)		| [Java](./Leetcode/) [C++]
