@@ -9,9 +9,9 @@
 |-----|---------------- | --------------- |
 1 | [Two Sum](https://leetcode.com/problems/two-sum) 		| [Java](./Leetcode/1.%20Two%20Sum/Solution.java) [C++]
 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) 		| [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java) [C++]
-3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) 		| [Java](./Leetcode/) [C++]
-5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) 		| [Java](./Leetcode/) [C++]
-7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer) 		| [Java](./Leetcode/) [C++]
+3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) 		| [Java](./Leetcode/3.%20Longest%20SubString%20Without%20Repeating%20Characters/Soluton.java) [C++]
+5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) 		| [Java](./Leetcode/5.%20Longest%20Palindromic%20Substring/Solution.java) [C++]
+7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer) 		| [Java](./Leetcode/7.%20Reverse%20Integer/Solution.java) [C++]
 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number) 		| [Java](./Leetcode/) [C++]
 11 | [Container with Most Water](https://leetcode.com/problems/container-with-most-water) 		| [Java](./Leetcode/) [C++]
 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman) 		| [Java](./Leetcode/) [C++]
