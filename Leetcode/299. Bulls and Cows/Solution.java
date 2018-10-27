@@ -31,7 +31,7 @@ class Solution {
         for(int i = 0 ; i < secret.length() ; i++) {
             char s = secret.charAt(i);
             char g = guess.charAt(i);
-            if(s == g) {
+            if(s == g) { // correct digit+position
                 bulls++;
             }
             else {

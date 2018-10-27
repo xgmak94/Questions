@@ -31,7 +31,7 @@ public class Solution {
         for(int i = 0 ; i < timeSeries.length ; i++) {
             int start = timeSeries[i];
             int end = timeSeries[i] + duration;
-            if(i + 1 < timeSeries.length && end > timeSeries[i + 1]) {
+            if(i + 1 < timeSeries.length && end > timeSeries[i + 1]) { //if duration extends to next instance add diff between beginning of both
                 length += timeSeries[i + 1] - timeSeries[i];
             }
             else {

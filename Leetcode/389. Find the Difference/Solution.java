@@ -18,9 +18,24 @@ e
 Explanation:
 'e' is the letter that was added.
 */
-
 public class Solution {
     public char findTheDifference(String s, String t) {
+        char[] first = s.toCharArray();
+        char[] second = t.toCharArray();
+        
+        Arrays.sort(first);
+        Arrays.sort(second);
+        
+        for(int i = 0 ; i < s.length() ; i++) {
+            if(first[i] != second[i])
+                return second[i];
+        }               
+        return second[t.length() - 1];
+    }
+}
+
+public class Solution {
+    public char findTheDifference(String s, String t) { //if not sure which one is longer
         int n = s.length();
         int m = t.length();
         int minLength = (n > m) ? m : n;

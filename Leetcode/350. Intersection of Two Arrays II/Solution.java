@@ -14,14 +14,15 @@ class Solution {
         Map<Integer, Integer> map = new HashMap<>();
         ArrayList<Integer> list = new ArrayList<>();
         for(int n : nums1) {
-            map.put(n, map.getOrDefault(n, 0) + 1);
+            map.put(n, map.getOrDefault(n, 0) + 1); //frequency of elements in nums1
         }
         
         for(int m : nums2) {
             if(map.containsKey(m) && map.get(m) > 0) {
                 list.add(m);
+                map.put(m, map.getOrDefault(m, 0) - 1); //subtract 1 from frequency and add to intersection
             }
-            map.put(m, map.getOrDefault(m, 0) - 1);
+            
         }
         
         int[] arr = new int[list.size()];

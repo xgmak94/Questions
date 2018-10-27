@@ -34,11 +34,12 @@ class Solution {
         
         if(root == null)return list;
         
-        int levelSize = 1, currLevel = 0;
+        int currLevel = 0;
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         
         while(!q.isEmpty()) {
+            int levelSize = q.size();
             for(int i = 0 ; i < levelSize ; i++) {
                 TreeNode curr = q.remove();
                 level.add(curr.val);
@@ -52,7 +53,6 @@ class Solution {
 
             list.add(level);
             level = new ArrayList<>();
-            levelSize = q.size();
         }
         return list;
     }

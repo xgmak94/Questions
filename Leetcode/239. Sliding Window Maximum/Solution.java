@@ -30,7 +30,7 @@ class Solution {
         if(nums.length == 0 || k == 0)
             return new int[0];
 
-        int[] ret = new int[nums.length - k + 1];
+        int[] ret = new int[nums.length - k + 1]; //num of windows
         
         for (int i = 0; i < nums.length - k + 1 ; i++) {   
             int max = nums[i];

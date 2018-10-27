@@ -32,13 +32,13 @@ public class Solution {
         ListNode evenHead = head.next;
         
         while(even != null && even.next != null) {
-            odd.next = odd.next.next;
+            odd.next = odd.next.next; //1->2->3->4 becomes 1->3 2->4
             odd = odd.next;
             
             even.next = even.next.next;
             even = even.next;
         }
-        odd.next = evenHead;
+        odd.next = evenHead;//1->3 2->4 becomes 1->3->2->4->
         
         return head;
     }

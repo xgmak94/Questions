@@ -47,7 +47,11 @@ public class Solution {
             curr.next = list;
             list = curr;
             
-            sum = (sum > 9) ? 1 : 0;
+            if(sum >= 10)
+                sum = 1;
+            else
+                sum = 0;
+            // sum = (sum > 9) ? 1 : 0;
         }
         
         if(sum == 1) {

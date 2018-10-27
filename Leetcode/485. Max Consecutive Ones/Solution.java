@@ -28,6 +28,6 @@ class Solution {
                 currLength = 0;
             }
         }
-        return Math.max(currLength, maxLength);
+        return Math.max(currLength, maxLength); //compare last length of 1's to maxLength 
     }
 }

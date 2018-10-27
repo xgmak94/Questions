@@ -13,23 +13,25 @@ return [3, 4].
 public class Solution {
     public int[] searchRange(int[] nums, int target) {
         int[] ret = new int[2];
-        ret[0] = -1; ret[1] = -1;
-        if(nums.length < 1 || nums[0] > target || nums[nums.length - 1] < target)
+        ret[0] = ret[1] = -1;
+        if(nums.length == 0 || nums[0] > target || nums[nums.length - 1] < target) //not found if length is 0 or first num is greater than target or last number is less than target
         	return ret;
 
         boolean found = false;
 
         for(int i = 0 ; i < nums.length ; i++) {
             if(nums[i] == target) {
-                if(found) {
+                if(found) { //not first instance of target
                 	ret[1] = i;
                 }
-                else {
+                else { //first instance of target
                     ret[0] = i;
                     ret[1] = i;
                     found = true;
                 }
             }
+            else if(nums[i] > target)
+                break;
         }
         return ret;
     }

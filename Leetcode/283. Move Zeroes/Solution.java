@@ -12,14 +12,13 @@ import java.util.*;
 class Solution {
     public void moveZeroes(int[] nums) {
         int idx = 0;
-        for(int i = 0 ; i < nums.length ; i++) {
+        for(int i = 0 ; i < nums.length ; i++) { //if not 0 add it to end of our idx
             if(nums[i] != 0) {
                 nums[idx] = nums[i];
                 idx++;
             }
         }
-        
-        while(idx < nums.length) {
+        while(idx < nums.length) { //fill rest with 0's
             nums[idx] = 0;
             idx++;
         }

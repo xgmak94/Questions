@@ -35,7 +35,7 @@ public class Solution {
             second.next = first;
             
             curr.next = second;
-            curr = curr.next.next;
+            curr = first;
         }
         return dummy.next;
     }

@@ -14,6 +14,26 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 public class Solution {
     public int[] singleNumber(int[] nums) {
         int[] ret = new int[2];
+        Set<Integer> set = new HashSet<>();
+        for(int i : nums) {
+            if(!set.contains(i))
+                set.add(i);
+            else
+                set.remove(i);
+        }
+        
+        int n = 0;
+        for(Integer i : set) {
+            ret[n] = i;
+            n++;
+        }
+        return ret;
+    }
+}
+
+public class Solution {
+    public int[] singleNumber(int[] nums) {
+        int[] ret = new int[2];
         Map<Integer, Integer> map = new HashMap<>();
         for(int i : nums) {
             if(!map.containsKey(i))

@@ -21,14 +21,14 @@ class Solution {
         if(matrix.length == 0 || matrix[0].length == 0)
             return list;
         
-        int m = matrix.length;
-        int n = matrix[0].length;
+        int r = matrix.length;
+        int c = matrix[0].length;
         
         int rowBegin = 0;
-        int rowEnd = m - 1;
+        int rowEnd = r - 1;
         
         int colBegin = 0;
-        int colEnd = n - 1;
+        int colEnd = c - 1;
         
         while(colBegin <= colEnd && rowBegin <= rowEnd) { //right down left up repeat      
             //right

@@ -27,10 +27,12 @@ return [2].
  *     TreeNode(int x) { val = x; }
  * }
  */
+
 public class Solution {
     public int[] findMode(TreeNode root) {
         if(root == null)
             return new int[0];
+        
         Map<Integer, Integer> map = new HashMap<>();
         Queue<TreeNode> q = new LinkedList<>();
         List<Integer> list = new ArrayList<>();

@@ -38,12 +38,12 @@ public class Solution {
         int iterS = 0;
         
         while(iterG < g.length && iterS < s.length) {
-            if(g[iterG] <= s[iterS]) {
+            if(g[iterG] <= s[iterS]) { //current cookie is good for current child
                 iterG++;
                 iterS++;
             }
             else {
-                iterS++;
+                iterS++; //need a better cookie for current child
             }
         }
         return iterG;

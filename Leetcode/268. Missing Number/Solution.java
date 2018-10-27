@@ -14,9 +14,9 @@ class Solution {
     public int missingNumber(int[] nums) {
         int n = nums.length;
         
-        int sum0toN = n;
-        int actualSum = 0;
-        
+        int sum0toN = n; // n + 0+1+2+3+4...
+        int actualSum = 0;//0 + num[0]+num[1]+num[2]...
+
         for(int i = 0 ; i < n ; i++) {
             sum0toN += i;
             actualSum += nums[i];

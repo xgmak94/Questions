@@ -15,9 +15,9 @@ Here are few examples.
 public class Solution {
     public int searchInsert(int[] nums, int target) {
         for(int i = 0 ; i < nums.length ; i++) {
-            if(nums[i] >= target)
+            if(nums[i] >= target) // find target or the number after target
                 return i;
         }
-        return nums.length;
+        return nums.length; //last index if all numbers less than target
     }
 }

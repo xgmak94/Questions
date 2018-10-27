@@ -28,12 +28,15 @@ public class Solution {
                 end--;
             }
 
-            char temp = chars[start];
-            chars[start] = chars[end];
-            chars[end] = temp;
+            swap(chars, start, end); //swap outside vowels
             start++; end--;
         }
-        return new String(chars)
+        return new String(chars);
+    }
+    public void swap(char[] chars, int start, int end) {
+        char temp = chars[start];
+        chars[start] = chars[end];
+        chars[end] = temp;
     }
 }
 

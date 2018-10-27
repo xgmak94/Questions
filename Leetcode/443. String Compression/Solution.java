@@ -12,7 +12,6 @@ After you are done modifying the input array in-place, return the new length of 
 Follow up:
 Could you solve it using only O(1) extra space?
 
-
 Example 1:
 Input:
 ["a","a","b","b","c","c","c"]
@@ -43,7 +42,6 @@ Since the character "a" does not repeat, it is not compressed. "bbbbbbbbbbbb" is
 Notice each digit has it's own entry in the array.
 
 */
-
 
 class Solution {
     public int compress(char[] chars) {

@@ -23,7 +23,7 @@ class Solution {
             int j = 1;
             
             while(i - j*j >= 0) {
-                min = Math.min(dp[i -j*j] + 1, min);
+                min = Math.min(dp[i - j*j] + 1, min);
                 j++;
             }
             dp[i] = min;

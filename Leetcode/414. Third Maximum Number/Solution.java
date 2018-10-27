@@ -45,7 +45,7 @@ class Solution {
         		third = n;
         	}
         }
-        return (third == null) ? first : third;
+        return (third == null) ? first : third; //no third max so return first
     }
 }
 

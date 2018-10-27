@@ -8,12 +8,12 @@ and the absolute difference between i and j is at most k.
 
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>(); // (value, idx)
         
         for(int i = 0 ; i < nums.length ; i++) {
             int num = nums[i];
             if(map.containsKey(num)) {
-                if(i <= map.get(num) + k) {
+                if(i <= map.get(num) + k) { //if curr idx <= last idx + k
                     return true;
                 }
             }
@@ -25,7 +25,6 @@ class Solution {
 
 public class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        int length = nums.length;
         Set<Integer> set = new HashSet<>();
         
         for(int i = 0 ; i < nums.length ; i++) {

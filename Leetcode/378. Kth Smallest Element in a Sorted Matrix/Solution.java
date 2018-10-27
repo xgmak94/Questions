@@ -30,11 +30,11 @@ class Solution {
             }
         }
         
-        int front = 0;
+        int smallest = 0;
         while(k > 0) {
-            front = pq.poll();
+            smallest = pq.poll();
             k--;
         }
-        return front;
+        return smallest;
     }
 }

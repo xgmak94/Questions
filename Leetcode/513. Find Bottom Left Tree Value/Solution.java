@@ -45,7 +45,7 @@ public class Solution {
         
         TreeNode curr = root;
         
-        while(!q.isEmpty()) {
+        while(!q.isEmpty()) { //level order traversal right to left per level
             curr = q.remove();
             if(curr.right != null)
                 q.add(curr.right);

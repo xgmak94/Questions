@@ -22,19 +22,22 @@ public class Solution {
         
         for(int i = 0 ; i < ransomNote.length() ; i++) {
             Character c = ransomNote.charAt(i);
-            map1.put(c, (map1.containsKey(c) ? map1.get(c) + 1 : 1));
+            
+            map1.put(c, map1.getOrDefault(c, 0) + 1);
+            // map1.put(c, (map1.containsKey(c) ? map1.get(c) + 1 : 1));
         }
         
         for(int j = 0 ; j < magazine.length() ; j++) {
             Character c = magazine.charAt(j);
-            map2.put(c, (map2.containsKey(c) ? map2.get(c) + 1 : 1));
+
+            map2.put(c, map2.getOrDefault(c, 0) + 1);
+            // map2.put(c, (map2.containsKey(c) ? map2.get(c) + 1 : 1));
         }
         
         for(int i = 0 ; i < ransomNote.length() ; i++) {
             Character c = ransomNote.charAt(i);
-            if(map2.get(c) == null || map1.get(c) > map2.get(c)) {
+            if(map2.containsKey(c) == false || map1.get(c) > map2.get(c))
                 return false;
-            }
         }       
         return true;
     }
@@ -59,7 +62,7 @@ public class Solution {
                 if(k == 1)
                     map.remove(c);
                 else
-                    map.put(c, k- 1);
+                    map.put(c, k-1);
             }
             else
                 return false;

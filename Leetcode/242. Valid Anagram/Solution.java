@@ -24,14 +24,15 @@ class Solution {
         
         for(int i = 0 ; i < t.length() ; i++) {
             char c = t.charAt(i);
-            if(map.get(c) == null) {
+            Integer count = map.get(c);
+            if(count == null) {
                 return false;
             }
-            else if(map.get(c) == 1) {
+            else if(count == 1) {
                 map.remove(c);
             }
             else {
-                map.put(c, map.get(c)-1);
+                map.put(c, count-1);
             }
         }
         

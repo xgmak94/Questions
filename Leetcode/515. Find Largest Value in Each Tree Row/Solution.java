@@ -1,5 +1,18 @@
 /*https://leetcode.com/problems/find-largest-value-in-each-tree-row
 
+You need to find the largest value in each row of a binary tree.
+
+Example:
+Input: 
+
+          1
+         / \
+        3   2
+       / \   \  
+      5   3   9 
+
+Output: [1, 3, 9]
+
 /**
 * Definition for a binary tree node.
 * public class TreeNode {
@@ -9,6 +22,7 @@
 *     TreeNode(int x) { val = x; }
 * }
 */
+
 public class Solution {
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> ret = new ArrayList<>();
@@ -26,10 +40,8 @@ public class Solution {
                 TreeNode top = q.poll();
                 max = Math.max(top.val, max);
 
-                if(top.left != null)
-                    q.add(top.left);
-                if(top.right != null)
-                    q.add(top.right);
+                if(top.left != null) q.add(top.left);
+                if(top.right != null) q.add(top.right);
             }
             ret.add(max);
         }
