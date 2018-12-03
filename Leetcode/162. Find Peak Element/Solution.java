@@ -26,3 +26,39 @@ class Solution {
         return nums.length - 1;
     }
 }
+
+class Solution {
+    public int findPeakElement(int[] nums) {
+        int low = 0, high = nums.length-1;
+        while(low < high){
+            int mid = low + (high - low) / 2;
+            if(nums[mid] < nums[mid + 1]) lo = mid + 1;
+            else high = mid - 1;
+        }
+        return lo;
+    }aa
+}
+
+class Solution {
+	public int findPeakElement(int[] nums) {
+		return findPeakUtil(nums, 0, nums.length - 1);
+	}
+
+	public int findPeakUtil(int[] nums, int low, int high) {
+        if(low == high) return low;
+        
+		int mid = (high+low) / 2;
+        
+		if((mid == 0 && nums[mid] >= nums[mid+1]) || 
+           (mid == nums.length - 1 && nums[mid] >= nums[mid-1]) || 
+           (nums[mid] >= nums[mid+1] && nums[mid] >= nums[mid-1])) {
+			return mid;
+		}
+		else {
+			if(nums[mid] < nums[mid+1]) {
+				return findPeakUtil(nums, mid+1, high);
+			}
+			return findPeakUtil(nums, low, mid-1);
+		}
+	}
+}
