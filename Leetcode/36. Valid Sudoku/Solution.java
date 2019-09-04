@@ -25,8 +25,8 @@ class Solution {
                 if(board[j][i] != '.' && !col.add(board[j][i])) {
                     return false;
                 }       
-                int rowIndex = 3*(i/3);
-                int colIndex = 3*(i%3);
+                int rowIndex = 3*(i/3); //for cube
+                int colIndex = 3*(i%3); //for cube
                 if(board[rowIndex + j/3][colIndex + j%3] !='.' && !cube.add(board[rowIndex + j/3][colIndex + j%3]))
                     return false;
             }

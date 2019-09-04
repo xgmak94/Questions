@@ -59,13 +59,12 @@ public class Solution {
             Character c = ransomNote.charAt(i);
             Integer k = map.get(c);
             if(k != null) {
-                if(k == 1)
-                    map.remove(c);
-                else
-                    map.put(c, k-1);
+                if(k == 1) map.remove(c);
+                else map.put(c, k-1);
             }
-            else
+            else {
                 return false;
+            }
         }
         return true;
     }

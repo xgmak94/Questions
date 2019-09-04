@@ -11,7 +11,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 
 */
-class Solution {
+public class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>(); //stores the number, index
         for(int i = 0 ; i < nums.length ; i++) {
@@ -20,22 +20,6 @@ class Solution {
                 return new int[]{idx, i};
             }
             else if(idx == null) {
-                map.put(nums[i], i); //if map does not contain complement
-            }
-        }
-        return new int[]{0, 0}; // if two numbers do not add up to the target
-    }
-}
-
-
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>(); //stores the number, index
-        for(int i = 0 ; i < nums.length ; i++) {
-            if(map.containsKey(target - nums[i])) { //if the map contains the complementary number then they do add up
-                return new int[]{map.get(target - nums[i]), i};
-            }
-            else {
                 map.put(nums[i], i); //if map does not contain complement
             }
         }
