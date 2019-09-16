@@ -5,10 +5,9 @@ For example, given k = 3,
 Return [1,3,3,1].
 
 */
-
 class Solution {
     public List<Integer> getRow(int rowIndex) {
-        List<Integer> row = new ArrayList<>();
+        List<Integer> currRow = new ArrayList<>();
         
         List<Integer> prevRow = new ArrayList<>();
         prevRow.add(1);
@@ -17,8 +16,6 @@ class Solution {
             return prevRow;
         
         for(int i = 2 ; i <= rowIndex + 1 ; i++) {
-            List<Integer> currRow = new ArrayList<>();
-            
             currRow.add(1);//always begin with 1
             for(int j = 0 ; j < prevRow.size() - 1 ; j++) {
                 currRow.add(prevRow.get(j) + prevRow.get(j+1)); // middles
@@ -26,9 +23,8 @@ class Solution {
             currRow.add(1);//always ends with 1
             
             prevRow = currRow; // sets previous row to current
-            
+            currRow = new ArrayList<>();
         }
-        row = prevRow;
-        return row;
+        return prevRow;
     }
 }

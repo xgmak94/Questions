@@ -36,7 +36,7 @@ class Solution {
             int max = nums[i];
  
             for (int j = 1 ; j < k ; j++) {
-                if (nums[i + j] > max)
+                if(nums[i + j] > max)
                     max = nums[i + j];
             }
             ret[i] = max;
