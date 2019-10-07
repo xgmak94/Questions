@@ -16,12 +16,13 @@ public class Solution {
         
         while(curr != null) {
         	next = curr.next;
+
             while(sortedIter.next != null && sortedIter.next.val < curr.val)
                 sortedIter = sortedIter.next;
         	curr.next = sortedIter.next;
         	sortedIter.next = curr;
-
         	sortedIter = sorted;
+
         	curr = next;
         }
         return sorted.next;

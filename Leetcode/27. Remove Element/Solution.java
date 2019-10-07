@@ -1,6 +1,5 @@
-// https://leetcode.com/problems/remove-element
+/* https://leetcode.com/problems/remove-element
 
-/*
 Given an array and a value, remove all instances of that value in place and return the new length.
 
 Do not allocate extra space for another array, you must do this in place with constant memory.

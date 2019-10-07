@@ -15,7 +15,7 @@ class Solution {
         int n = nums.length;
         
         int sum0toN = n; // n + 0+1+2+3+4...
-        int actualSum = 0;//0 + num[0]+num[1]+num[2]...
+        int actualSum = 0; //0 + num[0]+num[1]+num[2]...
 
         for(int i = 0 ; i < n ; i++) {
             sum0toN += i;
@@ -26,18 +26,13 @@ class Solution {
     }
 }
 
-public class Solution {
+class Solution {
     public int missingNumber(int[] nums) {
-        int n = nums.length;
         Arrays.sort(nums);
-        
-        int missingSum = 0;
-        for(int i = 0 ; i < n ; i++) {
-            missingSum += nums[i];
+        for(int i = 0 ; i < nums.length ; i++) {
+            if(nums[i] != i)
+                return i;
         }
-        
-        int actualSum = (n * (n + 1)) / 2;
-        
-        return actualSum - missingSum;
+        return nums.length;
     }
 }

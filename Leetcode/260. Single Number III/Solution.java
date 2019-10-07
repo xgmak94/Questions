@@ -15,35 +15,16 @@ public class Solution {
     public int[] singleNumber(int[] nums) {
         int[] ret = new int[2];
         Set<Integer> set = new HashSet<>();
+        
         for(int i : nums) {
-            if(!set.contains(i))
-                set.add(i);
-            else
+            if(set.contains(i))
                 set.remove(i);
+            else
+                set.add(i);
         }
         
         int n = 0;
         for(Integer i : set) {
-            ret[n] = i;
-            n++;
-        }
-        return ret;
-    }
-}
-
-public class Solution {
-    public int[] singleNumber(int[] nums) {
-        int[] ret = new int[2];
-        Map<Integer, Integer> map = new HashMap<>();
-        for(int i : nums) {
-            if(!map.containsKey(i))
-                map.put(i, 1);
-            else
-                map.remove(i);
-        }
-        
-        int n = 0;
-        for(Integer i : map.keySet()) {
             ret[n] = i;
             n++;
         }
