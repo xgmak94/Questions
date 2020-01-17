@@ -8,6 +8,39 @@ For example,
    After removing the second node from the end, the linked list becomes 1->2->3->5.
 */
 
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode slow = head;
+        ListNode fast = head;
+        ListNode prev = slow;
+        
+        for(int i = 0 ; i < n ; i++)
+            fast = fast.next;
+        
+        while(fast != null) {
+            fast = fast.next;
+            
+            prev = slow;
+            slow = slow.next;
+        }
+        
+        prev.next = slow.next;
+        
+        if(slow == head)
+            return head.next;
+        else
+            return head;
+    }
+}
+
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
