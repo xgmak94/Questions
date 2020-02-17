@@ -343,7 +343,7 @@
 1315 | [Sum of Nodes with Even-Valued Grandparent](https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/) | [Java](./Leetcode/1315.%20Sum%20of%20Nodes%20with%20Even-Valued%20Grandparent/Solution.java)
 1317 | [Convert Integer to the Sum of Two No-Zero Integers](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/) | [Java](./Leetcode/1317.%20Convert%20Integer%20to%20the%20Sum%20of%20Two%20No-Zero%20Integers/Solution.java)
 1323 | [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/) | [Java](./Leetcode/1323.%20Maximum%2069%20Number/Solution.java)
-1324 | [Print Words Vertically](https://leetcode.com/problems/print-words-vertically/) | [Java](./Leetcode/1324.%20Print%20Words%20Vertically%/Solution.java)
+1324 | [Print Words Vertically](https://leetcode.com/problems/print-words-vertically/) | [Java](./Leetcode/1324.%20Print%20Words%20Vertically/Solution.java)
 1332 | [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) | [Java](./Leetcode/1332.%20Remove%20Palindromic%20Subsequences/Solution.java)
 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | [Java](./Leetcode/1342.%20Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero/Solution.java)
 1344 | [Angle Between Hands of a Clock](https://leetcode.com/problems/angle-between-hands-of-a-clock/) | [Java](./Leetcode/1344.%20Angle%20Between%20Hands%20of%20a%20Clock/Solution.java)
