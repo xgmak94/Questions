@@ -9,19 +9,19 @@ Valid combinations are:
 2,3,4 (using the first 2)
 2,3,4 (using the second 2)
 2,2,3
-
 */
 
 class Solution {
     public int triangleNumber(int[] nums) {
+        if(nums.length < 3) return 0;
+
         Arrays.sort(nums);
-        if(nums.length < 3)
-            return 0;
         int count = 0;
+
         for(int i = 0 ; i < nums.length - 2 ; i++) {
             for(int j = i + 1 ; j < nums.length - 1 ; j++) {
                 for(int k = j + 1 ; k < nums.length ; k++) {
-                    if(nums[i] + nums[j] > nums[k] && nums[i] != 0 && nums[j] != 0 && nums[k] != 0) {
+                    if(nums[i] + nums[j] > nums[k] && nums[i] != 0 && nums[j] != 0 && nums[k] != 0) { //2 sides must be larger than 3rd in a triangle, sides cannot be 0
                         count++;
                     }
                 }

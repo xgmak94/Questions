@@ -11,7 +11,8 @@ Given s = "leetcode", return "leotcede".
 Note:
 The vowels does not include the letter "y".
 */
-public class Solution {
+
+class Solution {
     public String reverseVowels(String word) {
         String vowels = "aeiouAEIOU"; // vowels we are looking for
 

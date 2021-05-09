@@ -15,14 +15,12 @@ Explanation:
 For the point (0,0), (0,2), (2,0), (2,2): floor(3/4) = floor(0.75) = 0
 For the point (0,1), (1,0), (1,2), (2,1): floor(5/6) = floor(0.83333333) = 0
 For the point (1,1): floor(8/9) = floor(0.88888889) = 0
-Note:
-The value in the given matrix is in the range of [0, 255].
-The length and width of the given matrix are in the range of [1, 150].
-
 */
 
 class Solution {        
-    int[][] dirs = new int[][]{{-1,-1},{-1,0},{-1,1},  {0,-1},{0, 0},{0,1},  {1,-1},{1,0},{1, 1}};
+    int[][] dirs = new int[][]{{-1,-1},{-1,0},{-1,1},  
+                                {0,-1},{0, 0},{0,1},  
+                                {1,-1},{1,0},{1, 1}};
     public int[][] imageSmoother(int[][] M) {
         
         int m = M.length;
@@ -44,7 +42,7 @@ class Solution {
             int dr = r + dir[0];
             int dc = c + dir[1];
     
-            if(dr >= 0 && dr < m && dc >= 0 && dc < n) {
+            if(dr >= 0 && dr < m && dc >= 0 && dc < n) { //if not off the image
                 sum += M[dr][dc];
                 numDirs++;
             }

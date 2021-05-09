@@ -9,13 +9,11 @@ Did you use extra space?
 A straight forward solution using O(mn) space is probably a bad idea.
 A simple improvement uses O(m + n) space, but still not the best solution.
 Could you devise a constant space solution?
-
 */
 
 class Solution {
     public void setZeroes(int[][] matrix) {
-        if(matrix.length == 0 || matrix[0].length == 0)
-            return;
+        if(matrix.length == 0 || matrix[0].length == 0) return;
         
         int r = matrix.length;
         int c = matrix[0].length;

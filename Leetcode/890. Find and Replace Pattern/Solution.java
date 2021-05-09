@@ -20,16 +20,14 @@ class Solution {
     }
     
     public boolean match(String word, String pattern) {
-        if(word.length() != pattern.length())
-            return false;
+        if(word.length() != pattern.length()) return false;
         
         Map<Character, Character> map = new HashMap<>();
-        
         for(int i = 0 ; i < word.length() ; i++) {
             char c = word.charAt(i);
             char d = pattern.charAt(i);
             
-            if(!map.containsKey(c) && !map.containsValue(d)) { //if does
+            if(!map.containsKey(c) && !map.containsValue(d)) { //if the char in word and the pattern char have not been used yet
                 map.put(c, d);
             }
             else {

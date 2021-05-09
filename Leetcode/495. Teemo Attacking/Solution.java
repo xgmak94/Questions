@@ -1,4 +1,5 @@
 /* https://leetcode.com/problems/teemo-attacking
+
 In LOL world, there is a hero called Teemo and his attacking can make his enemy Ashe be in poisoned condition. 
 Now, given the Teemo's attacking ascending time series towards Ashe and the poisoning time duration per Teemo's attacking, you need to output the total time that Ashe is in poisoned condition.
 
@@ -22,10 +23,33 @@ Since the poisoned status won't add up together, though the second poisoning att
 So you finally need to output 3.
 */
 
-public class Solution {
+class Solution {
     public int findPoisonedDuration(int[] timeSeries, int duration) {
-        if(timeSeries == null || timeSeries.length == 0 || duration == 0)
-            return 0;
+        if(timeSeries == null || timeSeries.length == 0 || duration == 0) return 0;
+
+        int length = 0;
+        int start = timeSeries[0];
+        int end = timeSeries[0] + duration;
+
+        for(int i = 1 ; i < timeSeries.length ; i++) {
+            if(timeSeries[i] <= end) { //extended
+                end = timeSeries[i] + duration;
+            }
+            else { //current poison is over add it to length
+                length += end-start;
+                start = timeSeries[i];
+                end = timeSeries[i] + duration;
+            }
+        }
+        length += end-start;
+        
+        return length;
+    }
+}
+
+class Solution {
+    public int findPoisonedDuration(int[] timeSeries, int duration) {
+        if(timeSeries == null || timeSeries.length == 0 || duration == 0) return 0;
         
         int length = 0;
         for(int i = 0 ; i < timeSeries.length ; i++) {

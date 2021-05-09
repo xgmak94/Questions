@@ -7,13 +7,12 @@ Given [100, 4, 200, 1, 3, 2],
 The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
 
 Your algorithm should run in O(n) complexity.
-
 */
 
 class Solution {
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
-        int longestConsec = 0;
+        int longest = 0;
         
         for(int n : nums) {
             set.add(n);
@@ -30,8 +29,8 @@ class Solution {
                 i++;
                 streak++;
             }
-            longestConsec = Math.max(streak, longestConsec);
+            longest = Math.max(streak, longest);
         }
-        return longestConsec;
+        return longest;
     }
 }

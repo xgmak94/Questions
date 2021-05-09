@@ -11,16 +11,6 @@ Input:
 Output: [3, 14.5, 11]
 Explanation:
 The average value of nodes on level 0 is 3,  on level 1 is 14.5, and on level 2 is 11. Hence return [3, 14.5, 11].
-
-
-/**
-* Definition for a binary tree node.
-* public class TreeNode {
-*     int val;
-*     TreeNode left;
-*     TreeNode right;
-*     TreeNode(int x) { val = x; }
-* }
 */
 
 public class Solution {
@@ -42,7 +32,6 @@ public class Solution {
                 if(node.left != null) level.add(node.left);
                 if(node.right != null) level.add(node.right);
             }
-            
             ret.add(sum / n);
         }
         return ret;

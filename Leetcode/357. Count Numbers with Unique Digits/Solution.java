@@ -13,10 +13,8 @@ Given n = 2, return 91. (The answer should be the total numbers in the range of 
 
 class Solution {
     public int countNumbersWithUniqueDigits(int n) {
-        if(n == 0)
-            return 1;
-        if(n == 1)
-            return 10;
+        if(n == 0) return 1; //0-1
+        if(n == 1) return 10; //0-10
 
         int ret = 10;
         int uniqueDigits = 9;

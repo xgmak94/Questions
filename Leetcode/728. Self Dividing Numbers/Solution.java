@@ -12,8 +12,34 @@ Example 1:
 Input: 
 left = 1, right = 22
 Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
-
 */
+
+class Solution {
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> list = new ArrayList<>();
+        for(int i = left ; i <= right ; i++) {
+            if(selfDividing(i)) list.add(i);
+        }
+        return list;
+    }
+    
+    public boolean selfDividing(int n) {
+        List<Integer> list = getDigits(n);
+        for(int digit : list) {
+            if(digit == 0 || n % digit != 0) return false;
+        }
+        return true;
+    }
+    
+    public List<Integer> getDigits(int n) {
+        List<Integer> list = new ArrayList<>();
+        while(n > 0) {
+            list.add(n % 10);
+            n /= 10;
+        }
+        return list;
+    }
+}
 
 class Solution {
     public List<Integer> selfDividingNumbers(int left, int right) {

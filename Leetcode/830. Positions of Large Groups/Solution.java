@@ -8,32 +8,29 @@ Call a group large if it has 3 or more characters.  We would like the starting a
 
 The final answer should be in lexicographic order.
 
- 
-
 Example 1:
-
 Input: "abbxxxxzzy"
 Output: [[3,6]]
 Explanation: "xxxx" is the single large group with starting  3 and ending positions 6.
-Example 2:
 
+Example 2:
 Input: "abc"
 Output: []
 Explanation: We have "a","b" and "c" but no large group.
-Example 3:
 
+Example 3:
 Input: "abcdddeeeeaabbbcd"
 Output: [[3,5],[6,9],[12,14]]
-
 */
 
 class Solution {
     public List<List<Integer>> largeGroupPositions(String S) {
         List<List<Integer>> list = new ArrayList<>();
         
-        for(int i = 0 ; i < S.length() ; i++) {
-            int j = 1;
+        int i = 0;
+        while(i < S.length()) {
             char c = S.charAt(i);
+            int j = 1;
             while(i+j < S.length() && S.charAt(i+j) == c) {
                 j++;
             }
@@ -43,9 +40,8 @@ class Solution {
                 group.add(i);
                 group.add(i+j-1);
                 list.add(group);
-                
-                i = i+j-1;
             }
+            i = i+j;
         }
         return list;
     }

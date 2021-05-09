@@ -19,17 +19,7 @@ The minimum absolute difference is 1, which is the difference between 2 and 1 (o
 Note: There are at least two nodes in this BST.
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
-public class Solution {
+class Solution {
     int min = Integer.MAX_VALUE;
     Integer prev = null;
     
@@ -50,7 +40,7 @@ public class Solution {
     
 }
 
-public class Solution {
+class Solution {
     public int getMinimumDifference(TreeNode root) {
         if(root == null)
             return -1;

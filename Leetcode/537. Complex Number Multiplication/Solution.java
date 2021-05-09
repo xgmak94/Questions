@@ -18,8 +18,7 @@ The input strings will not have extra blank.
 The input strings will be given in the form of a+bi, where the integer a and b will both belong to the range of [-100, 100]. And the output should be also in this form.
 */
 
-
-public class Solution {
+class Solution {
     public String complexNumberMultiply(String a, String b) {        
         String x[] = a.split("\\+|i");
         String y[] = b.split("\\+|i");
@@ -34,7 +33,7 @@ public class Solution {
     }
 }
 
-public class Solution {
+class Solution {
     public String complexNumberMultiply(String a, String b) {
         StringBuilder ret = new StringBuilder();
         

@@ -12,38 +12,54 @@ canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true
 */
 
-public class Solution {
+class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        if(ransomNote.length() > magazine.length())
-            return false;
-        
-        HashMap<Character, Integer> map1 = new HashMap<>();
-        HashMap<Character, Integer> map2 = new HashMap<>();
-        
-        for(int i = 0 ; i < ransomNote.length() ; i++) {
-            Character c = ransomNote.charAt(i);
-            
-            map1.put(c, map1.getOrDefault(c, 0) + 1);
-            // map1.put(c, (map1.containsKey(c) ? map1.get(c) + 1 : 1));
-        }
-        
-        for(int j = 0 ; j < magazine.length() ; j++) {
-            Character c = magazine.charAt(j);
+        if(ransomNote.length() > magazine.length()) return false;
 
-            map2.put(c, map2.getOrDefault(c, 0) + 1);
-            // map2.put(c, (map2.containsKey(c) ? map2.get(c) + 1 : 1));
+        HashMap<Character, Integer> mag = new HashMap<>();
+
+        for(char c : magazine.toCharArray()) {
+            mag.put(c, mag.getOrDefault(c, 0) + 1);
         }
         
-        for(int i = 0 ; i < ransomNote.length() ; i++) {
-            Character c = ransomNote.charAt(i);
-            if(map2.containsKey(c) == false || map1.get(c) > map2.get(c))
+        for(char c : ransomNote.toCharArray()) {
+            if(mag.get(c) == null || mag.get(c) <= 0) {
                 return false;
-        }       
+            }
+            else {
+                mag.put(c, mag.get(c) - 1);
+            }
+        }
         return true;
     }
 }
 
-public class Solution {
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+        if(ransomNote.length() > magazine.length())
+            return false;
+        
+        HashMap<Character, Integer> ransom = new HashMap<>();
+        HashMap<Character, Integer> mag = new HashMap<>();
+        
+        for(char c : ransomNote.toCharArray()) {
+            ransom.put(c, ransom.getOrDefault(c, 0) + 1);
+        }
+
+        for(char c : magazine.toCharArray()) {
+            mag.put(c, mag.getOrDefault(c, 0) + 1);
+        }
+        
+        for(char c : ransomNote.toCharArray()) {
+            if(mag.containsKey(c) == false || ransom.get(c) > mag.get(c)) {
+                return false;
+            }
+        } 
+        return true;
+    }
+}
+
+class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
         if(ransomNote.length() > magazine.length())
             return false;

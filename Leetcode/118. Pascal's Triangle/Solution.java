@@ -12,8 +12,6 @@ Return
   [1,3,3,1],
  [1,4,6,4,1]
 ]
-
-
 */
 
 class Solution {
@@ -30,13 +28,13 @@ class Solution {
             List<Integer> currRow = new ArrayList<>();
             
             currRow.add(1);//always begin with 1
-            for(int j = 0 ; j < prevRow.size() - 1 ; j++)
+            for(int j = 0 ; j < prevRow.size() - 1 ; j++) {
                 currRow.add(prevRow.get(j) + prevRow.get(j+1)); // middles            
+            }
             currRow.add(1);//always ends with 1
             
-            prevRow = currRow; // sets previous row to current
-            
-            triangle.add(prevRow); // adds the row to triangle
+            triangle.add(currRow); // adds the row to triangle
+            prevRow = currRow;
         }
         return triangle;
     }

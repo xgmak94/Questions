@@ -19,7 +19,6 @@ Secret number:  "1123"
 Friend's guess: "0111"
 In this case, the 1st 1 in friend's guess is a bull, the 2nd or 3rd 1 is a cow, and your function should return "1A1B".
 You may assume that the secret number and your friend's guess only contain digits, and their lengths are always equal.
-
 */
 
 class Solution {
@@ -43,11 +42,6 @@ class Solution {
                 }
             }
         }
-        
-        for(int i = 0 ; i < 10 ; i++) {
-            System.out.println(numCounts[i]);
-        }
-        
         return bulls + "A" + cows + "B";
     }
 }

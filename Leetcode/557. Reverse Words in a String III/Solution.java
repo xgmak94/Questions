@@ -6,17 +6,34 @@ Example 1:
 Input: "Let's take LeetCode contest"
 Output: "s'teL ekat edoCteeL tsetnoc"
 Note: In the string, each word is separated by single space and there will not be any extra space in the string.
-
 */
+
 class Solution {
     public String reverseWords(String s) {
-        StringBuilder reversed = new StringBuilder();        
+        String[] words = s.split(" ");
+        String reversed = "";
+        for(String word : words) {
+            reversed += reverse(word) + " ";
+        }
+        return reversed.trim(); //remove trailing whitespace
+    }
+    
+    public String reverse(String word) {
+        StringBuilder sb = new StringBuilder(word);
+        return sb.reverse().toString();
+    }
+}
+
+class Solution {
+    public String reverseWords(String s) {
+        StringBuilder reversed = new StringBuilder();
         StringBuilder word = new StringBuilder();
         
         for(int i = 0 ; i < s.length() ; i++) {
             Character c = s.charAt(i);
-            if (c != ' ')
+            if (c != ' ') {
                 word.append(c); 
+            }
             else {
                 reversed.append(word.reverse());
                 reversed.append(" ");
@@ -25,20 +42,5 @@ class Solution {
         }
         reversed.append(word.reverse());     
         return reversed.toString();
-    }
-}
-
-class Solution {
-    public String reverseWords(String s) {
-        String[] words = s.split(" ");
-        
-        StringBuilder newString = new StringBuilder();
-        
-        for(int i = 0 ; i < words.length ; i++) {
-            StringBuilder sb = new StringBuilder(words[i]);
-            words[i] = sb.reverse().toString();     
-            newString.append(words[i] +" ");
-        }
-        return newString.substring(0, newString.length() - 1);
     }
 }

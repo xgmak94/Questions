@@ -9,17 +9,17 @@ Output: True
 Explanation: 28 = 1 + 2 + 4 + 7 + 14
 */
 
-public class Solution {
+class Solution {
     public boolean checkPerfectNumber(int num) {
-        if (num == 1)
-            return false;
+        if (num == 1) return false;
         
         int sum = 1; // 1 is always a divisor
         for(int i = 2 ; i <= Math.sqrt(num) ; i++) {
             if(num % i == 0) {
                 sum += i;
-                if(i * i != num) // add j where j is i*j=num if i is not sqrt
+                if(i * i != num) {//add other divisor if its not square
                     sum += num / i;
+                }
             }
         }
         return sum == num;

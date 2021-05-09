@@ -14,7 +14,6 @@ public class Solution {
         ArrayList<Integer> list = new ArrayList<>();
         
         int count = 0;
-        
         for(int n : nums) {
         	Integer get = map.get(n);
             if(get == null) {

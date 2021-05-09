@@ -1,112 +1,34 @@
-/* https://leetcode.com/problems/merge-two-sorted-lists/description/
+/* https://leetcode.com/problems/merge-two-sorted-lists/
 
-Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-
+Merge two sorted linked lists and return it as a new list. 
+The new list should be made by splicing together the nodes of the first two lists.
 */
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {   
-        ListNode list = new ListNode(0);
-        ListNode listptr = list;
+        ListNode merged = new ListNode(0);
+        ListNode mergedptr = merged;
         
         while(l1 != null && l2 != null) {
             if(l1.val < l2.val) {
-                listptr.next = l1;
+                mergedptr.next = l1;
                 l1 = l1.next;
+                mergedptr = mergedptr.next;
             }
             else{
-                listptr.next = l2;
+                mergedptr.next = l2;
                 l2 = l2.next;
+                mergedptr = mergedptr.next;
             }
-            listptr = listptr.next;
-        }        
-        if(l1 != null) listptr.next = l1;
-        if(l2 != null) listptr.next = l2;
-
-        return list.next;
-    }
-}
-
-public class Solution {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if(l1 == null) return l2;
-        if(l2 == null) return l1;
-        
-        ListNode newHead = new ListNode(0);
-        ListNode curr = newHead;
-        
-        while(l1 != null && l2 != null) {
-            if(l1.val > l2.val) {
-                curr.next = l2;
-                l2 = l2.next;
-            }
-            else {
-                curr.next = l1;
-                l1 = l1.next;
-            }
-            curr = curr.next;
         }
-        
-        if(l1 != null)
-            curr.next = l1;
-        if(l2 != null)
-            curr.next = l2;
-        
-        return newHead.next;
+        if(l1 != null) mergedptr.next = l1; //get the rest
+        if(l2 != null) mergedptr.next = l2; //get the rest
+
+        return merged.next;
     }
 }
 
-public class Solution {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if(l1 == null)
-            return l2;
-        if(l2 == null)
-            return l1;
-        
-        ListNode currA = l1;
-        ListNode currB = l2;
-        
-        ListNode newHead = new ListNode(0);
-        ListNode currC = newHead;
-        
-        while(currA != null && currB != null) {
-            if(currA.val > currB.val) {
-                currC.next = currB;
-                currB = currB.next;
-            }
-            else {
-                currC.next = currA;
-                currA = currA.next;
-            }
-            currC = currC.next;
-        }
-        
-        if(currA != null)
-            currC.next = currA;
-        if(currB != null)
-            currC.next = currB;
-        
-        return newHead.next;
-    }
-}
-
-public class Solution {
+class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1 == null)
             return l2;

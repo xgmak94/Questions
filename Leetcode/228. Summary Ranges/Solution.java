@@ -6,7 +6,7 @@ For example, given [0,1,2,4,5,7], return ["0->2","4->5","7"].
 
 */
 
-public class Solution {
+class Solution {
     public List<String> summaryRanges(int[] nums) {
         List<String> list = new ArrayList<>();
         
@@ -15,10 +15,12 @@ public class Solution {
             while(i + 1 < nums.length && nums[i + 1] == nums[i] + 1) {
                 i++;
             }
-            if(a != nums[i])
-                list.add(a+"->"+nums[i]);
-            else
+            if(a == nums[i]) { //i did not move, the range is just itself
                 list.add(a+"");
+            }
+            else { //range is from a ->nums[i]
+                list.add(a+"->"+nums[i]);
+            }
         }
         return list;
     }

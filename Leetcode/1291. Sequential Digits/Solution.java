@@ -5,10 +5,11 @@ An integer has sequential digits if and only if each digit in the number is one 
 Return a sorted list of all the integers in the range [low, high] inclusive that have sequential digits.
 
 Example 1:
-
 Input: low = 100, high = 300
 Output: [123,234]
 
+Constraints:
+10 <= low <= high <= 10^9
 */
 
 class Solution {
@@ -24,13 +25,13 @@ class Solution {
                          123456789};
         
         for(int n : sequential) {
-            if(n >= low && n <= high)
+            if(n >= low && n <= high) {
                 ret.add(n);
-            
-            if(n > high)
+            }
+            else {
                 break;
+            }
         }
         return ret;
     }
 }
-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZDZZZZZZZZZZZZZZZZZZZZZZSZZZZZZZZ  ZZZZZZZZZZSZZZZZZWZZ    ZZZZZZZZZ

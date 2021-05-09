@@ -20,28 +20,21 @@ You should return this subtree:
 In the example above, if we want to search the value 5, since there is no node with value 5, we should return NULL.
 
 Note that an empty tree is represented by NULL, therefore you would see the expected output (serialized tree format) as [], not null.
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 class Solution {
     public TreeNode searchBST(TreeNode root, int val) {
         if(root == null) 
             return null;
         
-        if(root.val < val)
+        if(root.val < val) {
             return searchBST(root.right, val);
-        else if(root.val > val)
+        }
+        else if(root.val > val) {
             return searchBST(root.left, val);
-        else
+        }
+        else {
             return root;
+        }
     }
 }

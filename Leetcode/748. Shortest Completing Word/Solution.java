@@ -1,6 +1,7 @@
 /* https://leetcode.com/problems/shortest-completing-word/
 
-Find the minimum length word from a given dictionary words, which has all the letters from the string licensePlate. Such a word is said to complete the given string licensePlate
+Find the minimum length word from a given dictionary words, which has all the letters from the string licensePlate.
+Such a word is said to complete the given string licensePlate
 
 Here, for letters we ignore case. For example, "P" on the licensePlate still matches "p" on the word.
 
@@ -20,21 +21,18 @@ Input: licensePlate = "1s3 456", words = ["looks", "pest", "stew", "show"]
 Output: "pest"
 Explanation: There are 3 smallest length words that contains the letters "s".
 We return the one that occurred first.
-
 */
 
 class Solution {
     public String shortestCompletingWord(String licensePlate, String[] words) {
         int shortestLength = Integer.MAX_VALUE;
-        String shortestWord = licensePlate;
+        String shortestWord = null;
 
         int[] chars = new int[26];
-        for(int i = 0 ; i < 26 ; i++) 
-        	chars[i] = 0;
+        Arrays.fill(chars, 0);
         
-        for(char c : licensePlate.toCharArray()) {
-            if(Character.isLetter(c)) { //only care about lowercase letters
-                c = Character.toLowerCase(c);
+        for(char c : licensePlate.toLowerCase().toCharArray()) { //get the count of all letters in license plate
+            if(Character.isLetter(c)) {
                 chars[c-'a']++;
             }
         }
@@ -42,23 +40,23 @@ class Solution {
         for(String word : words) {
             int[] plateCount = chars.clone();
             
-            if(canMake(plateCount, word) == true) {
-                if(word.length() < shortestLength) {
-                    shortestLength = word.length();
-                    shortestWord = word;
-                }
+            if(word.length() < shortestLength && canMake(plateCount, word)) {
+                shortestLength = word.length();
+                shortestWord = word;
             }
         }
         return shortestWord;
     }
     
     public boolean canMake(int[] plateCount, String word) {
-        for(char c : word.toCharArray())
+        for(char c : word.toCharArray()) {
             plateCount[c-'a']--;
+        }
         
-        for(int i = 0 ; i < 26 ; i++) {
-            if(plateCount[i] > 0)
+        for(int i = 0 ; i < 26 ; i++) { //if theres any letter missing we cannot make it
+            if(plateCount[i] > 0) {
                 return false;
+            }
         }
         return true;
     }

@@ -11,51 +11,52 @@ You should return the following matrix:
  [ 8, 9, 4 ],
  [ 7, 6, 5 ]
 ]
-
 */
 
-	class Solution {
-	    public int[][] generateMatrix(int n) {
-	        int[][] matrix = new int[n][n];
-	        
-	        int rowBegin = 0;
-	        int rowEnd = n - 1;
-	        
-	        int colBegin = 0;
-	        int colEnd = n - 1;
-	        
-	        int num = 1;
-	        while(colBegin <= colEnd && rowBegin <= rowEnd) {//right down left up repeat          
-	            //right
-	            for(int i = colBegin ; i <= colEnd ; i++) {
-	                matrix[rowBegin][i] = num;
-	                num++;
+class Solution {
+    public int[][] generateMatrix(int n) {
+        int[][] matrix = new int[n][n];
+        
+        int rowBegin = 0;
+        int rowEnd = n - 1;
+        
+        int colBegin = 0;
+        int colEnd = n - 1;
+        
+        int num = 1;
+        while(colBegin <= colEnd && rowBegin <= rowEnd) {//right down left up repeat
+            //right
+            for(int i = colBegin ; i <= colEnd ; i++) {
+                matrix[rowBegin][i] = num;
+                num++;
+            }
+            rowBegin++;
+
+            //down
+            for(int i = rowBegin ; i <= rowEnd ; i++) {
+                matrix[i][colEnd] = num;
+                num++;
+            }
+            colEnd--;
+
+            //left
+            if(rowBegin <= rowEnd) {
+	            for(int i = colEnd ; i >= colBegin ; i--) {
+                    matrix[rowEnd][i] = num;
+                    num++;
 	            }
-	            rowBegin++;         
-	            //down
-	            for(int i = rowBegin ; i <= rowEnd ; i++) {
-	                matrix[i][colEnd] = num;
-	                num++;
+	            rowEnd--;
+            }
+            
+            //up
+            if(colBegin <= colEnd) {
+	            for(int i = rowEnd ; i >= rowBegin ; i--) {
+                    matrix[i][colBegin] = num;
+                    num++;
 	            }
-	            colEnd--;
-	            //left
-	            if(rowBegin <= rowEnd) {
-		            for(int i = colEnd ; i >= colBegin ; i--) {
-	                    matrix[rowEnd][i] = num;
-	                    num++;
-		            }
-		            rowEnd--;
-	            }
-	            //up
-	            if(colBegin <= colEnd) {
-		            for(int i = rowEnd ; i >= rowBegin ; i--) {
-	                    matrix[i][colBegin] = num;
-	                    num++;
-		            }
-		            colBegin++;
-	            }           
-	        }
-	        return matrix;
-	    }
-	}
-	
+	            colBegin++;
+            }
+        }
+        return matrix;
+    }
+}

@@ -9,10 +9,8 @@ Could you do it without extra space and in O(n) runtime?
 Example:
 Input:
 [4,3,2,7,8,2,3,1]
-
 Output:
 [2,3]
-
 */
 
 class Solution {
@@ -25,7 +23,7 @@ class Solution {
 
             // store singletons as negative at index, num - 1
             // if duplicate then index will already be negative
-            if(nums[idx] < 0) { 
+            if(nums[idx] < 0) {
                 list.add(num);
             }
             else {

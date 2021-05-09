@@ -9,29 +9,17 @@ Can you solve it without using extra space?
 
 */
 
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
+class Solution {
     public ListNode detectCycle(ListNode head) {
         HashSet<ListNode> set = new HashSet<>();
         
         ListNode curr = head;
         while(curr != null) {
-            if(set.contains(curr)) {
-                return curr;
-            }
-            else {
-                set.add(curr);
+            if(set.add(curr)) { //true if can be added to set
                 curr = curr.next;
+            }
+            else { //cannot be added to set already exists, cycle
+                return curr;
             }
         }
         return null;

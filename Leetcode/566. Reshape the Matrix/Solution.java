@@ -18,6 +18,7 @@ Output:
 [[1,2,3,4]]
 Explanation:
 The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+
 Example 2:
 Input: 
 nums = 
@@ -29,15 +30,13 @@ Output:
  [3,4]]
 Explanation:
 There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
-
 */
 
 public class Solution {
     public int[][] matrixReshape(int[][] nums, int r, int c) {
         int m = nums.length;
         int n = nums[0].length;
-        if(r*c != m*n)
-            return nums;
+        if(r*c != m*n) return nums; //cant reshape if sizes are not same
         
         int[][] ret = new int[r][c];
         for(int i = 0 ; i < r*c ; i++) {

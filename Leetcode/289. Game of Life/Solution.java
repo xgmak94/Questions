@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/game-of-life/description/
+/* https://leetcode.com/problems/game-of-life/
 
 According to the Wikipedia's article: "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970."
 
@@ -16,7 +16,9 @@ In this question, we represent the board using a 2D array. In principle, the boa
 */
 
 class Solution {
-	private static int[][] directions = new int[][]{{-1,-1},{-1,0},{-1,1},  {0,-1},{0,1},  {1,-1},{1,0},{1, 1}};
+	private static int[][] directions = new int[][]{{-1,-1},{-1,0},{-1,1},  
+                                                    {0,-1},{0,1},  
+                                                    {1,-1},{1,0},{1, 1}};
 
     public int sumSurroundings(int[][] matrix, int x, int y, int m, int n){
         int sum = 0;
@@ -28,16 +30,12 @@ class Solution {
             	sum += matrix[dx][dy];
             	numSurrounding++;
             }
-            else {
-            	continue;
-            }
         }
         return sum;
     }
 
     public void gameOfLife(int[][] board) {
-        if(board.length == 0 || board[0].length == 0)
-            return;
+        if(board.length == 0 || board[0].length == 0) return;
         
         int m = board.length;
         int n = board[0].length;
@@ -46,17 +44,21 @@ class Solution {
         for(int i = 0 ; i < m ; i++) {
         	for(int j = 0 ; j < n ; j++) {
         		int sum = sumSurroundings(board, i, j, m, n);
-        		if(board[i][j] == 0) {// 0 dead cell               
-    				if(sum == 3)                    // Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+        		if(board[i][j] == 0) { // 0 dead cell               
+    				if(sum == 3) {  // Any dead cell with exactly 3 live neighbors becomes a live cell
     					updatedBoard[i][j] = 1;
+                    }
         		}
         		else if (board[i][j] == 1) {// 1 live cell
-        			if(sum < 2)                      // Any live cell with fewer than two live neighbors dies, as if caused by under-population.
+        			if(sum < 2) { // Any live cell with fewer than 2 live neighbors dies
         				updatedBoard[i][j] = 0;
-        			else if(sum == 2 || sum == 3)    // Any live cell with two or three live neighbors lives on to the next generation.
+                    }
+        			else if(sum == 2 || sum == 3) { // Any live cell with 2 or 3 live neighbors lives
         				updatedBoard[i][j] = 1;
-        			else if(sum > 3)                 // Any live cell with more than three live neighbors dies, as if by over-population
+                    }
+        			else if(sum > 3) { // Any live cell with more than three live neighbors dies
         				updatedBoard[i][j] = 0;
+                    }
         		}
         	}
         }

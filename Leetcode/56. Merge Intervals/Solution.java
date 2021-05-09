@@ -15,11 +15,12 @@ return [1,6],[8,10],[15,18].
  *     Interval(int s, int e) { start = s; end = e; }
  * }
  */
+
 public class Solution {
     public List<Interval> merge(List<Interval> intervals) {
         List<Interval> ret = new ArrayList<>();
         
-        if(intervals.size() < 2) {
+        if(intervals.size() <= 1) { //only 1 or 0 intervals doesnt need to be merged
             return intervals;
         }
         intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));

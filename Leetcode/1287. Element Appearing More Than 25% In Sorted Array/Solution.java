@@ -4,13 +4,9 @@ Given an integer array sorted in non-decreasing order, there is exactly one inte
 
 Return that integer.
 
- 
-
 Example 1:
-
 Input: arr = [1,2,2,6,6,6,6,7,10]
 Output: 6
-
 */
 
 class Solution {
@@ -19,8 +15,9 @@ class Solution {
         for(int i = 1 ; i < arr.length ; i++) {
             if(arr[i] == arr[i-1]) {
                 count++;
-                if(count > arr.length/4)
+                if(count == arr.length/4) {
                     return arr[i];
+                }
             }
             else {
                 count = 1;

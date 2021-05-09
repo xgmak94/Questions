@@ -1,4 +1,4 @@
-/* 
+/* https://leetcode.com/problems/arithmetic-slices/
 
 A sequence of number is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
 
@@ -18,29 +18,27 @@ A[P], A[p + 1], ..., A[Q - 1], A[Q] is arithmetic. In particular, this means tha
 
 The function should return the number of arithmetic slices in the array A.
 
-
 Example:
-
 A = [1, 2, 3, 4]
-
 return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] itself.
-
 */
 
-public class Solution {
+class Solution {
     public int numberOfArithmeticSlices(int[] A) {
         int count = 0;
-        if(A.length < 3)
+        if(A.length <= 2) //need 3 to have any slices
             return count;
         
-        int[] memo = new int[A.length];
-        
+        int curr = 0;
         int sum = 0;
         
         for(int i = 2 ; i < A.length ; i++) {
             if(A[i] - A[i - 1] == A[i - 1] - A[i - 2]) {
-                memo[i] = memo[i - 1] + 1;
-                sum += memo[i];
+                curr++;
+                sum += curr;
+            }
+            else {
+                curr = 0;
             }
         }
         return sum;

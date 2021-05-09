@@ -7,18 +7,12 @@ Two rectangles overlap if the area of their intersection is positive.  To be cle
 Given two (axis-aligned) rectangles, return whether they overlap.
 
 Example 1:
-
 Input: rec1 = [0,0,2,2], rec2 = [1,1,3,3]
 Output: true
-Example 2:
 
+Example 2:
 Input: rec1 = [0,0,1,1], rec2 = [1,0,2,1]
 Output: false
-Notes:
-
-Both rectangles rec1 and rec2 are lists of 4 integers.
-All coordinates in rectangles will be between -10^9 and 10^9.
-
 */
 
 class Solution {

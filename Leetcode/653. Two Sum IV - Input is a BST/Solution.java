@@ -9,10 +9,9 @@ Input:
   3   6
  / \   \
 2   4   7
-
 Target = 9
-
 Output: True
+
 Example 2:
 Input: 
     5
@@ -20,22 +19,10 @@ Input:
   3   6
  / \   \
 2   4   7
-
 Target = 28
-
 Output: False
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class Solution {
     public boolean findTarget(TreeNode root, int k) {
         Set<Integer> set = new HashSet<>();
@@ -46,11 +33,12 @@ public class Solution {
         if(root == null)
             return false;
         
-        if(!set.contains(k - root.val))
+        if(!set.contains(k - root.val)) {
             set.add(root.val);
-        else
+        }
+        else {
             return true;
-        
+        }
         return dfs(root.left, set, k) || dfs(root.right, set, k);
     }
 }

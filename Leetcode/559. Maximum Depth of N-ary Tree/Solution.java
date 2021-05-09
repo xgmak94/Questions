@@ -35,8 +35,11 @@ class Solution {
     
     public void dfs(Node root, int depth) {
         if (root == null) return;
+
         max = Math.max(max, depth);
-        for(Node node: root.children)
+
+        for(Node node: root.children) {
             dfs(node, depth+1);
+        }
     }
 }

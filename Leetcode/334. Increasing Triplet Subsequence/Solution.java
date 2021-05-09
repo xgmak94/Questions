@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/increasing-triplet-subsequence/description/
+/* https://leetcode.com/problems/increasing-triplet-subsequence/
 
 Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 
@@ -13,8 +13,8 @@ return true.
 
 Given [5, 4, 3, 2, 1],
 return false.
-
 */
+
 class Solution {
     public boolean increasingTriplet(int[] nums) {
         if(nums.length < 3)
@@ -24,12 +24,15 @@ class Solution {
         int y = Integer.MAX_VALUE;
         
         for(int num : nums){
-            if(num <= x)
+            if(num <= x) {
                 x = num;
-            else if(num > x && num < y)
+            }
+            else if(num > x && num < y) {
                 y = num;
-            else if(num > y)
+            }
+            else if(num > y) {
                 return true;
+            }
         }
         return false;
     }

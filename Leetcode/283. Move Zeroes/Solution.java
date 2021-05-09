@@ -1,24 +1,19 @@
-// https://leetcode.com/problems/move-zeroes 
+/* https://leetcode.com/problems/move-zeroes 
 
-/*
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
 For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
 */
 
-import java.io.*;
-import java.util.*;
-
 class Solution {
     public void moveZeroes(int[] nums) {
         int idx = 0;
-        for(int i = 0 ; i < nums.length ; i++) { //if not 0 add it to end of our idx
-            if(nums[i] != 0) {
-                nums[idx] = nums[i];
-                idx++;
+        for(int i = 0 ; i < nums.length ; i++) {
+            if(nums[i] != 0) { //place non zeros in order at beginning of array
+                nums[idx++] = nums[i];
             }
         }
-        while(idx < nums.length) { //fill rest with 0's
+        while(idx < nums.length) { // fill rest with 0's
             nums[idx] = 0;
             idx++;
         }

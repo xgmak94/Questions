@@ -1,29 +1,21 @@
 /* https://leetcode.com/problems/remove-nth-node-from-end-of-list
+
 Given a linked list, remove the nth node from the end of list and return its head.
 
 For example,
-
-   Given linked list: 1->2->3->4->5, and n = 2.
-
-   After removing the second node from the end, the linked list becomes 1->2->3->5.
+Given linked list: 1->2->3->4->5, and n = 2.
+After removing the second node from the end, the linked list becomes 1->2->3->5.
 */
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode slow = head;
         ListNode fast = head;
         ListNode prev = slow;
         
-        for(int i = 0 ; i < n ; i++)
+        for(int i = 0 ; i < n ; i++) {
             fast = fast.next;
+        }
         
         while(fast != null) {
             fast = fast.next;
@@ -31,13 +23,8 @@ class Solution {
             prev = slow;
             slow = slow.next;
         }
-        
         prev.next = slow.next;
-        
-        if(slow == head)
-            return head.next;
-        else
-            return head;
+        return (slow == head) ? head.next : head;
     }
 }
 

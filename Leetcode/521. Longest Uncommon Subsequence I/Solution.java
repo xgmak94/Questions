@@ -11,19 +11,25 @@ Input: "aba", "cdc"
 Output: 3
 Explanation: The longest uncommon subsequence is "aba" (or "cdc"), 
 because "aba" is a subsequence of "aba", 
-but not a subsequence of any other strings in the group of two strings. 
-Note:
+but not a subsequence of any other strings in the group of two strings.
 
+Note:
 Both strings' lengths will not exceed 100.
 Only letters from a ~ z will appear in input strings.
-
 */
 
 public class Solution {
     public int findLUSlength(String a, String b) {
-        if(a.equals(b))
+        if(a.equals(b)) {
             return -1;
-        else
-            return (a.length() > b.length()) ? a.length() : b.length();
+        }
+        else {
+        	if(a.length() > b.length()) {
+        		return a.length();
+        	}
+        	else {
+        		return b.length();
+        	}
+        }
     }
 }

@@ -16,29 +16,24 @@ Example 2:
 Input: "10101"
 Output: 4
 Explanation: There are 4 substrings: "10", "01", "10", "01" that have equal number of consecutive 1's and 0's.
-Note:
-
-s.length will be between 1 and 50,000.
-s will only consist of "0" or "1" characters.
-
 */
 
 class Solution {
     public int countBinarySubstrings(String s) {
         int prevLength = 0;
-        int curLength = 1;
+        int currLength = 1;
         int numStrings = 0;
         
         for(int i = 1 ; i < s.length() ; i++) {
             if(s.charAt(i) == s.charAt(i-1)) {
-                curLength++;
+                currLength++;
             }
             else {
                 prevLength = curLength;
-                curLength = 1;
+                currLength = 1;
             }
             
-            if(prevLength >= curLength) {
+            if(prevLength >= currLength) {
                 numStrings++;
             }
         }

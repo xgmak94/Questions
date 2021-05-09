@@ -1,6 +1,5 @@
-// https://leetcode.com/problems/excel-sheet-column-title
+/* https://leetcode.com/problems/excel-sheet-column-title
 
-/*
 Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 
 For example:
@@ -14,10 +13,7 @@ For example:
     28 -> AB 
 */
     
-import java.io.*;
-import java.util.*;
-
-public class Solution {
+class Solution {
     public String convertToTitle(int n) {
         StringBuilder res = new StringBuilder();
         while(n > 0) {

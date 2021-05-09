@@ -13,16 +13,22 @@ return [1,3,2].
 Note: Recursive solution is trivial, could you do it iteratively?
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        traverse(root, list);
+        return list;
+    }
+    
+    public void traverse(TreeNode root, List<Integer> list) {
+        if(root == null) return;
+        traverse(root.left, list);
+        list.add(root.val);
+        traverse(root.right, list);
+    }
+}
+
+class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         Stack<TreeNode> s = new Stack<>();
         List<Integer> ret = new ArrayList<>();

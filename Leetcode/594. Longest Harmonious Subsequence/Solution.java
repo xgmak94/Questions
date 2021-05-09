@@ -8,9 +8,24 @@ Example 1:
 Input: [1,3,2,2,5,2,3,7]
 Output: 5
 Explanation: The longest harmonious subsequence is [3,2,2,2,3].
-Note: The length of the input array will not exceed 20,000.
-
 */
+
+class Solution {
+    public int findLHS(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int longest = 0;
+        for(int n : nums) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
+        
+        for(int key : map.keySet()) {
+            if(map.containsKey(key + 1)) {
+                longest = Math.max(longest, map.get(key) + map.get(key+1));
+            }
+        }
+        return longest;
+    }
+}
 
 class Solution {
     public int findLHS(int[] nums) {
@@ -19,10 +34,12 @@ class Solution {
         
         for(int i = 0 ; i < nums.length ; i++) {
             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
-            if(map.containsKey(nums[i] + 1))
+            if(map.containsKey(nums[i] + 1)) {
                 longest = Math.max(longest, map.get(nums[i]) + map.get(nums[i] + 1));
-            if(map.containsKey(nums[i] - 1))
+            }
+            if(map.containsKey(nums[i] - 1)) {
                 longest = Math.max(longest, map.get(nums[i]) + map.get(nums[i] - 1));
+            }
         }
         return longest;
     }

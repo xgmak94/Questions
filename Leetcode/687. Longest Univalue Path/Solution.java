@@ -1,11 +1,11 @@
 /* https://leetcode.com/problems/longest-univalue-path/description/
 
-Given a binary tree, find the length of the longest path where each node in the path has the same value. This path may or may not pass through the root.
+Given a binary tree, find the length of the longest path where each node in the path has the same value. 
+This path may or may not pass through the root.
 
 Note: The length of path between two nodes is represented by the number of edges between them.
 
 Example 1:
-
 Input:
 
               5
@@ -14,10 +14,9 @@ Input:
            / \   \
           1   1   5
 Output:
-
 2
-Example 2:
 
+Example 2:
 Input:
 
               1
@@ -26,20 +25,9 @@ Input:
            / \   \
           4   4   5
 Output:
-
 2
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 class Solution {
     int length = 0;
     
@@ -61,9 +49,11 @@ class Solution {
         
         length = Math.max(length, left + right);
         
-        if(val == root.val)
+        if(val == root.val) {
             return Math.max(left, right) + 1;
-        else
+        }
+        else {
             return 0;
+        }
     }
 }

@@ -15,31 +15,19 @@ return its zigzag level order traversal as:
   [20,9],
   [15,7]
 ]
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
-        List<Integer> level = new ArrayList<>();
-        
-        if(root == null)return list;
-        
-        int currLevel = 0;
         Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
+        if(root == null) return list;
         
+        q.add(root);
         while(!q.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
             int levelSize = q.size();
+
             for(int i = 0 ; i < levelSize ; i++) {
                 TreeNode curr = q.remove();
                 level.add(curr.val);
@@ -48,11 +36,10 @@ class Solution {
                 if(curr.right != null) q.add(curr.right);
             }
             
-            if(currLevel++ % 2 == 1) // we reverse every other level
+            if(list.size() % 2 == 1) {// we reverse every other level
                 Collections.reverse(level);
-
+            }
             list.add(level);
-            level = new ArrayList<>();
         }
         return list;
     }

@@ -29,9 +29,15 @@ public class Solution extends GuessGame {
         while(i <= j) {
             int mid = i + (j - i) / 2;
             int ret = guess(mid);
-            if(ret == 0) return mid;
-            else if(ret == -1) j = mid - 1;
-            else if(ret == 1) i = mid + 1;
+            if(ret == 0) { //success
+                return mid;
+            }
+            else if(ret == -1) { //lower, move high bound down
+                j = mid - 1;
+            }
+            else if(ret == 1) { //higher, move low bound up
+                i = mid + 1;
+            }
         }
         return -1;
     }

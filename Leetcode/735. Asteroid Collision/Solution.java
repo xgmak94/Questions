@@ -32,9 +32,7 @@ Output: [-2, -1, 1, 2]
 Explanation: 
 The -2 and -1 are moving left, while the 1 and 2 are moving right.
 Asteroids moving the same direction never meet, so no asteroids will meet each other.
-
 */
-
 
 class Solution {
     public int[] asteroidCollision(int[] asteroids) {

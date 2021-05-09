@@ -33,7 +33,7 @@ class Solution {
     }
 }
 
-public class Solution {
+class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
     	int length1 = nums1.length;
     	int length2 = nums2.length;

@@ -7,15 +7,29 @@ Given 1->1->2, return 1->2.
 Given 1->1->2->3->3, return 1->2->3.
 */
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
-public class Solution {
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head == null || head.next == null) 
+            return head;
+        ListNode first = head;
+        ListNode next = first.next;
+        
+        while(next != null) {
+            if(first.val == next.val) {
+                next = next.next;
+            }
+            else {
+                first.next = next;
+                first = next;
+                next = next.next;
+            }
+        }
+        first.next = null;
+        return head;
+    }
+}
+
+class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         if(head == null || head.next == null)
             return head;
@@ -38,7 +52,7 @@ public class Solution {
     }
 }
 
-public class Solution {
+class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode curr = head;
         

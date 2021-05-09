@@ -20,16 +20,6 @@ Bonus points if you could solve it both recursively and iteratively.
 
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
 /* We make use of breadth first traversal from both the left and right side concurrently
 Allowing us to check that if the values are equal then the tree is considered valid
 
@@ -40,7 +30,7 @@ Allowing us to check that if the values are equal then the tree is considered va
 3  4 4  3
 */        
 
-public class Solution {
+class Solution {
     public boolean isSymmetric(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);

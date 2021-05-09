@@ -7,12 +7,13 @@ You may complete as many transactions as you like (ie, buy one and sell one shar
 However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
 */
 
-public class Solution {
+class Solution {
     public int maxProfit(int[] prices) {
         int profit = 0;
         for(int i = 1 ; i < prices.length ; i++) {
-            if(prices[i] > prices[i - 1])
-                profit += prices[i] - prices[i - 1];
+            if(prices[i] > prices[i - 1]) {
+                profit += (prices[i] - prices[i - 1]);
+            }
         }
         return profit;
     }

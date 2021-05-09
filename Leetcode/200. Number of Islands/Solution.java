@@ -5,7 +5,6 @@ An island is surrounded by water and is formed by connecting adjacent lands hori
 You may assume all four edges of the grid are all surrounded by water.
 
 Example 1:
-
 11110
 11010
 11000
@@ -13,22 +12,18 @@ Example 1:
 Answer: 1
 
 Example 2:
-
 11000
 11000
 00100
 00011
 Answer: 3
-
 */
 
 class Solution {
     public int[][] dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     
     public int numIslands(char[][] grid) {
-        if(grid.length == 0 || grid[0].length == 0) {
-            return 0;
-        }
+        if(grid.length == 0 || grid[0].length == 0) return 0;
         
         int m = grid.length;
         int n = grid[0].length;
@@ -38,7 +33,7 @@ class Solution {
             for(int c = 0 ; c < n ; c++) {
                 if(grid[r][c] == '1') {
                     count++;
-                    dfs(grid, r, c, m, n);
+                    dfs(grid, r, c, m, n); //changes the whole island to 0
                 }
             }
         }
@@ -46,9 +41,7 @@ class Solution {
     }
     
     public void dfs(char[][]grid, int r, int c, int m, int n) {
-        if(r < 0 || r >= m || c < 0 || c >= n) { //out of bounds
-            return;
-        }
+        if(r < 0 || r >= m || c < 0 || c >= n) return; //out of bounds
         
         for(int[] dir : dirs) {
             int dr = r + dir[0];

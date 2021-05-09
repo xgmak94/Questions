@@ -3,8 +3,27 @@
 Given an array of integers and an integer k, 
 find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] 
 and the absolute difference between i and j is at most k.
-
 */
+
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Set<Integer> set = new HashSet<>();
+        
+        for(int i = 0 ; i < nums.length ; i++) { // sliding window
+            if(i > k) { //start removing after first k
+                set.remove(nums[i - k - 1]);
+            }
+            
+            if(!set.contains(nums[i])) { //no nearby duplicate
+                set.add(nums[i]);
+            }
+            else { //nearby duplicate
+                return true;
+            }
+        }
+        return false;
+    }
+}
 
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
@@ -18,23 +37,6 @@ class Solution {
                 }
             }
             map.put(num, i);
-        }
-        return false;
-    }
-}
-
-public class Solution {
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
-        Set<Integer> set = new HashSet<>();
-        
-        for(int i = 0 ; i < nums.length ; i++) {
-            if(i > k)
-                set.remove(nums[i - k - 1]);
-            
-            if(!set.contains(nums[i]))
-                set.add(nums[i]);
-            else
-                return true;
         }
         return false;
     }

@@ -29,31 +29,25 @@ This tree is also valid:
     1   3
          \
           4
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 class Solution {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if(root.val < val) {
-            if(root.right == null)
+            if(root.right == null) {
                 root.right = new TreeNode(val);
-            else
+            }
+            else {
                 insertIntoBST(root.right, val);
+            }
         }
         else if(root.val > val) {
-            if(root.left == null)
+            if(root.left == null) {
                 root.left = new TreeNode(val);
-            else
+            }
+            else {
                 insertIntoBST(root.left, val);
+            }
         }
         return root;
     }

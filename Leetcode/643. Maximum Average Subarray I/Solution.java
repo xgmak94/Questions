@@ -1,6 +1,7 @@
 /* https://leetcode.com/problems/maximum-average-subarray-i/description/
 
-Given an array consisting of n integers, find the contiguous subarray of given length k that has the maximum average value. And you need to output the maximum average value.
+Given an array consisting of n integers, find the contiguous subarray of given length k that has the maximum average value. 
+And you need to output the maximum average value.
 
 Example 1:
 Input: [1,12,-5,-6,50,3], k = 4

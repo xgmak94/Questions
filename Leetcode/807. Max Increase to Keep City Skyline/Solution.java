@@ -36,24 +36,24 @@ All buildings in grid[i][j] occupy the entire grid cell: that is, they are a 1 x
 
 class Solution {
     public int maxIncreaseKeepingSkyline(int[][] grid) {
-        int length = grid[0].length;
-        int numIncrease = 0;
-        int[] top = new int[length];
-        int[] left = new int[length];
+        int m = grid.length;
+        int n = grid[0].length;
+        int[] rows = new int[m];
+        int[] cols = new int[n];
         
-        for(int r = 0 ; r < length ; r++) {
-            for(int c = 0 ; c < length ; c++) {
-                top[r] = Math.max(top[r], grid[c][r]); //view from top left->right
-                left[r] = Math.max(left[r], grid[r][c]); //view from left top->down
+        for(int i = 0 ; i < m ; i++) {
+            for(int j = 0 ; j < n ; j++) {
+                rows[i] = Math.max(grid[i][j], rows[i]);
+                cols[j] = Math.max(grid[i][j], cols[j]);
             }
         }
         
-        for(int r = 0 ; r < length ; r++) {
-            for(int c = 0 ; c < length ; c++) {
-                numIncrease += (Math.min(top[r], left[c]) - grid[r][c]);
+        int count = 0;
+        for(int i = 0 ; i < m ; i++) {
+            for(int j = 0 ; j < n ; j++) {
+                count += Math.min(rows[i], cols[j]) - grid[i][j];
             }
         }
-        
-        return numIncrease;
+        return count;
     }
 }

@@ -11,28 +11,20 @@ Example 2:
 Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] in as [1,2],[3,10],[12,16].
 
 This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
-
 */
 
-/**
- * Definition for an interval.
- * public class Interval {
- *     int start;
- *     int end;
- *     Interval() { start = 0; end = 0; }
- *     Interval(int s, int e) { start = s; end = e; }
- * }
- */
 class Solution {
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> ret = new ArrayList<>();
         
         Collections.sort(intervals, new Comparator<Interval>() {
             public int compare(Interval i1, Interval i2) {
-                if(i1.start != i2.start)
+                if(i1.start != i2.start) {
                     return i1.start - i2.start;
-                else
+                }
+                else {
                     return i1.end - i2.end;
+                }
             }
         });
         

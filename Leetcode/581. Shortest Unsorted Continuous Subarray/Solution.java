@@ -8,7 +8,6 @@ Example 1:
 Input: [2, 6, 4, 8, 10, 9, 15]
 Output: 5
 Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.
-
 */
 
 class Solution {
@@ -21,13 +20,15 @@ class Solution {
         
         for(int i = 0 ; i < nums.length ; i++) {
             if(nums[i] != sorted[i]) {
-                start = Math.min(start, i);
-                end = Math.max(end, i);
+                start = Math.min(start, i); //first index that is not correct
+                end = Math.max(end, i); //last index that is not correct
             }
         }
-        if(end - start >= 0)
+        if(end - start >= 0) {
         	return end - start + 1;
-        else
+        }
+        else {
         	return 0;
+        }
     }
 }

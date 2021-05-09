@@ -6,15 +6,17 @@ Example1: x = 123, return 321
 Example2: x = -123, return -321
 */
 
-public class Solution {
+class Solution {
     public int reverse(int x) {
-        long rev= 0;
-        while( x != 0){
-            rev= rev*10 + x % 10;
-            x= x/10;
-            if( rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE)
+        long reversed = 0;
+        while(x != 0) {
+            reversed = reversed*10 + x % 10;
+            x = x/10;
+            
+            if(reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) { //overlow or underflow
                 return 0;
+            }
         }
-        return (int) rev;
+        return (int)reversed;
     }
 }

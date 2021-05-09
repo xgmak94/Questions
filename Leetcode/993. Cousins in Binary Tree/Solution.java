@@ -8,36 +8,58 @@ We are given the root of a binary tree with unique values, and the values x and 
 
 Return true if and only if the nodes corresponding to the values x and y are cousins.
 
- 
-
 Example 1:
-
-
 Input: root = [1,2,3,4], x = 4, y = 3
 Output: false
+
 Example 2:
-
-
 Input: root = [1,2,3,null,4,null,5], x = 5, y = 4
 Output: true
+
 Example 3:
-
-
-
 Input: root = [1,2,3,null,4], x = 2, y = 3
 Output: false
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
+class Solution {
+    public boolean isCousins(TreeNode root, int x, int y) {
+        if(getDepth(root, x, 0) == getDepth(root, y, 0) && getParent(root, x, null) != getParent(root, y, null)) {
+            return true;
+        }
+        else {
+            return false; //depth same parent not same
+        }
+    }
+
+    public TreeNode getParent(TreeNode root, int n, TreeNode parent){
+        if(root == null) return null;
+        
+        if(root.val == n) {
+            return parent;
+        }
+        else {
+            TreeNode left = getParent(root.left, n, root);
+            TreeNode right = getParent(root.right, n, root);
+            
+            if(left == null) 
+                return right;
+            else 
+                return left;
+        }
+    }
+
+    public int getDepth(TreeNode root, int n, int depth) {
+        if(root == null) return 0;
+
+        if(root.val == n) {
+            return depth;
+        }
+        else {
+            return getDepth(root.left, n, depth+1) + getDepth(root.right, n, depth+1);
+        }
+    }
+}
+
 class Solution {
     TreeNode xParent = null;
     TreeNode yParent = null;
@@ -57,7 +79,7 @@ class Solution {
         }else if(root.val == y){
             yParent = parent;
             yDepth = depth;
-        }       
+        }
         getDepthAndParent(root.left, x, y, depth + 1, root);
         getDepthAndParent(root.right, x, y, depth + 1, root);
     }

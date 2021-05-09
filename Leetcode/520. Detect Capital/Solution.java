@@ -8,39 +8,61 @@ All letters in this word are capitals, like "USA".
 All letters in this word are not capitals, like "leetcode".
 Only the first letter in this word is capital if it has more than one letter, like "Google".
 Otherwise, we define that this word doesn't use capitals in a right way.
+
 Example 1:
 Input: "USA"
 Output: True
+
 Example 2:
 Input: "FlaG"
 Output: False
+
 Note: The input will be a non-empty word consisting of uppercase and lowercase latin letters.
 */
 
-public class Solution {
+class Solution {
     public boolean detectCapitalUse(String word) {
-        if(word.length() < 2)
-            return true;
+        int count = 0;
+        for(char c : word.toCharArray()) {
+            if(Character.isUpperCase(c)) {
+                count++;
+            }
+        }
+        if((count == 0) ||
+          (count == 1 && Character.isUpperCase(word.charAt(0))) ||
+           (count == word.length())) {
+               return true;
+           }
+           return false;
+    }
+}
+
+class Solution {
+    public boolean detectCapitalUse(String word) {
+        if(word.length() < 2) return true;
         
         int length = word.length();
         char c = word.charAt(0);
         
-        if(Character.isUpperCase(c) == true) {
-            if(Character.isUpperCase(word.charAt(1)) == true) {
+        if(Character.isUpperCase(c)) { //uppercase first letter
+            if(Character.isUpperCase(word.charAt(1))) { //if first 2 letters are upper, whole thing must be
                 for(int i = 2 ; i < length ; i++)
-                    if(Character.isUpperCase(word.charAt(i)) == false)
+                    if(!Character.isUpperCase(word.charAt(i))) {
                         return false;
+                    }
             }
             else {
-                for(int i = 2 ; i < length ; i++)
-                    if(Character.isUpperCase(word.charAt(i)) == true)
+                for(int i = 2 ; i < length ; i++) //only first can be upper if second is lower
+                    if(Character.isUpperCase(word.charAt(i))) {
                         return false;
+                    }
             }
         }
-        else if(Character.isUpperCase(c) == false) {
-            for(int i = 1 ; i < length ; i++)
-                if(Character.isUpperCase(word.charAt(i)) == true)
+        else { //lowercase first letter
+            for(int i = 1 ; i < length ; i++) //all characters must be lower
+                if(Character.isUpperCase(word.charAt(i))) {
                     return false;
+                }
         }
         return true;
     }

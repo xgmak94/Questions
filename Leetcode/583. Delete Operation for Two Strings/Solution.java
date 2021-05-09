@@ -6,9 +6,7 @@ Example 1:
 Input: "sea", "eat"
 Output: 2
 Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
-
 */
-
 
 class Solution {
     public int minDistance(String word1, String word2) {
@@ -17,10 +15,12 @@ class Solution {
         
         int[][] memo = new int[m + 1][n + 1];
         
-        for(int i = 0 ; i < m+1 ; i++)
+        for(int i = 0 ; i < m+1 ; i++) {
             memo[i][0] = i;
-        for(int j = 0 ; j < n+1 ; j++)
+        }
+        for(int j = 0 ; j < n+1 ; j++) {
             memo[0][j] = j;
+        }
         
         
         for(int i = 1 ; i < m+1 ; i++) {

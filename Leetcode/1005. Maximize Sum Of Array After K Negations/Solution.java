@@ -1,27 +1,24 @@
 /* https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/
 
-Given an array A of integers, we must modify the array in the following way: we choose an i and replace A[i] with -A[i], and we repeat this process K times in total.  (We may choose the same index i multiple times.)
+Given an array A of integers, we must modify the array in the following way: we choose an i and replace A[i] with -A[i], and we repeat this process K times in total.
+(We may choose the same index i multiple times.)
 
 Return the largest possible sum of the array after modifying it in this way.
 
- 
-
 Example 1:
-
 Input: A = [4,2,3], K = 1
 Output: 5
 Explanation: Choose indices (1,) and A becomes [4,-2,3].
-Example 2:
 
+Example 2:
 Input: A = [3,-1,0,2], K = 3
 Output: 6
 Explanation: Choose indices (1, 2, 2) and A becomes [3,1,0,2].
-Example 3:
 
+Example 3:
 Input: A = [2,-3,-1,5,-4], K = 2
 Output: 13
 Explanation: Choose indices (1, 4) and A becomes [2,3,-1,5,4].
-
 */
 
 class Solution {
@@ -30,25 +27,20 @@ class Solution {
         int sum = 0;
         
         Arrays.sort(A);
-        //change as many negative values to positive
+        //change as many negative values to positive starting from most negative number
         for(int i = 0 ; i < A.length ; i++) {
             if(k > 0 && A[i] < 0) {
                 k--;
-                A[i] = -1 * A[i];
+                A[i] = -A[i];
             }
         }
-        
         // sum up all elements after negs changed
         for(int num : A) {
             sum += num;
             min = Math.min(num, min);
         }
-        
-        //if any k left we can constantly switch the min positive element and if k is odd then 2*min
-        if(k % 2 == 1) {
-            sum -= min*2; 
-        }
-        
+        //if any k left we can constantly switch the min positive element and if k is odd then 2*min to add neg
+        if(k % 2 == 1) sum -= min*2;
         return sum;
     }
 }

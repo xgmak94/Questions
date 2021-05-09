@@ -20,24 +20,24 @@ The transformation of each word is:
 "msg" -> "--...--."
 
 There are 2 different transformations, "--...-." and "--...--.".
-
 */
 
 class Solution {
     public int uniqueMorseRepresentations(String[] words) {
-        String[] morse = new String[]{".-","-...","-.-.","-..",".","..-.","--.",
-                         "....","..",".---","-.-",".-..","--","-.",
-                         "---",".--.","--.-",".-.","...","-","..-",
-                         "...-",".--","-..-","-.--","--.."};
-        
+        String[] alphabet = new String[]{".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
         Set<String> set = new HashSet<>();
+        
         for(String word : words) {
-            StringBuilder sb = new StringBuilder();
-            for(char c : word.toCharArray()) {
-                sb.append(morse[c - 'a']);
-            }
-            set.add(sb.toString());
+            set.add(toMorse(word, alphabet));
         }
         return set.size();
+    }
+    
+    public String toMorse(String word, String[] alphabet) {
+        StringBuilder morse = new StringBuilder();
+        for(char c : word.toCharArray()) {
+            morse.append(alphabet[c-'a']);
+        }
+        return morse.toString();
     }
 }

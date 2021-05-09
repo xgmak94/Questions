@@ -1,4 +1,5 @@
-/* https://leetcode.com/problems/intersection-of-two-arrays`
+/* https://leetcode.com/problems/intersection-of-two-arrays
+
 Given two arrays, write a function to compute their intersection.
 
 Example:
@@ -7,37 +8,36 @@ Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
 Note:
 Each element in the result must be unique.
 The result can be in any order.
-
 */
 
-
-public class Solution {
+class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
         int length1 = nums1.length;
         int length2 = nums2.length;
         if(length1 < 1 || length2 < 1)
             return new int[0];
         
-        Set<Integer> intersect = new HashSet<>();        
         Set<Integer> set = new HashSet<>();
-        int[] arr;
-        for(int n : nums1)
+        Set<Integer> intersect = new HashSet<>(); //guarantees us unique elements
+
+        for(int n : nums1) {
             set.add(n);
+        }
         
-        for(int m : nums2)
-            if(set.contains(m))
+        for(int m : nums2) {
+            if(set.contains(m)) {
                 intersect.add(m);
+            }
+        }
         
-        arr = new int[intersect.size()];
-        
-        int k = 0;
-        for(int n : intersect)
-            arr[k++] = n;
-        
+        int[] arr = new int[intersect.size()];
+        int idx = 0;
+        for(int n : intersect) {
+            arr[idx++] = n;
+        }
         return arr;
     }
 }
-
 
 public class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {

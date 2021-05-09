@@ -1,6 +1,7 @@
 /* https://leetcode.com/problems/most-common-word/description/
 
-Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words.  It is guaranteed there is at least one word that isn't banned, and that the answer is unique.
+Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words.
+It is guaranteed there is at least one word that isn't banned, and that the answer is unique.
 
 Words in the list of banned words are given in lowercase, and free of punctuation.  Words in the paragraph are not case sensitive.  The answer is in lowercase.
 
@@ -15,20 +16,35 @@ Explanation:
 Note that words in the paragraph are not case sensitive,
 that punctuation is ignored (even if adjacent to words, such as "ball,"), 
 and that "hit" isn't the answer even though it occurs more because it is banned.
- 
-
-Note:
-
-1 <= paragraph.length <= 1000.
-1 <= banned.length <= 100.
-1 <= banned[i].length <= 10.
-The answer is unique, and written in lowercase (even if its occurrences in paragraph may have uppercase symbols, and even if it is a proper noun.)
-paragraph only consists of letters, spaces, or the punctuation symbols !?',;.
-Different words in paragraph are always separated by a space.
-There are no hyphens or hyphenated words.
-Words only consist of letters, never apostrophes or other punctuation symbols.
-
 */
+
+class Solution {
+    public String mostCommonWord(String paragraph, String[] banned) {
+        Set<String> bannedSet = new HashSet<>();
+        String[] words = paragraph.toLowerCase().split("[ !?',;.]+");
+        Map<String, Integer> map = new HashMap<>();
+
+        for(String word : banned) {
+            bannedSet.add(word.toLowerCase());
+        }
+        
+        for(String word : words) {
+            if(!bannedSet.contains(word)) {
+                map.put(word, map.getOrDefault(word, 0) + 1);
+            }
+        }
+        
+        String ret = null;
+        int max = Integer.MIN_VALUE;
+        for (String str : map.keySet()) {
+            if (map.get(str) > max) {
+                max = map.get(str);
+                res = str;
+            }
+        }
+        return res;
+    }
+}
 
 class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
@@ -41,13 +57,15 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         
         for (String str : banned)
-            if (str != null)
+            if (str != null) {
                 bannedSet.add(str);
+            }
         
         for (int i = 0; i <= len; i++) {
             if (i < len && Character.isLetter(paragraph.charAt(i))) {
                 sb.append(Character.toLowerCase(paragraph.charAt(i)));
-            } else {
+            } 
+            else {
                 if (sb.length() > 0) {
                     String str = sb.toString();
                     if (!bannedSet.contains(str)) {
@@ -65,7 +83,6 @@ class Solution {
                 res = str;
             }
         }
-
         return res;
     }
 }

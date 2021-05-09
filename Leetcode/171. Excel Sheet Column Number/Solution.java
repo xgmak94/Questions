@@ -1,6 +1,5 @@
-// https://leetcode.com/problems/excel-sheet-column-number/#/description
+/* https://leetcode.com/problems/excel-sheet-column-number/
 
-/*
 Given a column title as appear in an Excel sheet, return its corresponding column number.
 
 For example:
@@ -15,10 +14,7 @@ For example:
 
 */
 
-import java.io.*;
-import java.util.*;
-
-public class Solution {
+class Solution {
     public int titleToNumber(String s) {
         int column = 0;
         for(int i = 0 ; i < s.length() ; i++) {

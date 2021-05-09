@@ -1,6 +1,7 @@
 /* https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
 
-Given a non-negative integer num, return the number of steps to reduce it to zero. If the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
+Given a non-negative integer num, return the number of steps to reduce it to zero. 
+If the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
 
 Example 1:
 Input: num = 14
@@ -25,19 +26,37 @@ Step 4) 1 is odd; subtract 1 and obtain 0.
 Example 3:
 Input: num = 123
 Output: 12
-
 */
 
 class Solution {
-    public int numberOfSteps (int num) {
-        int count = 0;
+    public int numberOfSteps(int num) {
+        int steps = 0;
         while(num > 0) {
-            if(num % 2 == 0)
+            if(num % 2 == 0) {
             	num /= 2;
-            else 
+            }
+            else {
             	num -= 1;
-            count++;
+            }
+            steps++;
         }
-        return count;
+        return steps;
+    }
+}
+
+class Solution {
+    public int numberOfSteps(int num) {
+        int[] dp = new int[num+1];
+        dp[0] = 0;
+
+        for(int i = 1 ; i <= num ; i++) {
+            if(i % 2 == 0) {
+                dp[i] = dp[i/2] + 1;
+            }
+            else {
+                dp[i] = dp[i-1] + 1;
+            }
+        }
+        return dp[num];
     }
 }

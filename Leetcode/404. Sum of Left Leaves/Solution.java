@@ -11,22 +11,11 @@ Example:
    15   7
 
 There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
+class Solution {
     public int sumOfLeftLeaves(TreeNode root) {
-        if(root == null)
-            return 0;
+        if(root == null) return 0;
         
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
@@ -34,10 +23,10 @@ public class Solution {
         while(!q.isEmpty()) {
             TreeNode top = q.poll();
             if(top.left != null) {
-                if(top.left.left == null && top.left.right == null) {
+                if(top.left.left == null && top.left.right == null) { //if leaf
                     sum += top.left.val;
                 }
-                else {
+                else { //not a leaf add to q
                     q.add(top.left);
                 }
             }
@@ -51,7 +40,7 @@ public class Solution {
     }
 }
 
-public class Solution {
+class Solution {
     public int sumOfLeftLeaves(TreeNode root) {
         int sum = 0;
         if(root == null)

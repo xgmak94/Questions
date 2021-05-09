@@ -1,6 +1,6 @@
 /* https://leetcode.com/problems/intersection-of-two-linked-lists
-Write a program to find the node at which the intersection of two singly linked lists begins.
 
+Write a program to find the node at which the intersection of two singly linked lists begins.
 
 For example, the following two linked lists:
 
@@ -32,7 +32,21 @@ Your code should preferably run in O(n) time and use only O(1) memory.
  * }
  */
 
-public class Solution {
+class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode a = headA;
+        ListNode b = headB;
+        
+        while(a != b) {
+            a = (a == null) ? headB : a.next;
+            
+            b = (b == null) ? headA : b.next;
+        }
+        return a;
+    }
+}
+
+class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode a = headA;
         ListNode b = headB;
@@ -43,20 +57,6 @@ public class Solution {
             
             if(b != null) b = b.next;
             else b = headA;
-        }
-        return a;
-    }
-}
-
-public class Solution {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        ListNode a = headA;
-        ListNode b = headB;
-        
-        while(a != b) {
-            a = (a == null) ? headB : a.next;
-            
-            b = (b == null) ? headA : b.next;
         }
         return a;
     }

@@ -15,44 +15,27 @@ return its bottom-up level order traversal as:
   [9,20],
   [3]
 ]
-
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
-public class Solution {
+class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> ret = new ArrayList<>();
-        
-        ArrayList<Integer> list = new ArrayList<>();
-        Queue<TreeNode> q = new LinkedList<>();
+        if(root == null) return new ArrayList<List<Integer>>();
 
-        if(root == null)
-            return ret;
-        else
-            q.add(root);
+        List<List<Integer>> ret = new ArrayList<>();
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
 
         while(!q.isEmpty()) {
-            int numInLevel = q.size();
+            ArrayList<Integer> list = new ArrayList<>();
+            int levelSize = q.size();
             
-            for(int i = 0 ; i < numInLevel ; i++) {
+            for(int i = 0 ; i < levelSize ; i++) {
                 TreeNode top = q.remove();
-                if(top.left != null)
-                    q.add(top.left);
-                if(top.right != null)
-                    q.add(top.right);
+                if(top.left != null) q.add(top.left);
+                if(top.right != null) q.add(top.right);
                 list.add(top.val);
             }
-            ret.add(0, list);
-            list = new ArrayList<>();
+            ret.add(0, list); //add to beginning of list
         }
         return ret;
     }

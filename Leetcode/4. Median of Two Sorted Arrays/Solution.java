@@ -1,24 +1,19 @@
 /* https://leetcode.com/problems/median-of-two-sorted-arrays/
 
 There are two sorted arrays nums1 and nums2 of size m and n respectively.
-
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
-
+Find the median of the two sorted arrays. 
+The overall run time complexity should be O(log (m+n)).
 You may assume nums1 and nums2 cannot be both empty.
 
 Example 1:
-
 nums1 = [1, 3]
 nums2 = [2]
-
 The median is 2.0
-Example 2:
 
+Example 2:
 nums1 = [1, 2]
 nums2 = [3, 4]
-
 The median is (2 + 3)/2 = 2.5
-
 */
 
 class Solution {
@@ -37,11 +32,8 @@ class Solution {
                 currB++;
             }
         }
-        
-        if(totalLength % 2 == 0)
-            return ((double)nums1[currA] + (double)nums2[currB]) / 2;
-        else
-            return Math.min(nums1[currA], nums2[currB]);
+        if(totalLength % 2 == 0) return ((double)nums1[currA] + (double)nums2[currB]) / 2;
+        else return Math.min(nums1[currA], nums2[currB]);
     }
 }
 

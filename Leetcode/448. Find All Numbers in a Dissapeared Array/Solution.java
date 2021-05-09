@@ -4,10 +4,11 @@ Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elem
 
 Find all the elements of [1, n] inclusive that do not appear in this array.
 
-Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Could you do it without extra space and in O(n) runtime? 
+You may assume the returned list does not count as extra space.
 */
 
-public class Solution {
+class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int n = nums.length;
         for(int i = 0 ; i < n ; i++) {
@@ -25,7 +26,7 @@ public class Solution {
     }
 }
 
-public class Solution {
+class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int n = nums.length;
         int[] counted= new int[n + 1];

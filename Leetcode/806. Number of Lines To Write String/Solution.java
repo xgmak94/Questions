@@ -4,8 +4,6 @@ We are to write the letters of a given string S, from left to right into lines. 
 
 Now answer two questions: how many lines have at least one character from S, and what is the width used by the last such line? Return your answer as an integer list of length 2.
 
- 
-
 Example :
 Input: 
 widths = [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]
@@ -30,16 +28,17 @@ So the answer is 2 lines, plus 4 units in the second line.
 
 class Solution {
     public int[] numberOfLines(int[] widths, String S) {
-        int totalLines = 1;
-        int width = 0;
+        int lineWidth = 100;
+        int numLines = 1;
+        int currWidth = 0;
         for(char c : S.toCharArray()) {
             int currLength = widths[c - 'a'];
-            if(width + currLength > 100) {
-                totalLines++;
-                width = 0;
+            if(currWidth + currLength > lineWidth) {
+                numLines++;
+                currWidth = 0;
             }
-            width += currLength;
+            currWidth += currLength;
         }
-        return new int[]{totalLines, width};
+        return new int[]{numLines, width};
     }
 }

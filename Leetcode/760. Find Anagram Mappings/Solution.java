@@ -13,25 +13,21 @@ B = [50, 12, 32, 46, 28]
 We should return
 [1, 4, 3, 2, 0]
 as P[0] = 1 because the 0th element of A appears at B[1], and P[1] = 4 because the 1st element of A appears at B[4], and so on.
-Note:
 
+Note:
 A, B have equal lengths in range [1, 100].
 A[i], B[i] are integers in range [0, 10^5].
-
 */
 
 class Solution {
     public int[] anagramMappings(int[] A, int[] B) {
-        int l = A.length;
-        int[] res = new int[l];
         HashMap<Integer,Integer> map = new HashMap<>();
-        for(int i=0;i<l;i++){
-            map.put(B[i],i);
+        for(int i = 0 ; i < A.length ; i++){
+            map.put(B[i], i);
         }
-        for(int i=0;i<l;i++){
-            res[i] = map.get(A[i]);
+        for(int i = 0 ; i < l ; i++){
+            A[i] = map.get(A[i]);
         }
-        
-        return res;
+        return A;
     }
 }

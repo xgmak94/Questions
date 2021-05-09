@@ -12,44 +12,34 @@ Input:
       5   3   9 
 
 Output: [1, 3, 9]
-
-/**
-* Definition for a binary tree node.
-* public class TreeNode {
-*     int val;
-*     TreeNode left;
-*     TreeNode right;
-*     TreeNode(int x) { val = x; }
-* }
 */
 
-public class Solution {
+class Solution {
     public List<Integer> largestValues(TreeNode root) {
-        List<Integer> ret = new ArrayList<>();
-        if(root == null)
-            return ret;
+        List<Integer> largest = new ArrayList<>();
+        if(root == null) return largest; //empty no tree
         
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         
         while(!q.isEmpty()) {
             int n = q.size();
-            int max = Integer.MIN_VALUE;
+            int maxRow = Integer.MIN_VALUE;
             
             for(int i = 0 ; i < n ; i++) {
                 TreeNode top = q.poll();
-                max = Math.max(top.val, max);
+                maxRow = Math.max(maxRow, top.val);
 
                 if(top.left != null) q.add(top.left);
                 if(top.right != null) q.add(top.right);
             }
-            ret.add(max);
+            largest.add(maxRow);
         }
-        return ret;
+        return largest;
     }
 }
 
-public class Solution {
+class Solution {
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> ret = new ArrayList<>();
         if(root == null)

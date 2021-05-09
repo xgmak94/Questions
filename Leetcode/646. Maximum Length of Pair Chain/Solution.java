@@ -12,7 +12,6 @@ Output: 2
 Explanation: The longest chain is [1,2] -> [3,4]
 
 */
-
 class Solution {
     public int findLongestChain(int[][] pairs) {
         if(pairs == null || pairs.length == 0)
@@ -30,7 +29,6 @@ class Solution {
                     memo[i] = Math.max(memo[j] + 1, memo[i]);
                 }         
                 maxLength = Math.max(memo[i], maxLength);
-                }
             }
         }
         return maxLength;

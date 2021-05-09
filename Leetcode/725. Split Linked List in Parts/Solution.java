@@ -25,52 +25,47 @@ root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
 Output: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
 Explanation:
 The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
-
 */
-
 
 /**
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
  *     ListNode next;
- *     ListNode(int x) { val = x; }
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-
 class Solution {
     public ListNode[] splitListToParts(ListNode root, int k) {
         ListNode[] list = new ListNode[k];
         if(root == null) return list;
-
-        int totalLength = 1;        
+        
+        int len = 1;
         ListNode curr = root;
         while(curr.next != null) {
             curr = curr.next;
-            totalLength++;
+            len++;
         }
-        
-        int l = totalLength / k; // guranteed length of all parts
-        int r = totalLength % k; // extra nodes over first r parts
+        int leftover = len % k;
+        int guaranteed = len / k;
         
         curr = root;
         ListNode prev = null;
-        for(int i = 0 ; i < k ; i++) { // for each part
+        for(int i = 0 ; i < k ; i++) {
             list[i] = curr;
-            for(int j = 0 ; j < l ; j++) { // add l nodes to each part
+            for(int j = 0 ; j < guaranteed ; j++) {
                 prev = curr;
                 curr = curr.next;
             }
-            
-            if(r > 0) { // if this part should have extra
-                r--;
+            if(leftover > 0) {
                 prev = curr;
                 curr = curr.next;
+                leftover--;
             }
-            
             prev.next = null;
         }
-        
         return list;
     }
 }

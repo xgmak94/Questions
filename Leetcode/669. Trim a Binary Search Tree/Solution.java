@@ -10,11 +10,11 @@ Input:
 
   L = 1
   R = 2
-
 Output: 
     1
       \
        2
+
 Example 2:
 Input: 
     3
@@ -27,34 +27,25 @@ Input:
 
   L = 1
   R = 3
-
 Output: 
       3
      / 
    2   
   /
  1
-
  */
 
- /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 class Solution {
     public TreeNode trimBST(TreeNode root, int L, int R) {
         if(root == null)
             return null;
         
-        if(root.val < L)
+        if(root.val < L) {
             return trimBST(root.right, L, R);
-        if(root.val > R)
+        }
+        if(root.val > R) {
             return trimBST(root.left, L, R);
+        }
         
         root.left = trimBST(root.left, L, R);
         root.right = trimBST(root.right, L, R);

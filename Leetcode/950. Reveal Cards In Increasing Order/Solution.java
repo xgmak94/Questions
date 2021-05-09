@@ -14,7 +14,6 @@ Return an ordering of the deck that would reveal the cards in increasing order.
 The first entry in the answer is considered to be the top of the deck.
 
 Example 1:
-
 Input: [17,13,11,2,3,5,7]
 Output: [2,13,3,11,5,17,7]
 Explanation: 
@@ -28,7 +27,6 @@ We reveal 11, and move 17 to the bottom.  The deck is now [13,17].
 We reveal 13, and move 17 to the bottom.  The deck is now [17].
 We reveal 17.
 Since all the cards revealed are in increasing order, the answer is correct.
-
 */
 
 class Solution {
@@ -37,8 +35,9 @@ class Solution {
         Arrays.sort(deck);
         
         Queue<Integer> q = new LinkedList<>();
-        for(int i = 0 ; i < deck.length ; i++) 
+        for(int i = 0 ; i < deck.length ; i++) {//add all positions in sorted order
             q.add(i);
+        }
         
         for(int i = 0 ; i < deck.length ; i++) {
             ret[q.poll()] = deck[i];

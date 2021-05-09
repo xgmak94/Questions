@@ -21,6 +21,7 @@ Round 2: You could get 2 points. The sum is: 7.
 Operation 1: The round 2's data was invalid. The sum is: 5.  
 Round 3: You could get 10 points (the round 2's data has been removed). The sum is: 15.
 Round 4: You could get 5 + 10 = 15 points. The sum is: 30.
+
 Example 2:
 Input: ["5","-2","4","C","D","9","+","+"]
 Output: 27
@@ -33,8 +34,42 @@ Round 4: You could get -4 points (the round 3's data has been removed). The sum 
 Round 5: You could get 9 points. The sum is: 8.
 Round 6: You could get -4 + 9 = 5 points. The sum is 13.
 Round 7: You could get 9 + 5 = 14 points. The sum is 27.
-
 */
+
+class Solution {
+    public int calPoints(String[] ops) {
+        List<Integer> list = new ArrayList<>();
+        int total = 0;
+        
+        for(String op : ops) {
+            if(op.equals("C")) {
+                Integer n = list.get(list.size()-1);
+
+                list.remove(list.size()-1);
+                total -= n;
+            }
+            else if(op.equals("D")) {
+                Integer n = list.get(list.size()-1) * 2;
+
+                list.add(n);
+                total += n;
+            }
+            else if(op.equals("+")) {
+                Integer n = list.get(list.size()-1) + list.get(list.size()-2);
+
+                list.add(n);
+                total += n;
+            }
+            else {
+                Integer n = Integer.parseInt(op);
+                
+                list.add(n);
+                total += n;
+            }
+        }
+        return total;
+    }
+}
 
 class Solution {
     public static int calPoints(String[] ops) {

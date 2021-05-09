@@ -15,13 +15,13 @@ For example, the word "goat" becomes "oatgma".
 Add one letter 'a' to the end of each word per its word index in the sentence, starting with 1.
 For example, the first word gets "a" added to the end, the second word gets "aa" added to the end and so on.
 Return the final sentence representing the conversion from S to Goat Latin. 
-
 */
 
 class Solution {
     public String toGoatLatin(String S) {
+        char[] v = new char[]{'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'};
         Set<Character> vowels = new HashSet<>();
-        for(char vowel : new char[]{'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'}) {
+        for(char vowel : v) {
             vowels.add(vowel);
         }
         
@@ -30,20 +30,20 @@ class Solution {
         
         for(String word : S.split(" ")) {
             char c = word.charAt(0);
-            if(vowels.contains(c)) {
+            if(vowels.contains(c)) { //append whole word
                 sb.append(word);
             }
             else {
-                sb.append(word.substring(1));
-                sb.append(word.substring(0, 1));
+                sb.append(word.substring(1)); //append all but first letter
+                sb.append(word.substring(0, 1)); //append first letter at end
             }
             sb.append("ma");
             for(int i = 0 ; i < numWord ; i++) { 
                 sb.append("a");
             }
-            numWord++;
             sb.append(" ");
+            numWord++;
         }
-        sb.deleteCharAt(sb.length() - 1);
-        return sb.toString();
-    }    
+        return sb.toString().trim();
+    }
+}

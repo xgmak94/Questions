@@ -1,29 +1,32 @@
 /* https://leetcode.com/problems/single-number-ii
 
-Given an array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
+Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. 
+Find that single one.
 
 Note:
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 
+Example 1:
+Input: [2,2,3,2]
+Output: 3
+
+Example 2:
+Input: [0,1,0,1,0,1,99]
+Output: 99
 */
 
-public class Solution {
+class Solution {
     public int singleNumber(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
-        
         for(int n : nums) {
-            if(map.containsKey(n)) {
-                if(map.get(n) == 2)
-                    map.remove(n);
-                else
-                    map.put(n, map.get(n) + 1);
-            }
-            else
-                map.put(n, 1);
+            map.put(n, map.getOrDefault(n, 0) + 1);
         }
-        for(int n : map.keySet())
-            return n;
         
-        return (Integer) null;
+        for(int n : map.keySet()) {
+            if(map.get(n) == 1) {
+                return n;
+            }
+        }
+        return -1;
     }
 }
