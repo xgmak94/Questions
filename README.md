@@ -5,7 +5,7 @@
 <!---
 Problem # | [PROBLEM NAME](PROBLEM LINK) | [Java](FILE DIRECTORY)
 -->
-|  #  | Title           |  Solution       | 
+|  Question #  | Title           |  Solution       | 
 |-----|---------------- | --------------- |
 1 | [Two Sum](https://leetcode.com/problems/two-sum) | [Java](./Leetcode/1.%20Two%20Sum/Solution.java)
 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | [Java](./Leetcode/2.%20Add%20Two%20Numbers/Solution.java)
@@ -471,7 +471,7 @@ Problem # | [PROBLEM NAME](PROBLEM LINK) | [Java](FILE DIRECTORY)
 1437 | [Check If All 1's Are at Least Length K Places Away](https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/) | [Java](./Leetcode/1437.%20Check%20If%20All%201's%20Are%20at%20Least%20Length%20K%20Places%20Away/Solution.java)
 1441 | [Build an Array With Stack Operations](https://leetcode.com/problems/build-an-array-with-stack-operations/) | [Java](./Leetcode/1441.%20Build%20an%20Array%20With%20Stack%20Operations/Solution.java)
 1446 | [Consecutive Characters](https://leetcode.com/problems/consecutive-characters/) | [Java](./Leetcode/1446.%20Consecutive%20Characters/Solution.java)
-1448 [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | [Java](./Leetcode/1448.%20Count%20Good%20Nodes%20in%20Binary%20Tree/Solution.java)
+1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | [Java](./Leetcode/1448.%20Count%20Good%20Nodes%20in%20Binary%20Tree/Solution.java)
 1450 | [Number of Students Doing Homework at a Given Time](https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/) | [Java](./Leetcode/1450.%20Number%20of%20Students%20Doing%20Homework%20at%20a%20Given%20Time/Solution.java)
 1451 | [Rearrange Words in a Sentence](https://leetcode.com/problems/rearrange-words-in-a-sentence/) | [Java](./Leetcode/1451.%02Rearrange%20Words%20in%20a%20Sentence/Solution.java)
 1455 | [Check If a Word Occurs As a Prefix of Any Word in a Sentence](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) | [Java](./Leetcode/1455.%20Check%20If%20a%20Word%20Occurs%20As%20a%20Prefix%20of%20Any%20Word%20in%20a%20Sentence/Solution.java)
@@ -507,7 +507,7 @@ Problem # | [PROBLEM NAME](PROBLEM LINK) | [Java](FILE DIRECTORY)
 1540 | [Can Convert String in K Moves](https://leetcode.com/problems/can-convert-string-in-k-moves/) | [Java](./Leetcode/1540.%20Can%20Convert%20String%20in%20K%20Moves/Solution.java)
 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | [Java](./Leetcode/1544.%20Make%20The%20String%20Great/Solution.java)
 1545 | [Find Kth Bit in Nth Binary String](https://leetcode.com/problems/find-kth-bit-in-nth-binary-string/) | [Java](./Leetcode/1545.%20Find%20Kth%20Bit%20in%20Nth%20Binary%20String/Solution.java)
-1556 | [Thousand Separator](https://leetcode.com/problems/thousand-separator/) | [Java](./Leetcode/1556.%20Thousand%20Separator/Solution.java)1561 | [Maximum Number of Coins You Can Get](https://leetcode.com/problems/maximum-number-of-coins-you-can-get/) | [Java](./Leetcode/1561.%20Maximum%20Number%20of%20Coins%20You%20Can%20Get/Solution.java)
+1556 | [Thousand Separator](https://leetcode.com/problems/thousand-separator/) | [Java](./Leetcode/1556.%20Thousand%20Separator/Solution.java)
 1560 | [Most Visited Sector in a Circular Track](https://leetcode.com/problems/most-visited-sector-in-a-circular-track/) | [Java](./Leetcode/1560.%20Most%20Visited%20Sector%20in%20a%20Circular%20Track/Solution.java)
 1561 | [Maximum Number of Coins You Can Get](https://leetcode.com/problems/maximum-number-of-coins-you-can-get/) | [Java](./Leetcode/1561.%20Maximum%20Number%20of%20Coins%20You%20Can%20Get/Solution.java)
 1566 | [Detect Pattern of Length M Repeated K or More Times](https://leetcode.com/problems/detect-pattern-of-length-m-repeated-k-or-more-times/) | [Java](./Leetcode/1566.%20Detect%20Pattern%20of%20Length%20M%20Repeated%20K%20or%20More%20Times/Solution.java)
