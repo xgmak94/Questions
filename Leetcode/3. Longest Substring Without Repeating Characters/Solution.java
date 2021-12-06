@@ -13,8 +13,7 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
 
 class Solution {
     public static int lengthOfLongestSubstring(String input) {
-        if (input.length() == 0)
-            return 0;
+        if (input.length() == 0) return 0;
 
         HashMap<Character, Integer> map = new HashMap<>();
 

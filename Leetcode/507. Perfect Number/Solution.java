@@ -17,7 +17,7 @@ class Solution {
         for(int i = 2 ; i <= Math.sqrt(num) ; i++) {
             if(num % i == 0) {
                 sum += i;
-                if(i * i != num) {//add other divisor if its not square
+                if(i * i != num) { //add other divisor if its not square
                     sum += num / i;
                 }
             }

@@ -25,7 +25,6 @@ seatManager.reserve();    // The available seats are [3,4,5], so return the lowe
 seatManager.reserve();    // The available seats are [4,5], so return the lowest of them, which is 4.
 seatManager.reserve();    // The only available seat is seat 5, so return 5.
 seatManager.unreserve(5); // Unreserve seat 5, so now the available seats are [5].
- 
 
 Constraints:
 1 <= n <= 105

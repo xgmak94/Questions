@@ -16,6 +16,8 @@ Output: false
 
 class Solution {
     public boolean rotateString(String A, String B) {
+        if(A.length() != B.length()) return false;
+        
         String c = A+A;
         return c.contains(B);
     }

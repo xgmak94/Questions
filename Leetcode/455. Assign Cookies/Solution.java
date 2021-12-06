@@ -35,18 +35,18 @@ class Solution {
         Arrays.sort(g);
         Arrays.sort(s);
         
-        int iterG = 0;
-        int iterS = 0;
+        int i = 0;
+        int j = 0;
         
-        while(iterG < g.length && iterS < s.length) {
-            if(g[iterG] <= s[iterS]) { //current cookie is good for current child
-                iterG++;
-                iterS++;
+        while(i < g.length && j < s.length) {
+            if(g[i] <= s[j]) { //current cookie is good for current child
+                i++;
+                j++;
             }
             else {
-                iterS++; //need a better cookie for current child
+                j++; //need a better cookie for current child
             }
         }
-        return iterG;
+        return i; //all children before i are good
     }
 }

@@ -19,14 +19,14 @@ The total number of nodes is at most 5000.
 class Solution {
     public List<List<Integer>> levelOrder(Node root) {
         List<List<Integer>> levelOrder = new ArrayList<>();
-        
-        if(root == null) //empty
-            return levelOrder;
+
+        //empty
+        if(root == null) return levelOrder; 
 
         List<Integer> level = new ArrayList<>();
         Queue<Node> q = new LinkedList<>();
-        q.add(root);
 
+        q.add(root);
         while(!q.isEmpty()) {
             int size = q.size();
             for(int i = 0 ; i < size ; i++) {

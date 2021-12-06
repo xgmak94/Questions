@@ -22,7 +22,7 @@ class Solution {
             int idx = num - 1; //store at
 
             // store singletons as negative at index, num - 1
-            // if duplicate then index will already be negative
+            // if duplicate then index will already be negative and become positive
             if(nums[idx] < 0) {
                 list.add(num);
             }

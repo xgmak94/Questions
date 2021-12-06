@@ -12,7 +12,6 @@ Explanation: The third maximum is 1.
 Example 2:
 Input: [1, 2]
 Output: 2
-
 Explanation: The third maximum does not exist, so the maximum (2) is returned instead.
 
 Example 3:

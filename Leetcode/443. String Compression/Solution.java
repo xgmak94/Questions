@@ -47,12 +47,10 @@ class Solution {
                 index++;
                 count++;
             }
-            chars[indexWrite] = curr;
-            indexWrite++;
+            chars[indexWrite++] = curr; //write the char
             if(count != 1) {
-                for(char c : Integer.toString(count).toCharArray()) {
-                    chars[indexWrite] = c;
-                    indexWrite++;
+                for(char c : Integer.toString(count).toCharArray()) { //write the number
+                    chars[indexWrite++] = c;
                 }
             }
         }

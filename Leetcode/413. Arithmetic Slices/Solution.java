@@ -26,12 +26,10 @@ return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] i
 class Solution {
     public int numberOfArithmeticSlices(int[] A) {
         int count = 0;
-        if(A.length <= 2) //need 3 to have any slices
-            return count;
+        if(A.length <= 2) return count; //need 3 to have any slices
         
         int curr = 0;
         int sum = 0;
-        
         for(int i = 2 ; i < A.length ; i++) {
             if(A[i] - A[i - 1] == A[i - 1] - A[i - 2]) {
                 curr++;

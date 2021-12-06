@@ -1,4 +1,5 @@
 /* https://leetcode.com/problems/add-two-numbers-ii
+
 You are given two non-empty linked lists representing two non-negative integers. 
 The most significant digit comes first and each of their nodes contain a single digit.
  Add the two numbers and return it as a linked list.
@@ -18,16 +19,13 @@ public class Solution {
         Stack<ListNode> num1 = new Stack<>();
         Stack<ListNode> num2 = new Stack<>();
         
-        ListNode curr1 = l1; 
-        ListNode curr2 = l2;
-        
-        while(curr1 != null) {
-            num1.push(curr1);
-            curr1 = curr1.next;
+        while(l1 != null) {
+            num1.push(l1);
+            l1 = l1.next;
         }
-        while(curr2 != null) {
-            num2.push(curr2);
-            curr2 = curr2.next;
+        while(l2 != null) {
+            num2.push(l2);
+            l2 = l2.next;
         }
 
         ListNode list = null; 
@@ -48,8 +46,7 @@ public class Solution {
         }
         
         if(sum == 1) {
-            curr = new ListNode(sum);
-            curr.next = list;
+            curr = new ListNode(sum, list);
         }
         return curr;
     }

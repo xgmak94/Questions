@@ -21,7 +21,7 @@ The coins can form the following rows:
 ¤
 ¤ ¤
 ¤ ¤ ¤
-¤ ¤
+¤ ¤ 
 Because the 4th row is incomplete, we return 3.
 */
 

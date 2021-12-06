@@ -20,19 +20,16 @@ Explanation: It's the substring "abc" four times. (And the substring "abcabc" tw
 
 class Solution {
     public boolean repeatedSubstringPattern(String s) {
-        for(int currLength = s.length() / 2 ; currLength >= 1 ; currLength--) {          
+        for(int currLength = s.length() / 2 ; currLength > 0; currLength--) {          
             if(s.length() % currLength != 0) //skips impossible lengths
                 continue;
 
             StringBuilder sb = new StringBuilder();
-            
             while(sb.length() < s.length()) {
                 sb.append(s.substring(0, currLength));
             }
                 
-            if(sb.toString().equals(s)) {
-                return true;
-            }
+            if(sb.toString().equals(s)) return true;
         }
         return false;
     }

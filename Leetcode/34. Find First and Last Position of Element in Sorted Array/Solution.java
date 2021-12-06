@@ -13,6 +13,28 @@ return [3, 4].
 
 class Solution {
     public int[] searchRange(int[] nums, int target) {
+        int[] arr = new int[]{-1, -1};
+        if(nums.length == 0) return arr;
+        
+        for(int i = 0 ; i < nums.length ; i++) {
+            if(nums[i] > target) break;
+            if(nums[i] == target) {
+                arr[0] = i; //first instance
+                
+                int n = 0;
+                while(i+n < nums.length && nums[i+n] == target) { //get last instance
+                    arr[1] = i+n;
+                    n++;
+                }
+                return arr;
+            }
+        }
+        return arr;
+    }
+}
+
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
         int[] ret = new int[2];
         ret[0] = ret[1] = -1;
         if(nums.length == 0 || nums[0] > target || nums[nums.length - 1] < target) //not found if length is 0 or first num is greater than target or last number is less than target
