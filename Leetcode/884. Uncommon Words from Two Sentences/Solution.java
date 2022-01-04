@@ -20,21 +20,16 @@ Output: ["banana"]
 class Solution {
     public String[] uncommonFromSentences(String A, String B) {
         Map<String, Integer> count = new HashMap();
-        A = String.join(" ", A, B);
-        for (String word: A.split(" +")) {
+        for (String word: String.join(" ", A, B).split(" +")) {
             count.put(word, count.getOrDefault(word, 0) + 1);
         }
         
         List<String> list = new ArrayList<>();
         for(String word : count.keySet()) {
-            if(count.get(word) == 1)
+            if(count.get(word) == 1) {
                 list.add(word);
+            }
         }
-
-        String[] ret = new String[list.size()];
-        for(int i = 0 ; i < list.size() ; i++) {
-            ret[i] = list.get(i);
-        }
-        return ret;
+        return list.toArray(new String[0]);
     }
 }

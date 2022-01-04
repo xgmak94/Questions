@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/goat-latin/description/
+/* https://leetcode.com/problems/goat-latin/
 
 A sentence S is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.
 

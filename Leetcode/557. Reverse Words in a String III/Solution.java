@@ -11,6 +11,21 @@ Note: In the string, each word is separated by single space and there will not b
 class Solution {
     public String reverseWords(String s) {
         String[] words = s.split(" ");
+        
+        for(int i = 0 ; i < words.length ; i++) {
+            words[i] = reverse(words[i]);
+        }
+        return String.join(" ", words).trim();
+    }
+    
+    public String reverse(String s) {
+        return new StringBuilder(s).reverse().toString();
+    }
+}
+
+class Solution {
+    public String reverseWords(String s) {
+        String[] words = s.split(" ");
         String reversed = "";
         for(String word : words) {
             reversed += reverse(word) + " ";

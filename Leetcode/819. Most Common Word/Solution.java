@@ -24,25 +24,23 @@ class Solution {
         String[] words = paragraph.toLowerCase().split("[ !?',;.]+");
         Map<String, Integer> map = new HashMap<>();
 
+        int max = 0;
+        String maxWord = "";
         for(String word : banned) {
             bannedSet.add(word.toLowerCase());
         }
         
         for(String word : words) {
-            if(!bannedSet.contains(word)) {
+            if(!bannedSet.contains(word)) { //word is not banned then check freq
                 map.put(word, map.getOrDefault(word, 0) + 1);
+
+                if(map.get(word) > max) {
+                    max = map.get(word);
+                    maxWord = word;
+                }
             }
         }
-        
-        String ret = null;
-        int max = Integer.MIN_VALUE;
-        for (String str : map.keySet()) {
-            if (map.get(str) > max) {
-                max = map.get(str);
-                res = str;
-            }
-        }
-        return res;
+        return maxWord;
     }
 }
 

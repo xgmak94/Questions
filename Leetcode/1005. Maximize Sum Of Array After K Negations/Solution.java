@@ -20,27 +20,34 @@ Input: A = [2,-3,-1,5,-4], K = 2
 Output: 13
 Explanation: Choose indices (1, 4) and A becomes [2,3,-1,5,4].
 */
-
+import java.util.*;
 class Solution {
-    public int largestSumAfterKNegations(int[] A, int k) {
+    public static int largestSumAfterKNegations(int[] nums, int k) {
         int min = Integer.MAX_VALUE;
         int sum = 0;
         
-        Arrays.sort(A);
+        Arrays.sort(nums);
         //change as many negative values to positive starting from most negative number
-        for(int i = 0 ; i < A.length ; i++) {
-            if(k > 0 && A[i] < 0) {
+        for(int i = 0 ; i < nums.length ; i++) {
+            sum += nums[i];
+            if(k > 0 && nums[i] < 0) {
                 k--;
-                A[i] = -A[i];
+                nums[i] = -nums[i];
+                sum += 2*nums[i];
             }
-        }
-        // sum up all elements after negs changed
-        for(int num : A) {
-            sum += num;
-            min = Math.min(num, min);
+            min = Math.min(nums[i], min); //store the min element
         }
         //if any k left we can constantly switch the min positive element and if k is odd then 2*min to add neg
         if(k % 2 == 1) sum -= min*2;
         return sum;
+    }
+    public static void main(String[] args) {
+        int ex1 = largestSumAfterKNegations(new int[]{4,2,3}, 1);
+        int ex2 = largestSumAfterKNegations(new int[]{3,-1,0,2}, 3);
+        int ex3 = largestSumAfterKNegations(new int[]{2,-3,-1,5,-4}, 2);
+
+        System.out.println(ex1);
+        System.out.println(ex2);
+        System.out.println(ex3);
     }
 }

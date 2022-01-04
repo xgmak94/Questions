@@ -25,15 +25,14 @@ A[i] is 0 or 1
 */
 
 class Solution {
-    public int longestOnes(int[] A, int K) {
+    public static int longestOnes(int[] A, int K) {
         int l = 0;
         int r = 0;
         int longest = 0;
         int zeroCount = 0;
         
         while(r < A.length) {
-            if(A[r] == 0) zeroCount++;
-
+            if(A[r] == 0) zeroCount++; //increment number of 0's
             while(zeroCount > K) { //if we have more zeros than allowed, we need to remove a zero from left
                 if(A[l] == 0) zeroCount--;
                 l++;
@@ -42,5 +41,12 @@ class Solution {
             r++;
         }
         return longest;
+    }
+    public static void main(String[] args) {
+        int ex1 = longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2);
+        int ex2 = longestOnes(new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}, 3);
+
+        System.out.println(ex1);
+        System.out.println(ex2);
     }
 }

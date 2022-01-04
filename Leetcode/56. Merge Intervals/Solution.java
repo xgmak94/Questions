@@ -6,39 +6,27 @@ Given [1,3],[2,6],[8,10],[15,18],
 return [1,6],[8,10],[15,18].
 */
 
-/**
- * Definition for an interval.
- * public class Interval {
- *     int start;
- *     int end;
- *     Interval() { start = 0; end = 0; }
- *     Interval(int s, int e) { start = s; end = e; }
- * }
- */
-
-public class Solution {
-    public List<Interval> merge(List<Interval> intervals) {
-        List<Interval> ret = new ArrayList<>();
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        if(intervals.length < 2) return intervals;
         
-        if(intervals.size() <= 1) { //only 1 or 0 intervals doesnt need to be merged
-            return intervals;
-        }
-        intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));
+        List<int[]> list = new ArrayList<>();
+        Arrays.sort(intervals, (a,b) -> a[0] - b[0]);
         
-        int start = intervals.get(0).start;
-        int end = intervals.get(0).end;
-        
-        for(Interval interval : intervals) {
-            if(interval.start <= end) {
-                end = Math.max(end, interval.end);
+        int currStart = intervals[0][0];
+        int currEnd = intervals[0][1];
+        for(int[] interval : intervals) {
+            if(interval[0] <= currEnd) { //merge
+                currEnd = Math.max(currEnd, interval[1]);
             }
             else {
-                ret.add(new Interval(start, end));
-                start = interval.start;
-                end = interval.end;
+                list.add(new int[]{currStart, currEnd});
+                currStart = interval[0];
+                currEnd = interval[1];
             }
         }
-        ret.add(new Interval(start, end));
-        return ret;
+        list.add(new int[]{currStart, currEnd}); //add last interval
+        
+        return list.toArray(new int[list.size()][2]);
     }
 }

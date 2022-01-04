@@ -27,22 +27,12 @@ Explanation:
 The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
 */
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
 class Solution {
     public ListNode[] splitListToParts(ListNode root, int k) {
         ListNode[] list = new ListNode[k];
         if(root == null) return list;
         
-        int len = 1;
+        int len = 1; //took care of empty list already
         ListNode curr = root;
         while(curr.next != null) {
             curr = curr.next;
@@ -53,16 +43,11 @@ class Solution {
         
         curr = root;
         ListNode prev = null;
-        for(int i = 0 ; i < k ; i++) {
+        for(int i = 0 ; i < k ; i++, leftover--) {
             list[i] = curr;
-            for(int j = 0 ; j < guaranteed ; j++) {
+            for(int j = 0 ; j < guaranteed + (leftover > 0 ? 1 : 0) ; j++) {
                 prev = curr;
                 curr = curr.next;
-            }
-            if(leftover > 0) {
-                prev = curr;
-                curr = curr.next;
-                leftover--;
             }
             prev.next = null;
         }

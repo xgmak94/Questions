@@ -11,7 +11,6 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 */
 import java.util.*;
-import org.junit.Assert.*;
 
 public class Solution {
     public static int[] twoSum(int[] nums, int target) {
@@ -31,18 +30,19 @@ public class Solution {
     public static void main(String[] args) {
         int[] ex1 = {2, 7, 11, 15};
         int targ1 = 9;
-        int[] ans1 = {0, 1};
 
         int[] ex2 = {3, 2, 4};
         int targ2 = 6;
-        int[] ans2 = {1, 2};
 
     	int[] ex3 = {3, 3};
         int targ3 = 6;
-        int[] ans3 = {0, 1};
 
-        assertEquals(ans1, twoSum(ex1, targ1));
-        assertEquals(ans2, twoSum(ex2, targ2));
-        assertEquals(ans3, twoSum(ex2, targ3));
+        int[] ret1 = twoSum(ex1, targ1);
+        int[] ret2 = twoSum(ex2, targ2);
+        int[] ret3 = twoSum(ex3, targ3);
+
+        System.out.printf("%d, %d\n", ret1[0], ret1[1]);
+        System.out.printf("%d, %d\n", ret2[0], ret2[1]);
+        System.out.printf("%d, %d\n", ret3[0], ret3[1]);
     } 
 }

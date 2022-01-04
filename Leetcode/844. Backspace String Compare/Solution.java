@@ -24,29 +24,22 @@ Explanation: S becomes "c" while T becomes "b".
 */
 
 class Solution {
-    public boolean backspaceCompare(String S, String T) {
-        StringBuilder first = new StringBuilder();
-        StringBuilder second = new StringBuilder();
+    public boolean backspaceCompare(String s, String t) {
+        String first = make(s);
+        String second = make(t);
         
-        for(int i = 0 ; i < S.length() ; i++) {
-            char c = S.charAt(i);
-            if(c != '#') {
-                first.append(c);
+        return first.equals(second);
+    }
+    public String make(String s) {
+        StringBuilder sb = new StringBuilder();
+        for(char c : s.toCharArray()) {
+            if(c == '#' && sb.length() > 0) {
+                sb.deleteCharAt(sb.length() - 1);
             }
-            else if(first.length() > 0) { //make sure theres a char to delete if #
-                first.deleteCharAt(first.length() - 1);
+            else if(c != '#'){
+                sb.append(c);
             }
         }
-        
-        for(int j = 0 ; j < T.length() ; j++) {
-            char d = T.charAt(j);
-            if(d != '#') {
-                second.append(d);
-            }
-            else if(second.length() > 0) { //make sure theres a char to delete if #
-                second.deleteCharAt(second.length() - 1);
-            }
-        }
-        return first.toString().equals(second.toString());
+        return sb.toString();
     }
 }

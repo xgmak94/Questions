@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/fair-candy-swap/description/
+/* https://leetcode.com/problems/fair-candy-swap/
 
 Alice and Bob have candy bars of different sizes: A[i] is the size of the i-th bar of candy that Alice has, and B[j] is the size of the j-th bar of candy that Bob has.
 
@@ -49,9 +49,9 @@ class Solution {
         int diff = (sumB - sumA) / 2; //get the average, the value that we need the sums to be
 
         for(int x : A) { //find a pair that is equal to the diff
-            if(set.contains(x + diff))
+            if(set.contains(x + diff)) //
                 return new int[]{x, x+diff};
         }
-        return new int[]{0,0}; //if it doesnt exist
+        return new int[]{-1,-1}; //if it doesnt exist
     }
 }

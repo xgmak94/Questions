@@ -7,6 +7,33 @@ Here, we will use the integers 0, 1, and 2 to represent the color red, white, an
 
 class Solution {
     public void sortColors(int[] nums) {
+        int l = 0; 
+        int r = nums.length-1;
+        int i = 0;
+        while(i <= r) {
+            if(nums[i]==0) {
+                swap(nums,i, l);
+                i++;
+                l++;
+            }
+            else if(nums[i]==2) {
+                swap(nums, i, r);
+                r--;
+            }
+            else {
+                i++;
+            }
+        }
+    }
+    public void swap(int[] nums, int l, int r) {
+        int temp = nums[l];
+        nums[l] = nums[r];
+        nums[r] = temp;
+    }
+}
+
+class Solution {
+    public void sortColors(int[] nums) {
         int[] buckets = new int[3];
         
         for(int i : nums) { //counting sort

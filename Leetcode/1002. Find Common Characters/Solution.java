@@ -13,9 +13,9 @@ Example 2:
 Input: ["cool","lock","cook"]
 Output: ["c","o"]
 */
-
+import java.util.*;
 class Solution {
-    public List<String> commonChars(String[] A) {
+    public static List<String> commonChars(String[] A) {
         List<String> ret = new ArrayList<>();
         
         int[] commonDict = new int[26];
@@ -37,12 +37,25 @@ class Solution {
         }
         return ret;
     }
-    
-    public int[] makeDict(String s) {
+    public static int[] makeDict(String s) {
         int[] dict = new int[26];
         for(char c : s.toCharArray()) {
             dict[c-'a']++;
         }
         return dict;
+    }
+    public static void main(String[] args) {
+        List<String> ex1 = commonChars(new String[]{"bella", "label", "roller"});
+        List<String> ex2 = commonChars(new String[]{"cool", "lock", "cook"});
+
+        for(String word : ex1) {
+            System.out.printf("%s ", word);
+        }
+        System.out.println();
+
+        for(String word : ex2) {
+            System.out.printf("%s ", word);
+        }
+        System.out.println();
     }
 }

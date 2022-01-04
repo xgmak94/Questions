@@ -14,38 +14,26 @@ This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
 */
 
 class Solution {
-    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
-        List<Interval> ret = new ArrayList<>();
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        List<int[]> list = new ArrayList<>();
         
-        Collections.sort(intervals, new Comparator<Interval>() {
-            public int compare(Interval i1, Interval i2) {
-                if(i1.start != i2.start) {
-                    return i1.start - i2.start;
-                }
-                else {
-                    return i1.end - i2.end;
-                }
+        int start = newInterval[0];
+        int end = newInterval[1];
+        for(int[] inter : intervals) {
+            if(inter[1] < start) { //interval comes strictly before
+                list.add(inter);
             }
-        });
-        
-        int start = newInterval.start;
-        int end = newInterval.end;
-        
-        for(Interval i : intervals) {
-            if(i.end < start) {
-                ret.add(i);
+            else if(inter[0] > end) { //interval comes strictly after
+                list.add(new int[]{start, end});
+                start = inter[0];
+                end = inter[1];
             }
-            else if(i.start > end) {
-                ret.add(new Interval(start, end));
-                start = i.start;
-                end = i.end;
-            }
-            else if(i.end >= start || i.start <= end){
-                start = Math.min(start, i.start);
-                end = Math.max(end, i.end);
+            else { //merge
+                start = Math.min(start, inter[0]);
+                end = Math.max(end, inter[1]);
             }
         }
-        ret.add(new Interval(start, end));
-        return ret;
+        list.add(new int[]{start, end});
+        return list.toArray(new int[list.size()][2]);
     }
 }

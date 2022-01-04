@@ -11,62 +11,28 @@ The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
 */
 
 class Solution {
-    public int[] sortArrayByParity(int[] A) {
+    public int[] sortArrayByParity(int[] nums) {
         int l = 0;
-        int r = A.length - 1;
+        int r = nums.length - 1;
         
         while(l < r) {
-            if(A[l] % 2 == 0) { //left val is even
+            if(nums[l] % 2 == 0) {
                 l++;
             }
             else {
-                if(A[r] % 2 == 0) {
-                    int temp = A[l];
-                    A[l] = A[r];
-                    A[r] = temp;
-
-                    l++;
-                    r--;
+                if(nums[r] % 2 == 0) {
+                    swap(nums, l, r);
                 }
                 else {
                     r--;
                 }
             }
         }
-        return A;
+        return nums;
     }
-}
-
-class Solution {
-    public int[] sortArrayByParity(int[] A) {
-        int l = 0;
-        int r = A.length - 1;
-        
-        while(l < r) {
-            if(A[l] % 2 == 1) { //if odd value we move it to the back
-                int temp = A[l];
-                A[l] = A[r];
-                A[r] = temp;
-                r--;
-            }
-            else {
-                l++;
-            }
-        }
-        return A;
-    }
-}
-
-class Solution {
-    public int[] sortArrayByParity(int[] A) {
-        int j = A.length - 1;
-        for(int i = 0 ; i < j ; i++) {
-            if(A[i] % 2 == 1) { //swap and check current index again
-                int temp = A[i];	
-                A[i--] = A[j];
-                A[j--] = temp;
-            }
-        }
-        return A;
+    public void swap(int[] nums, int l, int r) {
+        int temp = nums[l];
+        nums[l] = nums[r];
+        nums[r] = temp;
     }
 }
