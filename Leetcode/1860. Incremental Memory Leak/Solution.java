@@ -31,13 +31,13 @@ Constraints:
 
 class Solution {
     public int[] memLeak(int memory1, int memory2) {
-        int i = 0 ;
-        while(Math.max(memory1, memory2) >= i) {
-            if(memory1 >= memory2) {
-                memory1 -= i;
-            }
-            else {
+        int i = 1;
+        while(i <= memory1 || i <= memory2) {
+            if(memory1 < memory2) {
                 memory2 -= i;
+            }
+            else { //use first mem if equal
+                memory1 -= i;
             }
             i++;
         }

@@ -20,6 +20,7 @@ points[i].length == 2
 
 class Solution {
     public boolean isBoomerang(int[][] p) {
-        return (p[0][0] - p[1][0]) * (p[0][1] - p[2][1]) != (p[0][0] - p[2][0]) * (p[0][1] - p[1][1]);
+        return (p[0][0] - p[1][0]) * (p[0][1] - p[2][1]) != //checking slope between A, B and B,C are not equal
+                (p[0][0] - p[2][0]) * (p[0][1] - p[1][1]);
     }
 }

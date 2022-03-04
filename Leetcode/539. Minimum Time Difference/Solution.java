@@ -35,7 +35,7 @@ class Solution {
                 last = Math.max(i, last);
             }
         }
-        minDiff = Math.min(first-last+1440, minDiff); //if going from 23:59 to 00:01
+        minDiff = Math.min(first-last+1440, minDiff); //time between largest time and smallest time
         return minDiff;
     }
 }

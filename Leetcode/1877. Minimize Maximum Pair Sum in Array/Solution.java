@@ -33,7 +33,7 @@ class Solution {
         Arrays.sort(nums);
         int max = Integer.MIN_VALUE;
         
-        for(int i = 0 ; i < nums.length / 2 ; i++) {
+        for(int i = 0 ; i < nums.length / 2 ; i++) { //pair smallest, largest
             int pairSum = nums[i] + nums[nums.length - 1 - i];
             max = Math.max(pairSum, max);
         }

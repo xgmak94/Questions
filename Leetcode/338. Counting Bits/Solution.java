@@ -14,6 +14,21 @@ Can you do it like a boss? Do it without using any builtin function like __built
 */
 
 class Solution {
+    public int[] countBits(int n) {
+        int[] arr = new int[n+1];
+        int pow2 = 1;
+        for(int i = 1 ; i <= n ; i++) {
+            if(pow2 * 2 == i) {
+                pow2 = i;
+            }
+            arr[i] = 1 + arr[i-pow2];
+        }
+        
+        return arr;
+    }
+}
+
+class Solution {
     public int[] countBits(int num) {
         int[] arr = new int[num + 1];
 

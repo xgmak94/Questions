@@ -7,31 +7,26 @@ You are given a 0-indexed integer array nums. For each index i (1 <= i <= nums.l
 0, if none of the previous conditions holds.
 Return the sum of beauty of all nums[i] where 1 <= i <= nums.length - 2.
 
- 
-
 Example 1:
-
 Input: nums = [1,2,3]
 Output: 2
 Explanation: For each index i in the range 1 <= i <= 1:
 - The beauty of nums[1] equals 2.
-Example 2:
 
+Example 2:
 Input: nums = [2,4,6,4]
 Output: 1
 Explanation: For each index i in the range 1 <= i <= 2:
 - The beauty of nums[1] equals 1.
 - The beauty of nums[2] equals 0.
-Example 3:
 
+Example 3:
 Input: nums = [3,2,1]
 Output: 0
 Explanation: For each index i in the range 1 <= i <= 1:
 - The beauty of nums[1] equals 0.
- 
 
 Constraints:
-
 3 <= nums.length <= 105
 1 <= nums[i] <= 105
 */
@@ -49,11 +44,14 @@ class Solution {
         
         int leftMax = nums[0];
         for(int i = 1 ; i <= nums.length - 2 ; i++) {
-            if(leftMax < nums[i] && nums[i] < rightMin[i]) {
+            if(leftMax < nums[i] && nums[i] < rightMin[i]) { // 2, if nums[j] < nums[i] < nums[k]
                 beauty += 2;
             }
-            else if(nums[i-1] < nums[i] && nums[i] < nums[i+1]) {
-                beauty++;
+            else if(nums[i-1] < nums[i] && nums[i] < nums[i+1]) { // 1, if nums[i - 1] < nums[i] < nums[i + 1]
+                beauty += 1;
+            }
+            else { // 0, if none of the previous conditions holds
+                beauty += 0;
             }
             leftMax = Math.max(leftMax, nums[i]);
         }

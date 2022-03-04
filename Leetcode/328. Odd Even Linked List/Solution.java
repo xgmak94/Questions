@@ -19,7 +19,6 @@ class Solution {
         
         ListNode odd = head;
         ListNode even = head.next;
-
         ListNode evenHead = head.next; //to link odd to even list
         
         while(even != null && even.next != null) {
@@ -30,7 +29,6 @@ class Solution {
             even = even.next;
         }
         odd.next = evenHead;//1->3 2->4 becomes 1->3->2->4->
-        
         return head;
     }
 }

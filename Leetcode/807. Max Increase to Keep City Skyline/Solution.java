@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/
+/* https://leetcode.com/problems/max-increase-to-keep-city-skyline/
 
 In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well. 
 
@@ -31,26 +31,24 @@ Notes:
 1 < grid.length = grid[0].length <= 50.
 All heights grid[i][j] are in the range [0, 100].
 All buildings in grid[i][j] occupy the entire grid cell: that is, they are a 1 x 1 x grid[i][j] rectangular prism.
-
 */
 
+//get the max for each row and each col, then try to set each val to max between higher row,col
 class Solution {
     public int maxIncreaseKeepingSkyline(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-        int[] rows = new int[m];
-        int[] cols = new int[n];
+        int[] rows = new int[grid.length];
+        int[] cols = new int[grid[0].length];
         
-        for(int i = 0 ; i < m ; i++) {
-            for(int j = 0 ; j < n ; j++) {
+        for(int i = 0 ; i < grid.length ; i++) {
+            for(int j = 0 ; j < grid[0].length ; j++) {
                 rows[i] = Math.max(grid[i][j], rows[i]);
                 cols[j] = Math.max(grid[i][j], cols[j]);
             }
         }
         
         int count = 0;
-        for(int i = 0 ; i < m ; i++) {
-            for(int j = 0 ; j < n ; j++) {
+        for(int i = 0 ; i < grid.length ; i++) {
+            for(int j = 0 ; j < grid[0].length ; j++) {
                 count += Math.min(rows[i], cols[j]) - grid[i][j];
             }
         }

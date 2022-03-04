@@ -19,15 +19,7 @@ class Solution {
         PriorityQueue<ListNode> q = new PriorityQueue<ListNode>(lists.length, new Comparator<ListNode>(){
             @Override
             public int compare(ListNode l1,ListNode l2){
-                if(l1.val < l2.val) {
-                	return -1;
-                }
-                else if(l1.val > l2.val) {
-                	return 1;
-                }
-                else {
-                	return 0;
-                }
+                return l1.val - l2.val;
             }
         });
         
@@ -35,7 +27,7 @@ class Solution {
         ListNode mergedPtr = mergedList;
         
         for(ListNode list : lists) {
-            if(list != null) {
+            if(list != null) { //q holds all initial nodes, incase of empty lists
             	q.add(list);
             }
         }
@@ -43,9 +35,9 @@ class Solution {
         while(!q.isEmpty()) {
             // mergedPtr = mergedPtr.next = q.poll(); equivelent
             mergedPtr.next = q.poll();
-            mergedPtr = mergeedPtr.next;
+            mergedPtr = mergedPtr.next;
             
-            if(mergedPtr.next != null) {
+            if(mergedPtr.next != null) { //add next value of list into queue
             	q.add(mergedPtr.next);
             }
         }

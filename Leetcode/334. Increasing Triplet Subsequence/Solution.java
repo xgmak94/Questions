@@ -17,20 +17,18 @@ return false.
 
 class Solution {
     public boolean increasingTriplet(int[] nums) {
-        if(nums.length < 3)
-            return false;
+        if(nums.length < 3) return false; //cannot contain triple with less than 3 elements
         
         int x = Integer.MAX_VALUE;
         int y = Integer.MAX_VALUE;
-        
-        for(int num : nums){
-            if(num <= x) {
+        for(int num : nums) { //we are looking for number greater than both x AND y
+            if(num <= x) { // found a smaler number for x to be
                 x = num;
             }
-            else if(num > x && num < y) {
+            else if(num > x && num < y) { //found a smaller number for y to be
                 y = num;
             }
-            else if(num > y) {
+            else if(num > y) { //number is greater than x and y, triplet exists
                 return true;
             }
         }

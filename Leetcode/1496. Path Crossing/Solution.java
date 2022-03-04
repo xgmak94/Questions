@@ -14,7 +14,7 @@ Example 2:
 Input: path = "NESWW"
 Output: true
 Explanation: Notice that the path visits the origin twice.
- 
+
 Constraints:
 1 <= path.length <= 10^4
 path will only consist of characters in {'N', 'S', 'E', 'W}

@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/shortest-distance-to-a-character/description/
+/* https://leetcode.com/problems/shortest-distance-to-a-character/
 
 Given a string S and a character C, 
 return an array of integers representing the shortest distance from the character C in the string.
@@ -9,8 +9,8 @@ Output: [3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0]
 */
 
 class Solution {
-    public int[] shortestToChar(String S, char C) {
-        int n = S.length();
+    public int[] shortestToChar(String s, char c) {
+        int n = s.length();
         int[] left = new int[n];
         int[] right = new int[n];
         
@@ -18,8 +18,7 @@ class Solution {
         Arrays.fill(right, n);
         
         for(int i = 0 ; i < n ; i++) {
-            char d = S.charAt(i);
-            if(d == C) {
+            if(s.charAt(i) == C) {
                 left[i] = 0;
             }
             else if(i > 0) {
@@ -28,8 +27,7 @@ class Solution {
         }
         
         for(int i = n - 1 ; i >= 0 ; i--) {
-            char d = S.charAt(i);
-            if(d == C) {
+            if(s.charAt(i) == C) {
                 right[i] = 0;
             }
             else if(i < n - 1) {

@@ -23,7 +23,7 @@ Output: "jaqgacb"
 Example 4:
 Input: s = "??yw?ipkj?"
 Output: "acywaipkja"
- 
+
 Constraints:
 1 <= s.length <= 100
 s contains only lower case English letters and '?'.
@@ -34,11 +34,15 @@ class Solution {
         char[] arr = s.toCharArray();
         for(int i = 0 ; i < s.length() ; i++) {
             if(arr[i] == '?') { //use a,b,c
-                for(int j = 0 ; j < 3 ; j++) {
-                    if(i > 0 && arr[i-1] - 'a' == j) continue; //counted letter
-                    else if(i + 1 < arr.length && arr[i+1] - 'a' == j) continue; //counted letter
+                for(char c = 'a' ; c <= 'c' ; c++) {
+                    if(i > 0 && arr[i-1] == c) {
+                        continue; //counted letter
+                    }
+                    else if(i + 1 < arr.length && arr[i+1] == c) {
+                        continue; //counted letter
+                    }
                     else {
-                        arr[i] = (char)('a' + j);
+                        arr[i] = c;
                         break;
                     }
                 }

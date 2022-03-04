@@ -32,21 +32,13 @@ class Solution {
         int smallestDist = Integer.MAX_VALUE;
         int idx = -1;
         for(int i = 0 ; i < points.length ; i++) {
-            int[] point = points[i];
-            if(point[0] != x && point[1] != y) continue;
-            
-            int dist = 0;
-            
-            if(point[0] == x) {
-                dist = Math.abs(point[1] - y);
-            }
-            else if(point[1] == y) {
-                dist = Math.abs(point[0] - x);
-            }
-            
-            if(dist < smallestDist) {
-                idx = i;
-                smallestDist = dist;
+            if(points[i][0] == x || points[i][1] == y) {
+                int dist = Math.abs(points[i][1] - y) + Math.abs(points[i][0] - x);
+
+                if(dist < smallestDist) {
+                    idx = i;
+                    smallestDist = dist;
+                }
             }
         }
         return idx;

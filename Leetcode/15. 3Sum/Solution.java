@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/3sum/description/
+/* https://leetcode.com/problems/3sum/
 
 Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? 
 Find all unique triplets in the array which gives the sum of zero.
@@ -19,27 +19,26 @@ class Solution {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
         
+        //SET the first val, then reference #167. Two Sum II - Input Array Is Sorted
         for(int i = 0 ; i < nums.length - 2 ; i++) {
             if(i > 0 && nums[i] == nums[i-1]) continue;
             
-            int j = i+1;
-            int k = nums.length - 1;
+            int l = i+1;
+            int r = nums.length - 1;
             while(j < k) {
-                int sum = nums[i] + nums[j] + nums[k];
+                int sum = nums[i] + nums[l] + nums[r];
                 if(sum == 0) {
-                    list.add(Arrays.asList(nums[i], nums[j++], nums[k--])); //add to list and change to next unique set
-                    while(j < k && nums[j] == nums[j-1]) {
+                    list.add(Arrays.asList(nums[i], nums[l], nums[r])); //add to list and change to next unique set
+                    j++;
+                    while(l < r && nums[l] == nums[l-1]) { //move left ptr to new value
                         j++;
-                    }
-                    while(j < k && nums[k] == nums[k+1]) {
-                        k--;
                     }
                 }
                 else if(sum < 0) {
-                    j++;
+                    l++;
                 }
                 else if(sum > 0) {
-                    k--;
+                    r--;
                 }
             }
         }

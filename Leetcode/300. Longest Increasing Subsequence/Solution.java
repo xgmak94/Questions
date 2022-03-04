@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/longest-increasing-subsequence/description/
+/* https://leetcode.com/problems/longest-increasing-subsequence/
 
 Given an unsorted array of integers, find the length of longest increasing subsequence.
 
@@ -25,8 +25,7 @@ class Solution {
             for(int j = 0 ; j < i ; j++) {
                 if(nums[j] < nums[i]) {
                     memo[i] = Math.max(memo[i], memo[j] + 1);
-                    if(memo[i] > max)
-                        max = memo[i];
+                    max = Math.max(max, memo[i]);
                 }
             }
         }

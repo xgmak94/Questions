@@ -17,20 +17,21 @@ It can be shown with 5 or less moves that it is impossible for the array to have
 */
 
 class Solution { // times out
-    public int minIncrementForUnique(int[] A) {
+    public int minIncrementForUnique(int[] nums) {
         Set<Integer> set = new HashSet<>();
         int inc = 0;
         
-        for(int i = 0 ; i < A.length ; i++) {
-            if(!set.contains(A[i])) // unique
-                set.add(A[i]);
+        for(int num : nums) {
+            if(!set.contains(num)) {// unique
+                set.add(num);
+            }
             else { //find next value that is not in set
                 int n = 0;
-                while(set.contains(A[i] + n)) {
+                while(set.contains(num + n)) {
                     n++;
+                    inc++;
                 }
-                set.add(A[i] + n);
-                inc += n;
+                set.add(num + n);
             }
         }
         return inc;

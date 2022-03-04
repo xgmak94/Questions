@@ -30,13 +30,12 @@ A and B consist only of lowercase letters.
 */
 
 class Solution {
-    public boolean buddyStrings(String A, String B) {
-        if(A.length() != B.length()) 
-        	return false;
+    public boolean buddyStrings(String s, String goal) {
+        if(s.length() != goal.length()) return false;
 
-        if(A.equals(B)) { //if same string must check that there is atleast one char that is the same to swap
+        if(s.equals(goal)) { //if same string must check that there is atleast one char that is the same to swap
             Set<Character> set = new HashSet<>();
-            for(char c : A.toCharArray()) {
+            for(char c : s.toCharArray()) {
                 if(set.contains(c)) {
                     return true;
                 }
@@ -48,15 +47,15 @@ class Solution {
         }
         
         List<Integer> diff = new ArrayList<>();
-        for (int i = 0 ; i < A.length() ; i++) {
-        	if (A.charAt(i) != B.charAt(i)) {
+        for (int i = 0 ; i < s.length() ; i++) {
+        	if (s.charAt(i) != goal.charAt(i)) {
         		diff.add(i);
             }
         }
 
-        //only 2 indexes in dif and they can be swapped
+        //only 2 indexes in diff and they can be swapped
         return diff.size() == 2 && 
-            A.charAt(dif.get(0)) == B.charAt(dif.get(1)) && 
-            A.charAt(dif.get(1)) == B.charAt(dif.get(0));
+            s.charAt(diff.get(0)) == goal.charAt(diff.get(1)) && 
+            s.charAt(diff.get(1)) == goal.charAt(diff.get(0));
     }
 }

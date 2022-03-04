@@ -10,26 +10,20 @@ The result can be in any order.
 */
 
 class Solution {
-    public int[] intersect(int[] nums1, int[] nums2) {
-        Map<Integer, Integer> map = new HashMap<>();
-        ArrayList<Integer> list = new ArrayList<>();
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> set = new HashSet<>();
+        Set<Integer> intersect = new HashSet<>(); //guarantees us unique elements
+
         for(int n : nums1) {
-            map.put(n, map.getOrDefault(n, 0) + 1); //frequency of elements in nums1
+            set.add(n);
         }
         
         for(int m : nums2) {
-            if(map.containsKey(m) && map.get(m) > 0) {
-                list.add(m);
-                map.put(m, map.getOrDefault(m, 0) - 1); //subtract 1 from frequency and add to intersection
+            if(set.contains(m)) {
+                intersect.add(m);
             }
-            
         }
-        
-        int[] arr = new int[list.size()];
-        for(int i = 0 ; i < list.size() ; i++) {
-            arr[i] = list.get(i);
-        }
-        return arr;
+        return intersect.stream().mapToInt(i->i).toArray();
     }
 }
 

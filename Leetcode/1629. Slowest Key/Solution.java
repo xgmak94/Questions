@@ -31,7 +31,7 @@ Keypress for 'u' had a duration of 36 - 23 = 13.
 Keypress for 'd' had a duration of 46 - 36 = 10.
 Keypress for 'a' had a duration of 62 - 46 = 16.
 The longest of these was the keypress for 'a' with duration 16.
- 
+
 Constraints:
 releaseTimes.length == n
 keysPressed.length == n

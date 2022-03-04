@@ -14,30 +14,31 @@ The vowels does not include the letter "y".
 
 class Solution {
     public String reverseVowels(String word) {
-        String vowels = "aeiouAEIOU"; // vowels we are looking for
+        List<Character> vowels = Arrays.asList(new Character[]{'a','e','i','o','u','A','E','I','O','U'});
+        Set<Character> set = new HashSet<>(vowels);
 
         char[] chars = word.toCharArray();
-        int start = 0;
-        int end = word.length() - 1;
+        int l = 0;
+        int r = word.length() - 1;
 
-        while(start < end) {
-            while(start < end && !vowels.contains(chars[start]+"")) { //find first vowel
-                start++;
+        while(l < r) {
+            while(l < r && !set.contains(chars[l])) { //find first vowel
+                l++;
             }
 
-            while(start < end && !vowels.contains(chars[end]+"")) { //find last vowel
-                end--;
+            while(l < r && !set.contains(chars[r])) { //find last vowel
+                r--;
             }
-
-            swap(chars, start, end); //swap outside vowels
-            start++; end--;
+            swap(chars, l, r); //swap outside vowels
+            l++;
+            r--;
         }
         return new String(chars);
     }
-    public void swap(char[] chars, int start, int end) {
-        char temp = chars[start];
-        chars[start] = chars[end];
-        chars[end] = temp;
+    public void swap(char[] chars, int l, int r) {
+        char temp = chars[l];
+        chars[l] = chars[r];
+        chars[r] = temp;
     }
 }
 

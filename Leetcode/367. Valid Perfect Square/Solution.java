@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/valid-perfect-square/description/
+/* https://leetcode.com/problems/valid-perfect-square/
 
 Given a positive integer num, write a function which returns True if num is a perfect square else False.
 
@@ -13,6 +13,12 @@ Input: 14
 Returns: False
 */
 
+//square numbers
+//1
+//4 = 1+3
+//9 = 1+3+5
+//16 = 1+3+5+7
+//25 = 1+3+5+7+9
 class Solution {
     public boolean isPerfectSquare(int num) {
         int i = 1;

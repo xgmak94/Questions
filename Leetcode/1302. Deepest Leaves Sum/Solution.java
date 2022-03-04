@@ -9,8 +9,8 @@ Output: 15
 
 class Solution {
     public int deepestLeavesSum(TreeNode root) {
-        int currLevelSum = 0;
         Queue<TreeNode> q = new LinkedList<>();
+        int currLevelSum = 0;
         q.add(root);
         
         while(!q.isEmpty()) {

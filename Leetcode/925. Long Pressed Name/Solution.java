@@ -33,8 +33,9 @@ The characters of name and typed are lowercase letters.
 class Solution {
     public boolean isLongPressedName(String name, String typed) {
         int i = 0;
-        int j = 0;
         int m = name.length();
+
+        int j = 0;
         int n = typed.length();
         while(j < n) {
             if(i < m && name.charAt(i) == typed.charAt(j)) {

@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/
+/* https://leetcode.com/problems/minimum-distance-between-bst-nodes/
 
 Given a Binary Search Tree (BST) with the root node root, return the minimum difference between the values of any two different nodes in the tree.
 

@@ -8,6 +8,19 @@ Example 1:
 Input: arr = [1,2,2,6,6,6,6,7,10]
 Output: 6
 */
+class Solution {
+    public int findSpecialInteger(int[] arr) {
+        int n = arr.length;
+        int t = n/4;
+
+        for(int i = 0 ; i < n-t ; i++) {
+            if(arr[i] == arr[i + t]) { //element will appear at both locations
+                return arr[i];
+            }
+        }
+        return -1;
+    }
+}
 
 class Solution {
     public int findSpecialInteger(int[] arr) {

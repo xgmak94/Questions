@@ -28,8 +28,8 @@ class Solution {
     public int findNumbers(int[] nums) {
         int even = 0;
         for(int num : nums) { // 1 <= nums[i] <= 10^5
-            if((num >= 10 && num < 100) || 
-                (num >= 1000 && num < 10000) || 
+            if((num >= 10 && num < 100) || //2 digits
+                (num >= 1000 && num < 10000) || //4 digits
                 (num == 100000)) {
                 even++;
             }

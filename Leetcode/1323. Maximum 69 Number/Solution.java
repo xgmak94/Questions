@@ -27,7 +27,7 @@ Explanation: It is better not to apply any change.
 class Solution {
     public int maximum69Number (int num) {
         String str = String.valueOf(num);
-        return Integer.valueOf(str.replaceFirst("6","9"));
+        return Integer.valueOf(str.replaceFirst("6","9")); //change first 6 to a 9
     }
 }
 

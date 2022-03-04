@@ -31,16 +31,16 @@ Constraints:
 class Solution {
     public int minOperations(int[] nums) {
         int prev = 0; //less than all possible
-        int op = 0;
+        int ops = 0;
         for(int num : nums) {
-            if(num <= prev) {
+            if(num <= prev) { //we need to increase num to +1 of prev
                 prev += 1;
-                op += prev - num;
+                ops += prev - num;
             }
             else {
                 prev = num;
             }
         }
-        return op;
+        return ops;
     }
 }

@@ -35,35 +35,33 @@ All words in A[i] are unique: there isn't i != j with A[i] == A[j].
 */
 
 class Solution {
-    public List<String> wordSubsets(String[] A, String[] B) {
+    public List<String> wordSubsets(String[] words1, String[] words2) {
         List<String> list = new ArrayList<>();
-        int[] allChars = new int[26];
+        int[] maxCountB = new int[26];
 
-        for(String word : B) { //get the max count of all chars we need
+        for(String word : words2) { //get the max count of all chars we need
             int[] currWord = counts(word);
             for(int i = 0 ; i < 26 ; i++) {
-                allChars[i] = Math.max(currWord[i], allChars[i]);
+                maxCountB[i] = Math.max(currWord[i], maxCountB[i]);
             }
         }
         
-        for(String word : A) { //word is universal if count exceeds all
+        for(String word : words1) { //word is universal if count exceeds all
             int[] currWord = counts(word);
             boolean add = true; //should we add the word?
             for(int i = 0 ; i < 26 ; i++) {
-                if(currWord[i] < allChars[i]) { //this word is not universal
+                if(currWord[i] < maxCountB[i]) { //this word is not universal
                     add = false;
                     break;
                 }
             }
-            if(add == true) list.add(word);
+            if(add == true) list.add(word); //if add is still true add the word to our list
         }
         return list;
     }
-    public int[] counts(String B) { //get the count of all letters in B
+    public int[] counts(String word) { //get the count of all letters in B
         int[] chars = new int[26];
-        for(char c : B.toCharArray()) {
-            chars[c-'a']++;
-        }
+        for(char c : word.toCharArray()) chars[c-'a']++;
         return chars;
     }
 }

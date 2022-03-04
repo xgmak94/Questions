@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /* https://leetcode.com/problems/find-all-anagrams-in-a-string/
 
 Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
@@ -33,7 +30,9 @@ class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> list = new ArrayList<>();
         char[] chars = new char[26];
-        for(char c : p.toCharArray()) chars[c-'a']++;
+        for(char c : p.toCharArray()) { //the anagram we are looking for
+            chars[c-'a']++;
+        }
         
         int start = 0, end = 0, match = 0;
         while(end < s.length()) {

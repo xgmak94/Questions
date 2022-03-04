@@ -38,7 +38,8 @@ class Solution {
     public int minSetSize(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
         int[] freqs = new int[arr.length];
-        int count = 0, size = 0;
+        int count = 0;
+        int size = 0;
 
         for(int num : arr) {
             map.put(num, map.getOrDefault(num, 0) + 1);
@@ -46,7 +47,8 @@ class Solution {
         
         int idx = 0;
         for(int n : map.values()) {
-            freqs[idx++] = n;
+            freqs[idx] = n;
+            idx++;
         }
         Arrays.sort(freqs);
         

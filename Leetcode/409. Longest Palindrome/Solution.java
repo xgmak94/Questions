@@ -29,6 +29,8 @@ class Solution {
                 set.add(c);
             }
         }
-        return (set.isEmpty()) ? 2*pair : 2*pair + 1; //can add an extra character if available
+        // if(set.isEmpty()) return 2*pair;
+        // else return 2*pair+1;
+        return set.isEmpty() ? 2*pair : 2*pair + 1; //can add an extra character if available
     }
 }

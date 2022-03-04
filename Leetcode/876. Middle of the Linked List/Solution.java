@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/middle-of-the-linked-list/description/
+/* https://leetcode.com/problems/middle-of-the-linked-list/
 
 Given a non-empty, singly linked list with head node head, return a middle node of linked list.
 
@@ -15,7 +15,6 @@ Example 2:
 Input: [1,2,3,4,5,6]
 Output: Node 4 from this list (Serialization: [4,5,6])
 Since the list has two middle nodes with values 3 and 4, we return the second one.
-
 */
 
 class Solution {

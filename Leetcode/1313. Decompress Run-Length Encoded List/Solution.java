@@ -14,19 +14,37 @@ The second pair [3,4] means we have freq = 3 and val = 4 so we generate [4,4,4].
 At the end the concatenation [2] + [4,4,4,4] is [2,4,4,4].
 */
 
+//use a list to ignore size
+class Solution {
+    public int[] decompressRLElist(int[] nums) {
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0 ; i < nums.length ; i += 2) {
+            int freq = nums[i];
+            int val = nums[i+1];
+            
+            while(freq > 0) {
+                list.add(val);
+                freq--;
+            }
+        }
+        return list.stream().mapToInt(i->i).toArray();
+    }
+}
+
+//pre calculate the length of array
 class Solution {
     public int[] decompressRLElist(int[] nums) {
         int size = 0;
         for(int i = 0 ; i < nums.length ; i += 2) size += nums[i];
         
         int[] arr = new int[size];
-        int curr = 0;
+        int idx = 0;
         for(int i = 0 ; i < nums.length ; i += 2) {
             int freq = nums[i];
             int val = nums[i+1];
             
-            Arrays.fill(arr, curr, curr+freq, val);
-            curr += freq;
+            Arrays.fill(arr, idx, idx+freq, val);
+            idx += freq;
         }
         return arr;
     }

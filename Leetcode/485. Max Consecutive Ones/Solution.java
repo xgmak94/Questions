@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/max-consecutive-ones/description/
+/* https://leetcode.com/problems/max-consecutive-ones/
 
 Given a binary array, find the maximum number of consecutive 1s in this array.
 
@@ -21,12 +21,12 @@ class Solution {
         for(int i = 0 ; i < nums.length ; i++) {
             if(nums[i] == 1) {
                 currLength++;
+                maxLength = Math.max(currLength, maxLength);
             }
             else {
-                maxLength = Math.max(currLength, maxLength);
                 currLength = 0;
             }
         }
-        return Math.max(currLength, maxLength); //compare last length of 1's to maxLength 
+        return maxLength;
     }
 }

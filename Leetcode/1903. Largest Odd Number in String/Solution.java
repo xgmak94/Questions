@@ -26,9 +26,8 @@ num only consists of digits and does not contain any leading zeros.
 
 class Solution {
     public String largestOddNumber(String num) {
-        
         int idx = num.length() - 1;
-        while(idx >= 0) {
+        while(idx >= 0) { //keep removing last digit until our number is even
             char c = num.charAt(idx);
             
             if((c - '0') % 2 == 1) {

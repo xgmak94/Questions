@@ -43,7 +43,7 @@ Output: "12"
 Example 5:
 Input: number = "--17-5 229 35-39475 "
 Output: "175-229-353-94-75"
- 
+
 Constraints:
 2 <= number.length <= 100
 number consists of digits and the characters '-' and ' '.
@@ -63,12 +63,12 @@ class Solution {
             idx += 3;
         }
         
-        if(idx == number.length() - 4) {
+        if(idx == number.length() - 4) { //if 4 digits left xx-xx
             sb.append(number.substring(idx, idx+2));
             sb.append("-");
             sb.append(number.substring(idx+2, number.length()));
         }
-        else {
+        else { //if 3,2 digits left xxx or xx
             sb.append(number.substring(idx, number.length()));
         }
         return sb.toString();

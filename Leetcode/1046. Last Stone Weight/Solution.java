@@ -27,7 +27,7 @@ class Solution {
         }
         
         while(pq.size() >= 2) {
-            pq.offer(pq.poll() - pq.poll());
+            pq.offer(pq.poll() - pq.poll()); //will be positive
         }
         return pq.poll();
     }

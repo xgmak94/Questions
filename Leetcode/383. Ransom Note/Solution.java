@@ -17,7 +17,6 @@ class Solution {
         if(ransomNote.length() > magazine.length()) return false;
 
         HashMap<Character, Integer> mag = new HashMap<>();
-
         for(char c : magazine.toCharArray()) {
             mag.put(c, mag.getOrDefault(c, 0) + 1);
         }

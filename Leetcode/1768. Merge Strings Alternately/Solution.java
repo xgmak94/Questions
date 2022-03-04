@@ -27,7 +27,7 @@ Explanation: Notice that as word1 is longer, "cd" is appended to the end.
 word1:  a   b   c   d
 word2:    p   q 
 merged: a p b q c   d
- 
+
 Constraints:
 1 <= word1.length, word2.length <= 100
 word1 and word2 consist of lowercase English letters.
@@ -36,19 +36,12 @@ word1 and word2 consist of lowercase English letters.
 class Solution {
     public String mergeAlternately(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
-        int n = word1.length();
-        int m = word2.length();
-        int minLength = Math.min(m, n);
-        for(int i = 0 ; i < minLength ; i++) {
-            sb.append(word1.charAt(i));
-            sb.append(word2.charAt(i));
-        }
-        
-        if(minLength < n) {
-            sb.append(word1.substring(minLength, n));
-        }
-        if(minLength < m) {
-            sb.append(word2.substring(minLength, m));
+        int i = 0;
+        while(i < word1.length && word2.length) {
+            if(i < word1.length()) sb.append(word1.charAt(i));
+            if(i < word2.length()) sb.append(word2.charAt(i));
+
+            i++;
         }
         return sb.toString();
     }

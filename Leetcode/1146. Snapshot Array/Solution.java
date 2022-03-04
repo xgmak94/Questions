@@ -9,7 +9,6 @@ int get(index, snap_id) returns the value at the given index, at the time we too
  
 
 Example 1:
-
 Input: ["SnapshotArray","set","snap","set","get"]
 [[3],[0,5],[],[0,6],[0,0]]
 Output: [null,null,0,null,5]
@@ -22,7 +21,6 @@ snapshotArr.get(0,0);  // Get the value of array[0] with snap_id = 0, return 5
  
 
 Constraints:
-
 1 <= length <= 50000
 At most 50000 calls will be made to set, snap, and get.
 0 <= index < length

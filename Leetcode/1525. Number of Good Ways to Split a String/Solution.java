@@ -4,10 +4,7 @@ You are given a string s, a split is called good if you can split s into 2 non-e
 
 Return the number of good splits you can make in s.
 
- 
-
 Example 1:
-
 Input: s = "aacaba"
 Output: 2
 Explanation: There are 5 ways to split "aacaba" and 2 of them are good. 
@@ -16,24 +13,22 @@ Explanation: There are 5 ways to split "aacaba" and 2 of them are good.
 ("aac", "aba") Left string and right string contains 2 and 2 different letters respectively (good split).
 ("aaca", "ba") Left string and right string contains 2 and 2 different letters respectively (good split).
 ("aacab", "a") Left string and right string contains 3 and 1 different letters respectively.
-Example 2:
 
+Example 2:
 Input: s = "abcd"
 Output: 1
 Explanation: Split the string as follows ("ab", "cd").
-Example 3:
 
+Example 3:
 Input: s = "aaaaa"
 Output: 4
 Explanation: All possible splits are good.
-Example 4:
 
+Example 4:
 Input: s = "acbadbaada"
 Output: 2
- 
 
 Constraints:
-
 s contains only lowercase English letters.
 1 <= s.length <= 10^5
 */
@@ -41,24 +36,21 @@ s contains only lowercase English letters.
 class Solution {
     public int numSplits(String s) {
         Set<Character> set = new HashSet<>();
-        int n = s.length();
-        int[] pre = new int[n];
-        int[] post = new int[n];
+        int[] pre = new int[s.length()];
+        int[] post = new int[s.length()];
         
-        for(int i = 0 ; i < n ; i++) { //num unique characters from index 0 to i
-            char c = s.charAt(i);
-            set.add(c);
+        for(int i = 0 ; i < s.length() ; i++) { //num unique characters from index 0 to i
+            set.add(s.charAt(i));
             pre[i] = set.size();
         }
         set.clear();
-        for(int i = n-1 ; i >= 0 ; i--) { //num unique characters from index i to n
-            char c = s.charAt(i);
-            set.add(c);
+        for(int i = s.length()-1 ; i >= 0 ; i--) { //num unique characters from index i to n
+            set.add(s.charAt(i));
             post[i] = set.size();
         }
         
         int count = 0;
-        for(int i = 1 ; i < n ; i++) {
+        for(int i = 1 ; i < s.length() ; i++) {
             if(pre[i-1] == post[i]) count++;
         }
         return count;

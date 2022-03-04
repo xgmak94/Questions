@@ -24,7 +24,7 @@ Explanation: Details of the tournament:
 - 3rd Round: Teams = 4, Matches = 2, and 2 teams advance.
 - 4th Round: Teams = 2, Matches = 1, and 1 team is declared the winner.
 Total number of matches = 7 + 3 + 2 + 1 = 13.
- 
+
 Constraints:
 1 <= n <= 200
 */

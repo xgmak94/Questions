@@ -24,11 +24,6 @@ class Solution {
                 list.add(arr[i]);
             }
         }
-        
-        String[] thirds = new String[list.size()];
-        for(int i = 0 ; i < list.size() ; i++) {
-            thirds[i] = list.get(i);
-        }
-        return thirds;
+        return list.stream().toArray(String[]::new);
     }
 }

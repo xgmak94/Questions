@@ -36,12 +36,32 @@ Constraints:
 class Solution {
     public int numOfSubarrays(int[] arr, int k, int threshold) {
         int count = 0;
-        int total = 0;
+        int sum = 0;
+        int l = 0;
+        int r = 0;
+        while(r < arr.length) {
+            sum += arr[r];
+            r++;
+            if(r-l == k) {
+                if(sum / k >= threshold) count++;
+
+                sum -= arr[l];
+                l++;
+            }
+        }
+        return count;
+    }
+}
+
+class Solution {
+    public int numOfSubarrays(int[] arr, int k, int threshold) {
+        int count = 0;
+        int sum = 0;
         for(int i = 0 ; i < arr.length ; i++) {
-            total += arr[i];
+            sum += arr[i];
             if(i < k-1) continue; //add first k-1 elements
-            if(i > k-1) total -= arr[i-k]; //subtract after we have reached k elements
-            if(total/k >= threshold) count++; //check average after k elements
+            if(i > k-1) sum -= arr[i-k]; //subtract after we have reached k elements
+            if(sum/k >= threshold) count++; //check average after k elements
         }
         return count;
     }

@@ -8,11 +8,7 @@ You can stop the wheel at any time, including before serving all customers. If y
 
 Return the minimum number of rotations you need to perform to maximize your profit. If there is no scenario where the profit is positive, return -1.
 
- 
-
 Example 1:
-
-
 Input: customers = [8,3], boardingCost = 5, runningCost = 6
 Output: 3
 Explanation: The numbers written on the gondolas are the number of people currently there.
@@ -20,8 +16,8 @@ Explanation: The numbers written on the gondolas are the number of people curren
 2. 3 customers arrive, the 4 waiting board the wheel and the other 3 wait, the wheel rotates. Current profit is 8 * $5 - 2 * $6 = $28.
 3. The final 3 customers board the gondola, the wheel rotates. Current profit is 11 * $5 - 3 * $6 = $37.
 The highest profit was $37 after rotating the wheel 3 times.
-Example 2:
 
+Example 2:
 Input: customers = [10,9,6], boardingCost = 6, runningCost = 4
 Output: 7
 Explanation:
@@ -35,7 +31,6 @@ Explanation:
 The highest profit was $122 after rotating the wheel 7 times.
 
 Example 3:
-
 Input: customers = [3,4,0,5,1], boardingCost = 1, runningCost = 92
 Output: -1
 Explanation:
@@ -45,8 +40,8 @@ Explanation:
 4. 5 customers arrive, 4 board and 1 waits, the wheel rotates. Current profit is 11 * $1 - 4 * $92 = -$357.
 5. 1 customer arrives, 2 board and 0 wait, the wheel rotates. Current profit is 13 * $1 - 5 * $92 = -$447.
 The profit was never positive, so return -1.
-Example 4:
 
+Example 4:
 Input: customers = [10,10,6,4,7], boardingCost = 3, runningCost = 8
 Output: 9
 Explanation:
@@ -61,10 +56,8 @@ Explanation:
 9. 4 board and 1 waits, the wheel rotates. Current profit is 36 * $3 - 9 * $8 = $36.
 10. 1 board and 0 wait, the wheel rotates. Current profit is 37 * $3 - 10 * $8 = $31.
 The highest profit was $36 after rotating the wheel 9 times.
- 
 
 Constraints:
-
 n == customers.length
 1 <= n <= 105
 0 <= customers[i] <= 50

@@ -1,3 +1,5 @@
+import java.util.Map;
+
 /* https://leetcode.com/problems/find-lucky-integer-in-an-array/
 
 Given an array of integers arr, a lucky integer is an integer which has a frequency in the array equal to its value.
@@ -38,9 +40,9 @@ class Solution {
         }
         
         int maxLucky = -1;
-        for(int n : map.keySet()) {
-            if(map.get(n) == n) {
-                maxLucky = Math.max(maxLucky, n);
+        for(Map.Entry<Integer, Integer> e : map.entrySet()) {
+            if(e.getKey() == e.getValue()) {
+                maxLucky = Math.max(maxLucky, e.getKey());
             }
         }
         return maxLucky;

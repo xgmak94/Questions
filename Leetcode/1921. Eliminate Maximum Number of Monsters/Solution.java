@@ -34,7 +34,7 @@ Explanation:
 In the beginning, the distances of the monsters are [3,2,4]. You eliminate the first monster.
 After a minute, the distances of the monsters are [X,0,2], so you lose.
 You can only eliminate 1 monster.
- 
+
 Constraints:
 n == dist.length == speed.length
 1 <= n <= 105
@@ -43,11 +43,11 @@ n == dist.length == speed.length
 
 class Solution {
     public int eliminateMaximum(int[] dist, int[] speed) {
-        for(int i = 0 ; i < dist.length ; i++) {
+        for(int i = 0 ; i < dist.length ; i++) { //we only care about how long it takes the monster to reach
             dist[i] = (dist[i] - 1) / speed[i];
         }
         Arrays.sort(dist);
-        for(int i = 0 ; i < dist.length ; i++) {
+        for(int i = 0 ; i < dist.length ; i++) { //kill monsters in the order they reach city
             if(dist[i] < i) 
                 return i;
         }

@@ -18,26 +18,21 @@ All root-to-leaf paths are:
 class Solution {
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> list = new ArrayList<>();
-        
-        if(root == null) {
-            return list;
-        }
-        else {
-            binaryPaths(root, "", list);
-        }
+        if(root != null) binaryPaths(root, "", list);
+     
         return list;
     }
     
-    public void binaryPaths(TreeNode root, String s, List<String> list) {
-        if(root.left == null && root.right == null) { //add to list end of path
+    public void binaryPaths(TreeNode root, String path, List<String> list) {
+        if(root.left == null && root.right == null) { //leaf node add to list
             list.add(s + root.val);
         }
         
         if(root.left != null) {
-            binaryPaths(root.left, s + root.val + "->", list);
+            binaryPaths(root.left, path + root.val + "->", list);
         }
         if(root.right != null) {
-            binaryPaths(root.right, s + root.val + "->", list);
+            binaryPaths(root.right, path + root.val + "->", list);
         }
     }
 }

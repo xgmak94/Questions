@@ -41,7 +41,7 @@ class Solution {
         
         if(start > fin) fin += 60*24;
         
-        //round startTime to next 15, round finishTime to last 15
+        //round startTime to NEXT 15, round finishTime to PREV 15
         if(start % 15 != 0) start += 15 - (start % 15);
         fin -= fin % 15;
         

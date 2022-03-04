@@ -19,7 +19,7 @@ Input: s = "aababcabc"
 Output: 4
 Explanation: There are 7 substrings of size 3: "aab", "aba", "bab", "abc", "bca", "cab", and "abc".
 The good substrings are "abc", "bca", "cab", and "abc".
- 
+
 Constraints:
 1 <= s.length <= 100
 s​​​​​​ consists of lowercase English letters.

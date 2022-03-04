@@ -38,7 +38,7 @@ Output: [[1],
 Example 5:
 Input: rowSum = [0], colSum = [0]
 Output: [[0]]
- 
+
 Constraints:
 1 <= rowSum.length, colSum.length <= 500
 0 <= rowSum[i], colSum[i] <= 108

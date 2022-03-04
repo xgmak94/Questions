@@ -34,14 +34,17 @@ class Solution {
         int dir = 0;
         int idx = 0;
         int[][] ret = new int[R*C][2];
-        ret[idx++] = new int[]{r0, c0};
+        ret[idx++] = new int[]{r0, c0}; //we always start at starting point
         
         while(idx < R*C) {
             if(dir % 2 == 0) numSteps++; //increase steps every 2 dir changes
             for(int i = 0 ; i < numSteps ; i++) {
                 r0 += dirs[dir % 4][0];
                 c0 += dirs[dir % 4][1];
-                if(checkValid(R, C, r0, c0)) ret[idx++] = new int[]{r0, c0};
+                if(checkValid(R, C, r0, c0)) { //only add if within bounds
+                    ret[idx] = new int[]{r0, c0};
+                    idx++;
+                }
             }
             dir++;
         }

@@ -13,7 +13,7 @@ Example 2:
 Input: arr = [1,2,3,4], k = 2
 Output: 6
 Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.
- 
+
 Constraints:
 1 <= arr.length <= 1000
 1 <= arr[i] <= 1000
@@ -24,15 +24,15 @@ arr[i] < arr[j] for 1 <= i < j <= arr.length
 class Solution {
     public int findKthPositive(int[] arr, int k) {
         Set<Integer> set = new HashSet<>();
+        int count = 0;
         for(int num : arr) {
             set.add(num);
         }
-        int count = 0;
-        for(int i = 1 ; i < arr.length + k ; i++) {
-            System.out.println(i);
+
+        for(int i = 1 ; i <= arr.length + k ; i++) {
             if(!set.contains(i)) count++;
             if(count == k) return i;
         }
-        return arr.length+k;
+        return -1;
     }
 }

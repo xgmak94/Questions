@@ -30,9 +30,10 @@ distance.length == n
 
 class Solution {
     public int distanceBetweenBusStops(int[] distance, int a, int b) {
-        int sumDest = 0, total = 0;
-        int start = Math.min(a, b); //make start the smaller value
-        int dest = Math.max(a, b);
+        int sumDest = 0;
+        int total = 0;
+        int start = Math.min(a, b); //make start the smaller value, does not matter which way we go
+        int dest = Math.max(a, b); //make dest the larger value
         
         for(int i = 0 ; i < distance.length ; i++) {
             if(i >= start && i < dest) {

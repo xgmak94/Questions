@@ -47,8 +47,8 @@ class Solution {
         int carPeople = 0;
         for(int i = 0 ; i < 1001 ; i++) {
             carPeople += stops[i];
-            if(carPeople > capacity) return false;
+            if(carPeople > capacity) return false; //capacity was reached at some time during the trip
         }
-        return true;
+        return true; //we never reached capacity
     }
 }

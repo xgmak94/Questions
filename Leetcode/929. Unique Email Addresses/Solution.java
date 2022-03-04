@@ -22,12 +22,13 @@ class Solution {
         
         for(String email : emails) {
             String[] split = email.split("@");
-            String local = split[0];
-            String domain = split[1];
             
-            local = local.replaceAll("\\.", "");
-            if (local.contains("+"))
+            String local = split[0].replaceAll("\\.", "");
+            String domain = split[1];
+
+            if (local.contains("+")) {
                 local = local.substring(0, local.indexOf('+'));
+            }
             
             String fullEmail = local + "@" + domain;
             set.add(fullEmail);

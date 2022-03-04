@@ -6,24 +6,19 @@ A string s is a prefix string of words if s can be made by concatenating the fir
 
 Return true if s is a prefix string of words, or false otherwise.
 
- 
-
 Example 1:
-
 Input: s = "iloveleetcode", words = ["i","love","leetcode","apples"]
 Output: true
 Explanation:
 s can be made by concatenating "i", "love", and "leetcode" together.
-Example 2:
 
+Example 2:
 Input: s = "iloveleetcode", words = ["apples","i","love","leetcode"]
 Output: false
 Explanation:
 It is impossible to make s using a prefix of arr.
- 
 
 Constraints:
-
 1 <= words.length <= 100
 1 <= words[i].length <= 20
 1 <= s.length <= 1000

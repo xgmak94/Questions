@@ -18,7 +18,7 @@ Example 2:
 Input: items = [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], ruleKey = "type", ruleValue = "phone"
 Output: 2
 Explanation: There are only two items matching the given rule, which are ["phone","blue","pixel"] and ["phone","gold","iphone"]. Note that the item ["computer","silver","phone"] does not match.
- 
+
 Constraints:
 1 <= items.length <= 104
 1 <= typei.length, colori.length, namei.length, ruleValue.length <= 10
@@ -36,7 +36,9 @@ class Solution {
         int idx = map.get(ruleKey);
         int matchCount = 0;
         for(List<String> item : items) {
-            if(item.get(idx).equals(ruleValue)) matchCount++;
+            if(item.get(idx).equals(ruleValue)) {
+                matchCount++;
+            }
         }
         return matchCount;
     }

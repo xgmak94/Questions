@@ -33,7 +33,7 @@ The answer is guaranteed to be less than 2 ^ 31.
 
 class Solution {
     public int robotSim(int[] commands, int[][] obstacles) {
-        int[][] dirs = new int[][]{{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+        int[][] dirs = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; //south, east, north, west
         Set<String> set = new HashSet<>();
         for(int[] obstacle : obstacles) {
             set.add(obstacle[0] + " " + obstacle[1]);
@@ -41,7 +41,7 @@ class Solution {
 
         int x = 0, y = 0;
         int maxDist = 0;
-        int dir = 1; // index in dir
+        int dir = 0; // start facing south
         for(int command : commands) {
             if(command == -1) {
                 dir++;

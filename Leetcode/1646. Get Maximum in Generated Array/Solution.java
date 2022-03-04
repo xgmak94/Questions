@@ -31,7 +31,7 @@ Example 3:
 Input: n = 3
 Output: 2
 Explanation: According to the given rules, the maximum between nums[0], nums[1], nums[2], and nums[3] is 2.
- 
+
 Constraints:
 0 <= n <= 100
 */

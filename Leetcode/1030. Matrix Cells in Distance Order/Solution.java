@@ -34,6 +34,7 @@ class Solution {
     public int[][] allCellsDistOrder(int R, int C, int r0, int c0) {
         int[][] ans = new int[R * C][];
         PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> dist(a[0], a[1], r0, c0) - dist(b[0], b[1], r0, c0));
+        
         for(int i = 0 ; i < R ; i++) {
             for(int j = 0 ; j < C ; j++) {
                 pq.offer(new int[]{i, j});
@@ -42,7 +43,8 @@ class Solution {
         
         int idx = 0;
         while(idx < R*C) {
-            ans[idx++] = pq.poll();
+            ans[idx] = pq.poll();
+            idx++;
         }
         return ans;
     }

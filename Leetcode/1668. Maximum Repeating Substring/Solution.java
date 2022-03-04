@@ -18,7 +18,7 @@ Example 3:
 Input: sequence = "ababc", word = "ac"
 Output: 0
 Explanation: "ac" is not a substring in "ababc". 
- 
+
 Constraints:
 1 <= sequence.length <= 100
 1 <= word.length <= 100

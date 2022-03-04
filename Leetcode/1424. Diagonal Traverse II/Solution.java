@@ -17,7 +17,7 @@ Output: [1,4,2,5,3,8,6,9,7,10,11]
 Example 4:
 Input: nums = [[1,2,3,4,5,6]]
 Output: [1,2,3,4,5,6]
- 
+
 Constraints:
 1 <= nums.length <= 10^5
 1 <= nums[i].length <= 10^5

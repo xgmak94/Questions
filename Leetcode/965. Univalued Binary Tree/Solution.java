@@ -23,9 +23,9 @@ class Solution {
     
     public void traverse(Set<Integer> set, TreeNode root) {
         if(root == null) return;
+        set.add(root.val);
         
         traverse(set, root.left);
-        set.add(root.val);
         traverse(set, root.right);
     }
 }

@@ -23,7 +23,8 @@ Output: false
 
 class Solution {
     public boolean isCousins(TreeNode root, int x, int y) {
-        if(getDepth(root, x, 0) == getDepth(root, y, 0) && getParent(root, x, null) != getParent(root, y, null)) {
+        if(getDepth(root, x, 0) == getDepth(root, y, 0) && 
+            getParent(root, x, null) != getParent(root, y, null)) {
             return true;
         }
         else {
@@ -41,10 +42,8 @@ class Solution {
             TreeNode left = getParent(root.left, n, root);
             TreeNode right = getParent(root.right, n, root);
             
-            if(left == null) 
-                return right;
-            else 
-                return left;
+            if(left == null) return right;
+            else return left;
         }
     }
 

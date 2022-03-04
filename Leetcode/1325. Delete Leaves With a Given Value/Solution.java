@@ -1,47 +1,34 @@
 /* https://leetcode.com/problems/delete-leaves-with-a-given-value/
 
-Given the array nums consisting of n positive integers. You computed the sum of all non-empty continous subarrays from the array and then sort them in non-decreasing order, creating a new array of n * (n + 1) / 2 numbers.
+Given a binary tree root and an integer target, delete all the leaf nodes with value target.
 
-Return the sum of the numbers from index left to index right (indexed from 1), inclusive, in the new array. Since the answer can be a huge number return it modulo 10^9 + 7.
+Note that once you delete a leaf node with value target, if its parent node becomes a leaf node and has the value target, it should also be deleted (you need to continue doing that until you cannot).
 
 Example 1:
-Input: nums = [1,2,3,4], n = 4, left = 1, right = 5
-Output: 13 
-Explanation: All subarray sums are 1, 3, 6, 10, 2, 5, 9, 3, 7, 4. After sorting them in non-decreasing order we have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 1 to ri = 5 is 1 + 2 + 3 + 3 + 4 = 13. 
+Input: root = [1,2,3,2,null,2,4], target = 2
+Output: [1,null,3,null,4]
+Explanation: Leaf nodes in green with value (target = 2) are removed (Picture in left). 
+After removing, new nodes become leaf nodes with value (target = 2) (Picture in center).
 
 Example 2:
-Input: nums = [1,2,3,4], n = 4, left = 3, right = 4
-Output: 6
-Explanation: The given array is the same as example 1. We have the new array [1, 2, 3, 3, 4, 5, 6, 7, 9, 10]. The sum of the numbers from index le = 3 to ri = 4 is 3 + 3 = 6.
+Input: root = [1,3,3,3,2], target = 3
+Output: [1,3,null,null,2]
 
 Example 3:
-Input: nums = [1,2,3,4], n = 4, left = 1, right = 10
-Output: 50
- 
+Input: root = [1,2,null,2,null,2], target = 2
+Output: [1]
+Explanation: Leaf nodes in green with value (target = 2) are removed at each step.
+
 Constraints:
-1 <= nums.length <= 10^3
-nums.length == n
-1 <= nums[i] <= 100
-1 <= left <= right <= n * (n + 1) / 2
+The number of nodes in the tree is in the range [1, 3000].
+1 <= Node.val, target <= 1000
 */
 
 class Solution {
-    public int rangeSum(int[] nums, int n, int left, int right) {
-        int mod = 1000000000 + 7;
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0 ; i < n ; i++) {
-            int sum = nums[i];
-            list.add(sum);
-            for(int j = i+1 ; j < n ; j++) {
-                sum += nums[j];
-                list.add(sum);
-            }
-        }
-        Collections.sort(list);
-        int ret = 0;
-        for(int i = left ; i <= right ; i++) {
-            ret = (ret + list.get(i-1)) % mod;
-        }
-        return ret % mod;
+    public TreeNode removeLeafNodes(TreeNode root, int target) {
+        if(root.left != null) root.left = removeLeafNodes(root.left, target);
+        if(root.right != null) root.right = removeLeafNodes(root.right, target);
+        
+        return (root.val == target && root.left == null && root.right == null) ? null : root;
     }
 }

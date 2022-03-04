@@ -38,12 +38,13 @@ class Solution {
         Arrays.sort(piles);
         
         int l = 0;
-        int r = piles.length;
+        int r = piles.length-1;
         int coins = 0;
         while(l < r) { //sorted take smallest, largest, 2largest for each triple
+            coins += piles[r-1]; //our coin is the second r
+            
             l++;
             r -= 2;
-            coins += piles[r];
         }
         return coins;
     }

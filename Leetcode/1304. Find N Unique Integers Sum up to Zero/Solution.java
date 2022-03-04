@@ -21,11 +21,11 @@ class Solution {
         int[] arr = new int[n];
         
         int sum = 0;
-        for(int i = 0 ; i < n - 1 ; i++) {
-            arr[i] = i+1; // i+1 or else problem with n = 2
+        for(int i = 1 ; i < n ; i++) {
+            arr[i] = i; // i+1 or else problem with n = 2
             sum += arr[i];
         }
-        arr[n-1] = -sum;
+        arr[0] = -sum;
         return arr;
     }
 }

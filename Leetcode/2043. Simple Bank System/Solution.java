@@ -5,17 +5,15 @@ You have been tasked with writing a program for a popular bank that will automat
 Execute all the valid transactions. A transaction is valid if:
 
 The given account number(s) are between 1 and n, and
-The amount of money withdrawn or transferred from is less than or equal to the balance of the account.
+The money of money withdrawn or transferred from is less than or equal to the balance of the account.
 Implement the Bank class:
 
 Bank(long[] balance) Initializes the object with the 0-indexed integer array balance.
 boolean transfer(int account1, int account2, long money) Transfers money dollars from the account numbered account1 to the account numbered account2. Return true if the transaction was successful, false otherwise.
 boolean deposit(int account, long money) Deposit money dollars into the account numbered account. Return true if the transaction was successful, false otherwise.
 boolean withdraw(int account, long money) Withdraw money dollars from the account numbered account. Return true if the transaction was successful, false otherwise.
- 
 
 Example 1:
-
 Input
 ["Bank", "withdraw", "transfer", "deposit", "transfer", "withdraw"]
 [[[10, 100, 20, 50, 30]], [3, 10], [5, 1, 20], [5, 20], [3, 4, 15], [10, 50]]
@@ -33,10 +31,8 @@ bank.deposit(5, 20);     // return true, it is valid to deposit $20 to account 5
 bank.transfer(3, 4, 15); // return false, the current balance of account 3 is $10,
                          // so it is invalid to transfer $15 from it.
 bank.withdraw(10, 50);   // return false, it is invalid because account 10 does not exist.
- 
 
 Constraints:
-
 n == balance.length
 1 <= n, account, account1, account2 <= 105
 0 <= balance[i], money <= 1012
@@ -52,7 +48,8 @@ class Bank {
     }
     
     public boolean transfer(int account1, int account2, long money) {
-        if(account1 <= n && bals[account1-1] >= money && account2 <= n) {
+        //need to check account #'s are both valid AND money is valid'
+        if(account1 <= n && bals[account1-1] >= money && account2 <= n) { 
             withdraw(account1, money);
             deposit(account2, money);
             return true;
@@ -63,7 +60,7 @@ class Bank {
     }
     
     public boolean deposit(int account, long money) {
-        if(account <= n) {
+        if(account <= n) { //we only need to check that the account # is valid
             bals[account-1] += money;
             return true;
         }
@@ -73,7 +70,7 @@ class Bank {
     }
     
     public boolean withdraw(int account, long money) {
-        if(account <= n && bals[account-1] >= money) {
+        if(account <= n && bals[account-1] >= money) { //need to check account # is valid AND money is money is valid
             bals[account-1] -= money;
             return true;
         }

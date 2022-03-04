@@ -22,7 +22,7 @@ Output: 8
 Example 3:
 Input: mat = [[5]]
 Output: 5
- 
+
 Constraints:
 n == mat.length == mat[i].length
 1 <= n <= 100

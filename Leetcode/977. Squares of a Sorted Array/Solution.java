@@ -12,24 +12,22 @@ Output: [4,9,9,49,121]
 */
 
 class Solution {
-    public int[] sortedSquares(int[] A) {
-        int[] squares = new int[A.length];
-        int n = A.length;
+    public int[] sortedSquares(int[] nums) {
+        int[] squares = new int[nums.length];
         
-        int lo = 0;
-        int hi = n-1;
-        int idx = n-1;
-        
-        while(lo <= j) {
-            if(A[lo]*A[lo] > A[hi]*A[hi]) {
-                squares[idx] = A[lo]*A[lo];
+        int l = 0;
+        int r = nums.length-1;
+        int idx = nums.length-1;
+        while(l <= r) {
+            if(nums[l]*nums[l] > nums[r]*nums[r]) {
+                squares[idx] = nums[l]*nums[l];
                 idx--;
-                lo++;
+                l++;
             }
             else {
-                squares[idx] = A[hi]*A[hi];
+                squares[idx] = nums[r]*nums[r];
                 idx--;
-                j--;
+                r--;
             }
         }
         return squares;

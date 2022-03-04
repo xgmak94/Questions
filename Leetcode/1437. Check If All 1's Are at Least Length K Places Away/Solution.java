@@ -27,7 +27,7 @@ class Solution {
         
         for(int i = 0 ; i < nums.length ; i++) {
             if(nums[i] == 1) {
-                if(lastOne != Integer.MIN_VALUE && lastOne + k >= i) {
+                if(lastOne + k >= i) {
                     return false;
                 }
                 lastOne = i;

@@ -20,17 +20,16 @@ class Solution {
         int totalCost = 0;
         
         Arrays.sort(costs, new Comparator<int[]>() {
-        @Override
-        public int compare(int[] v1, int[] v2) {
-            return (v1[0] - v1[1]) - (v2[0] - v2[1]);
-        }
-            });
+            @Override
+            public int compare(int[] v1, int[] v2) {
+                return (v1[0] - v1[1]) - (v2[0] - v2[1]); //better to fly to city A before city B
+            }});
             
         for(int i = 0 ; i < costs.length ; i++) {
-            if(i < costs.length / 2) {
+            if(i < costs.length / 2) { //send first half to city A
                 totalCost += costs[i][0];
             }
-            else {
+            else { //send second half to city B
                 totalCost += costs[i][1];
             }
         }

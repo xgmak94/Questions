@@ -19,7 +19,7 @@ Example 3:
 Input: n = 20
 Output: 96
 Explanation: After the 20th day, the total is (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4 + 5 + 6 + 7 + 8) + (3 + 4 + 5 + 6 + 7 + 8) = 96.
- 
+
 Constraints:
 1 <= n <= 1000
 */
@@ -33,7 +33,7 @@ class Solution {
         for(int i = 1 ; i <= fullWeeks ; i++) { //full week totals
             total += 7*(i+3); //i+(i+1)+(i+2)+(i+3)+(i+4)+(i+5)+(i+6)
         }
-        for(int j = fullWeeks*7 ; j < n ; j++) {
+        for(int j = fullWeeks*7 ; j < n ; j++) { //last unfull week
             fullWeeks++;
             total += fullWeeks;
         }

@@ -21,7 +21,7 @@ class Solution {
         List<List<Integer>> levelOrder = new ArrayList<>();
 
         //empty
-        if(root == null) return levelOrder; 
+        if(root == null) return levelOrder;
 
         List<Integer> level = new ArrayList<>();
         Queue<Node> q = new LinkedList<>();

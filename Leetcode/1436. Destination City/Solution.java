@@ -27,13 +27,12 @@ Output: "Z"
 class Solution {
     public String destCity(List<List<String>> paths) {
         Set<String> cities = new HashSet<>();
-        
         for(List<String> path : paths) {
-            cities.add(path.get(1)); //add all destinations
+            cities.add(path.get(1)); //add all destinations locations
         }
         
         for(List<String> path : paths) {
-            cities.remove(path.get(0)); //remove all starting
+            cities.remove(path.get(0)); //remove all starting locations
         }
         return cities.iterator().next(); //only 1 destination should be left
     }

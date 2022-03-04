@@ -13,7 +13,7 @@ Example 2:
 Input: gain = [-4,-3,-2,-1,4,3,2]
 Output: 0
 Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
- 
+
 Constraints:
 n == gain.length
 1 <= n <= 100
@@ -23,10 +23,10 @@ n == gain.length
 class Solution {
     public int largestAltitude(int[] gain) {
         int largest = 0;
-        int curr = 0;
-        for(int i = 0 ; i < gain.length ; i++) {
-            curr += gain[i];
-            largest = Math.max(largest, curr);
+        int height = 0;
+        for(int change : gain) {
+            height += change;
+            largest = Math.max(largest, height);
         }
         return largest;
     }

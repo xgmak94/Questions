@@ -18,7 +18,7 @@ Example 3:
 Input: allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
 Output: 4
 Explanation: Strings "cc", "acd", "ac", and "d" are consistent.
- 
+
 Constraints:
 1 <= words.length <= 104
 1 <= allowed.length <= 26
@@ -30,13 +30,13 @@ words[i] and allowed contain only lowercase English letters.
 class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
         Set<Character> set = new HashSet<>();
-        int count = 0;
-        
         for(char c : allowed.toCharArray()) set.add(c);
         
+        int count = 0;
         for(String word : words) {
-            if(!check(word, set)) continue;
-            count++;
+            if(check(word, set)) {
+                count++;
+            }
         }
         return count;
     }

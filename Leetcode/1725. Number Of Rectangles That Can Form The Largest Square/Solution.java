@@ -17,7 +17,7 @@ The largest possible square is of length 5, and you can get it out of 3 rectangl
 Example 2:
 Input: rectangles = [[2,3],[3,7],[4,3],[3,7]]
 Output: 3
- 
+
 Constraints:
 1 <= rectangles.length <= 1000
 rectangles[i].length == 2

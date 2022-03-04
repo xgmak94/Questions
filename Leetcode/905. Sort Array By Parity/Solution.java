@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/sort-array-by-parity/description/
+/* https://leetcode.com/problems/sort-array-by-parity/
 
 Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
 
@@ -20,12 +20,10 @@ class Solution {
                 l++;
             }
             else {
-                if(nums[r] % 2 == 0) {
-                    swap(nums, l, r);
-                }
-                else {
+                while(r > l && nums[r] % 2 == 1) {
                     r--;
                 }
+                swap(nums, l, r);
             }
         }
         return nums;

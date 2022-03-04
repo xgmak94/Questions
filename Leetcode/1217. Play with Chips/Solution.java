@@ -20,15 +20,20 @@ Output: 2
 Explanation: Both fourth and fifth chip will be moved to position two with cost 1. Total minimum cost will be 2.
 */
 
-//move all chips to even amounts to position 2, odd amounts to position 1, total cost is 0
+//move all chips at even indices to position 2, odd indices to position 1, total cost is 0
 //move smaller stack over by 1 to create 1 stack, cost is equal to smaller stack
 class Solution {
     public int minCostToMoveChips(int[] chips) {
         int even = 0;
         int odd = 0;
         for(int val : chips) {
-            if(val % 2 == 0) even++;
+            if(val % 2 == 0) {
+                even++;
+            }
+            else {
+                odd++;
+            }
         }
-        return Math.min(even, chips.length - even);
+        return Math.min(odd, even);
     }
 }

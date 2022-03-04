@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/search-a-2d-matrix-ii/description/
+/* https://leetcode.com/problems/search-a-2d-matrix-ii/
 
 Write an efficient algorithm that searches for a value in an m x n matrix.
 

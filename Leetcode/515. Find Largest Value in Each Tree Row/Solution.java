@@ -23,15 +23,15 @@ class Solution {
         q.add(root);
         
         while(!q.isEmpty()) {
-            int n = q.size();
+            int rowSize = q.size();
             int maxRow = Integer.MIN_VALUE;
             
-            for(int i = 0 ; i < n ; i++) {
-                TreeNode top = q.poll();
-                maxRow = Math.max(maxRow, top.val);
+            for(int i = 0 ; i < rowSize ; i++) { //traverse a row
+                TreeNode node = q.poll();
+                maxRow = Math.max(maxRow, node.val); //max in current row
 
-                if(top.left != null) q.add(top.left);
-                if(top.right != null) q.add(top.right);
+                if(node.left != null) q.add(node.left);
+                if(node.right != null) q.add(node.right);
             }
             largest.add(maxRow);
         }

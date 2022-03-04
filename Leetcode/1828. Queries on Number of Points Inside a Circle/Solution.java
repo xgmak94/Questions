@@ -19,7 +19,7 @@ Input: points = [[1,1],[2,2],[3,3],[4,4],[5,5]], queries = [[1,2,2],[2,2,2],[4,3
 Output: [2,3,2,4]
 Explanation: The points and circles are shown above.
 queries[0] is green, queries[1] is red, queries[2] is blue, and queries[3] is purple.
- 
+
 Constraints:
 1 <= points.length <= 500
 points[i].length == 2

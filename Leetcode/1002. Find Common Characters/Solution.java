@@ -16,7 +16,7 @@ Output: ["c","o"]
 import java.util.*;
 class Solution {
     public static List<String> commonChars(String[] A) {
-        List<String> ret = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         
         int[] commonDict = new int[26];
         Arrays.fill(commonDict, Integer.MAX_VALUE);
@@ -31,11 +31,11 @@ class Solution {
         for(int i = 0 ; i < 26 ; i++) {
             int freq = commonDict[i];
             while(freq > 0) {
-                ret.add((char)(i+'a') + "");
+                list.add((char)(i+'a') + "");
                 freq--;
             }
         }
-        return ret;
+        return list;
     }
     public static int[] makeDict(String s) {
         int[] dict = new int[26];

@@ -35,7 +35,7 @@ s only consists of letters 'a' and 'b'
 class Solution {
     public int removePalindromeSub(String s) {
         if(s.length() == 0) return 0; //nothing to remove
-        if(isPalindrome(s)) return 1; //remove all at once
+        else if(isPalindrome(s)) return 1; //whole thing is a palindrome remove all
         else return 2; //remove all A's then all B's subsequence is not continuous
     }
     

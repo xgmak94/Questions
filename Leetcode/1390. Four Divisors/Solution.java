@@ -24,6 +24,7 @@ class Solution {
         for(int num : nums) {
             List<Integer> list = divisors(num);
             if(list.size() == 4) {
+                // sum += list.stream().mapToInt(i->i).sum();
                 for(int n : list) {
                     sum += n;
                 }

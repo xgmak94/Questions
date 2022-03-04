@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/find-anagram-mappings/description/
+/* https://leetcode.com/problems/find-anagram-mappings/
 
 Given two lists Aand B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
 
@@ -22,7 +22,7 @@ A[i], B[i] are integers in range [0, 10^5].
 class Solution {
     public int[] anagramMappings(int[] A, int[] B) {
         HashMap<Integer,Integer> map = new HashMap<>();
-        for(int i = 0 ; i < A.length ; i++){
+        for(int i = 0 ; i < A.length ; i++) { //map contains the (val, index in B)
             map.put(B[i], i);
         }
         for(int i = 0 ; i < l ; i++){

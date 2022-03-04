@@ -27,7 +27,7 @@ Output: "arigatou"
 Example 5:
 Input: s = "art", indices = [1,0,2]
 Output: "rat"
- 
+
 Constraints:
 s.length == indices.length == n
 1 <= n <= 100

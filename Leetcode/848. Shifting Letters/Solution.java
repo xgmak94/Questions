@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/shifting-letters/description/
+/* https://leetcode.com/problems/shifting-letters/
 
 We have a string S of lowercase letters, and an integer array shifts.
 
@@ -24,7 +24,7 @@ class Solution {
     public String shiftingLetters(String S, int[] shifts) {
         char[] chars = S.toCharArray();
         
-        for (int i = shifts.length - 2 ; i >= 0; i--) {
+        for (int i = shifts.length - 2 ; i >= 0 ; i--) {
             shifts[i] = (shifts[i] + shifts[i + 1]) % 26;
         }
         

@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/most-frequent-subtree-sum/description/
+/* https://leetcode.com/problems/most-frequent-subtree-sum/
 
 Given the root of a tree, you are asked to find the most frequent subtree sum. 
 The subtree sum of a node is defined as the sum of all the node values formed by the subtree rooted at that node (including the node itself). 
@@ -34,13 +34,7 @@ class Solution {
             if(map.get(key) == mostFrequent)
                 list.add(key);
         }
-        
-        int[] res = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            res[i] = list.get(i);
-        }
-        
-        return res;     
+        return list.stream().mapToInt(i->i).toArray();
     }
     
     public int postOrder(TreeNode root, Map<Integer, Integer> map) {

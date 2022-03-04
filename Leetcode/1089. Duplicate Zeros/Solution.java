@@ -19,24 +19,22 @@ Explanation: After calling your function, the input array is modified to: [1,2,3
 
 class Solution {
     public void duplicateZeros(int[] arr) {
-        int n = arr.length;
-        
         int numZeros = 0;
         for(int num : arr) {
             if(num == 0) numZeros++;
         }
-        int newLen = n+numZeros;
+        int newLen = arr.length+numZeros;
 
-        int i = n-1;
+        int i = arr.length-1;
         int j = newLen-1;
         while(j >= 0) {
             if(arr[i] == 0) { //if we hit a zero copy it twice
-                if(j < n) arr[j] = arr[i];
+                if(j < arr.length) arr[j] = arr[i]; //only need to write if within original arr bounds
                 j--;
-                if(j < n) arr[j] = arr[i];
+                if(j < arr.length) arr[j] = arr[i]; //only need to write if within original arr bounds
             }
             else { // non-zero copy once
-                if(j < n) arr[j] = arr[i];
+                if(j < arr.length) arr[j] = arr[i]; //only need to write if within original arr bounds
             }
             i--;
             j--;

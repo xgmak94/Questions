@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/perfect-number/description/
+/* https://leetcode.com/problems/perfect-number/
 
 We define the Perfect Number is a positive integer that is equal to the sum of all its positive divisors except itself.
 
@@ -14,11 +14,12 @@ class Solution {
         if (num == 1) return false;
         
         int sum = 1; // 1 is always a divisor
-        for(int i = 2 ; i <= Math.sqrt(num) ; i++) {
+        for(int i = 2 ; i <= Math.sqrt(num) ; i++) { //we will get all divisors from less than square
             if(num % i == 0) {
-                sum += i;
-                if(i * i != num) { //add other divisor if its not square
-                    sum += num / i;
+                sum += i; //divisor
+                sum += num/i; //other divisor
+                if(i * i == num) { // squared only count once
+                    sum -= i;
                 }
             }
         }

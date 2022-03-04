@@ -36,14 +36,12 @@ Output: 1
 class Solution {
     public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {
         int distVal = 0;
-        for(int i = 0 ; i < arr1.length ; i++) {
-            int num1 = arr1[i];
+        for(int num1 : arr1) {
             boolean count = true;
-            for(int j = 0 ; j < arr2.length ; j++) {
-                int num2 = arr2[j];
+            for(int num2 : arr2) {
                 if(Math.abs(num1 - num2) <= d) count = false;
             }
-            if(count == true) distVal++;
+            if(count) distVal++;
         }
         return distVal;
     }

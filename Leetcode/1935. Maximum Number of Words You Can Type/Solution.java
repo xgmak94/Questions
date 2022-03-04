@@ -18,7 +18,7 @@ Example 3:
 Input: text = "leet code", brokenLetters = "e"
 Output: 0
 Explanation: We cannot type either word because the 'e' key is broken.
- 
+
 Constraints:
 1 <= text.length <= 104
 0 <= brokenLetters.length <= 26
@@ -30,19 +30,19 @@ brokenLetters consists of distinct lowercase English letters.
 class Solution {
     public int canBeTypedWords(String text, String brokenLetters) {
         int cnt = 0;
-        Set<Character> set = new HashSet<>();
-        for(char c : brokenLetters.toCharArray()) set.add(c);
+        Set<Character> broke = new HashSet<>();
+        for(char c : brokenLetters.toCharArray()) broke.add(c);
         
         String[] words = text.split(" ");
         for(String word : words) {
-            if(checkWord(word, set)) cnt += 1;
+            if(checkWord(word, broke)) cnt += 1;
         }
         return cnt;
     }
     
-    public boolean checkWord(String word, Set<Character> set) {
+    public boolean checkWord(String word, Set<Character> broke) {
         for(char c : word.toCharArray()) {
-            if(set.contains(c)) return false;
+            if(broke.contains(c)) return false;
         }
         return true;
     }

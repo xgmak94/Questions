@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/flood-fill/description/
+/* https://leetcode.com/problems/flood-fill/
 
 An image is represented by a 2-D array of integers, each integer representing the pixel value of the image (from 0 to 65535).
 
@@ -21,20 +21,19 @@ to the starting pixel.
 */
 
 class Solution {
-    int[][] dirs = {{0,1}, {0,-1}, {1,0}, {-1,0}};
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
-        int currColor = image[sr][sc];
-        if(currColor != newColor) {
-            dfs(image, sr, sc, currColor, newColor);
-        }
+        if(image[sr][sc] == newColor) return image;
+        
+        dfs(image, sr, sc, image[sr][sc], newColor);
         return image;
     }
     
     public void dfs(int[][] image, int sr, int sc, int currColor, int newColor) {
+        int[][] dirs = {{0,1}, {0,-1}, {1,0}, {-1,0}};
         if(sr < 0 || sr >= image.length || sc < 0 || sc >= image[0].length) //not in bounds
             return;
         
-        if(image[sr][sc] != currColor) //not correrct color to change
+        if(image[sr][sc] != currColor) //need the color to change
             return;
             
         image[sr][sc] = newColor;

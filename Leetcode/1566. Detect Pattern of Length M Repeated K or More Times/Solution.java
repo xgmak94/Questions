@@ -30,7 +30,7 @@ Example 5:
 Input: arr = [2,2,2,2], m = 2, k = 3
 Output: false
 Explanation: The only pattern of length 2 is (2,2) however it's repeated only twice. Notice that we do not count overlapping repetitions.
- 
+
 Constraints:
 2 <= arr.length <= 100
 1 <= arr[i] <= 100

@@ -32,6 +32,7 @@ class Solution {
         return second[t.length() - 1]; //if not found its the last letter of second array
     }
 }
+
 class Solution {
     public char findTheDifference(String s, String t) { //if not sure which one is longer
         int n = s.length();

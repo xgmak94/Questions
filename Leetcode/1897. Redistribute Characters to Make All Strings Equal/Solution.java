@@ -32,7 +32,7 @@ class Solution {
                 freq[c-'a']++;
             }
         }
-        for(int num : freq) {
+        for(int num : freq) { //we need to be able to put each character an equal amount into each word
             if(num % words.length != 0) return false;
         }
         return true;

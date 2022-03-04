@@ -18,7 +18,7 @@ Input: nums = [4,2,5,9,7,4,8]
 Output: 64
 Explanation: We can choose indices 3 and 6 for the first pair (9, 8) and indices 1 and 5 for the second pair (2, 4).
 The product difference is (9 * 8) - (2 * 4) = 64.
- 
+
 Constraints:
 4 <= nums.length <= 104
 1 <= nums[i] <= 104
@@ -29,6 +29,6 @@ class Solution {
         if(nums.length < 4) return -1;
         
         Arrays.sort(nums);
-        return nums[nums.length - 1]*nums[nums.length - 2] - nums[0]*nums[1];
+        return nums[nums.length - 1]*nums[nums.length - 2] - nums[0]*nums[1]; //numbers are all positive so take biggest 2 and smallest 2
     }
 }

@@ -32,7 +32,6 @@ class Solution {
         
         for(int i = 0; i < nums.length - k + 1 ; i++) {   
             int max = nums[i];
- 
             for(int j = 1 ; j < k ; j++) {
                 max = Math.max(max, nums[i+j]);
             }

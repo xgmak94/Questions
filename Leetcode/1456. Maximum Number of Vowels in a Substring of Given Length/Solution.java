@@ -44,13 +44,13 @@ class Solution {
         
         for(int i = 0 ; i < s.length() ; i++) {
             if(isVowel(s.charAt(i))) {
-                winCount++;
+                count++;
             }
             
             if(i >= k && isVowel(s.charAt(i-k))) {
-                winCount--;
+                count--;
             }
-            maxLength = Math.max(maxLength, winCount);
+            maxLength = Math.max(maxLength, count);
         }
         return maxLength;
     }

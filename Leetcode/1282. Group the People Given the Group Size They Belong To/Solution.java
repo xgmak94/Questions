@@ -23,13 +23,14 @@ class Solution {
         
         for(int i = 0 ; i < groupSizes.length ; i++) {
             int size = groupSizes[i];
-            map.putIfAbsent(size, new ArrayList<>());
             
+            map.putIfAbsent(size, new ArrayList<>());
             List<Integer> list = map.get(size);
             list.add(i);
-            if(list.size() == size) {
+
+            if(list.size() == size) { //group is full record in our ret
                 ret.add(list);
-                map.put(size, new ArrayList<>());
+                map.remove(size);
             }
         }
         return ret;

@@ -26,7 +26,7 @@ Example 3:
 Input: s = "aab", t = "bbb", k = 27
 Output: true
 Explanation: In the 1st move, we shift the first 'a' 1 time to get 'b'. In the 27th move, we shift the second 'a' 27 times to get 'b'.
- 
+
 Constraints:
 1 <= s.length, t.length <= 10^5
 0 <= k <= 10^9

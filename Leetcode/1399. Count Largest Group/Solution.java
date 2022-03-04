@@ -28,8 +28,8 @@ class Solution {
     public int countLargestGroup(int n) {
         Map<Integer, Integer> map = new HashMap<>();
         for(int i = 1 ; i <= n ; i++) {
-            int sumDigits = sumDigits(i);
-            map.put(sumDigits, map.getOrDefault(sumDigits, 0) + 1);
+            int sum = sumDigits(i);
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
         
         int maxSize = 0;

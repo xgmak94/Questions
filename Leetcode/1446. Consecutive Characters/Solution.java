@@ -38,12 +38,12 @@ class Solution {
         int currLength = 1;
         for(int i = 1 ; i < s.length() ; i++) {
             if(s.charAt(i) == s.charAt(i-1)) {
-                currLength += 1;
+                currLength++;
+                maxLength = Math.max(maxLength, currLength);
             }
             else {
                 currLength = 1;
             }
-            maxLength = Math.max(maxLength, currLength);
         }
         return maxLength;
     }

@@ -36,9 +36,9 @@ class Solution {
         int count = numBottles;
         while(numBottles >= numExchange) {
         	int remainder = numBottles % numExchange;
-            numBottles = numBottles / numExchange;
-            count = count + numBottles;
-            numBottles = numBottles + remainder;
+            numBottles /= numExchange;
+            count += numBottles;
+            numBottles += remainder;
         }
         return count;
     }

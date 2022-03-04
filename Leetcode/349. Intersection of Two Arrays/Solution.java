@@ -12,11 +12,6 @@ The result can be in any order.
 
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
-        int length1 = nums1.length;
-        int length2 = nums2.length;
-        if(length1 < 1 || length2 < 1)
-            return new int[0];
-        
         Set<Integer> set = new HashSet<>();
         Set<Integer> intersect = new HashSet<>(); //guarantees us unique elements
 
@@ -29,13 +24,7 @@ class Solution {
                 intersect.add(m);
             }
         }
-        
-        int[] arr = new int[intersect.size()];
-        int idx = 0;
-        for(int n : intersect) {
-            arr[idx++] = n;
-        }
-        return arr;
+        return intersect.stream().mapToInt(i->i).toArray();
     }
 }
 

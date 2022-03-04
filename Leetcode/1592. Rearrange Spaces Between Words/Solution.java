@@ -43,7 +43,9 @@ class Solution {
         wordCount = words.length;
         
         for(char c : text.toCharArray()) {
-            if(c == ' ') spaces++;
+            if(c == ' ') {
+                spaces++;
+            }
         }
         
         int gapSize = (wordCount <= 1) ? 0 : spaces / (wordCount-1);

@@ -22,24 +22,22 @@ Output: [7]
 class Solution {
     public List<Integer> luckyNumbers (int[][] matrix) {
         ArrayList<Integer> list = new ArrayList<>();
-        int m = matrix.length;
-        int n = matrix[0].length;
-        int[] rowMin = new int[m];
-        int[] colMax = new int[n];
+        int[] rowMin = new int[matrix.length];
+        int[] colMax = new int[matrix[0].length];
         
         Arrays.fill(rowMin, Integer.MAX_VALUE);
         Arrays.fill(colMax, Integer.MIN_VALUE);
         
-        for(int i = 0 ; i < m ; i++) {
-            for(int j = 0 ; j < n ; j++) {
+        for(int i = 0 ; i < matrix.length ; i++) {
+            for(int j = 0 ; j < matrix[0].length ; j++) {
                 int val = matrix[i][j];
                 rowMin[i] = Math.min(val, rowMin[i]);
                 colMax[j] = Math.max(val, colMax[j]);
             }
         }
         
-        for(int i = 0 ; i < m ; i++) {
-            for(int j = 0 ; j < n ; j++) {
+        for(int i = 0 ; i < matrix.length ; i++) {
+            for(int j = 0 ; j < matrix[0].length ; j++) {
                 int val = matrix[i][j];
                 if(val == rowMin[i] && val == colMax[j]) { //if lucky
                     list.add(matrix[i][j]);

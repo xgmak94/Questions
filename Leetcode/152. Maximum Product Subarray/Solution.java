@@ -16,8 +16,8 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 class Solution {
     public int maxProduct(int[] nums) {
         int res = nums[0];
-        int max = nums[0]; //store the min and max values
-        int min = nums[0];
+        int max = nums[0]; //store the max + value
+        int min = nums[0]; //store the min - value
         
         for(int i = 1 ; i < nums.length ; i++) {
             if(nums[i] < 0) {//negative number we swap the min and max

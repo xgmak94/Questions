@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/reverse-string-ii/description/
+/* https://leetcode.com/problems/reverse-string-ii/
 
 Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string. 
 If there are less than k characters left, reverse all of them. 
@@ -22,20 +22,19 @@ class Solution {
         while(i < length) {
             int j = Math.min(i + k - 1, length - 1); //if there are not k characters left
             reverse(arr, i, j);
-            i += 2*k;
+            i += 2*k; //skip to next set of characters
         }
         return String.valueOf(arr);
     }
     
-    
-    public void reverse(char[] string, int left, int right) {
-        while(left < right) {
-            char temp = string[left];
-            string[left] = string[right];
-            string[right] = temp;
+    public void reverse(char[] string, int l, int r) {
+        while(l < right) {
+            char temp = string[l];
+            string[l] = string[r];
+            string[r] = temp;
             
-            left++;
-            right--;
+            l++;
+            r--;
         }
     }
 }

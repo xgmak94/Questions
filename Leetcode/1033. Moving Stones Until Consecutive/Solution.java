@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/moving-stones-until-consecutive/description
+/* https://leetcode.com/problems/moving-stones-until-consecutive/
 
 Three stones are on a number line at positions a, b, and c.
 
@@ -29,7 +29,7 @@ Explanation: Move the stone from 1 to 4; or move the stone from 1 to 2 to 4.
 class Solution {
     public int[] numMovesStones(int a, int b, int c) {
         int[] stones = new int[]{a,b,c};
-        Arrays.sort(stones);
+        Arrays.sort(stones); //x,y,z are sorted x<y<z
         int x = stones[0];
         int y = stones[1];
         int z = stones[2];

@@ -23,7 +23,7 @@ Output: 2
 Example 4:
 Input: nums = [1,5,6,14,15]
 Output: 1
- 
+
 Constraints:
 1 <= nums.length <= 10^5
 -10^9 <= nums[i] <= 10^9
@@ -37,7 +37,7 @@ class Solution {
         Arrays.sort(nums);
         
         for (int i = 0; i < 4; ++i) {
-            res = Math.min(res, nums[n - 4 + i] - nums[i]); //
+            res = Math.min(res, nums[n - 4 + i] - nums[i]);
         }
         /*checking
         4th largest - 1st smallest take out 3 largest, 0 smallest

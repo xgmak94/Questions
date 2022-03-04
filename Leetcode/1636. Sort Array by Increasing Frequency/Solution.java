@@ -17,7 +17,7 @@ Explanation: '2' and '3' both have a frequency of 2, so they are sorted in decre
 Example 3:
 Input: nums = [-1,1,-6,4,5,-6,1,4,1]
 Output: [5,-1,4,4,-6,-6,1,1,1]
- 
+
 Constraints:
 1 <= nums.length <= 100
 -100 <= nums[i] <= 100
@@ -31,9 +31,8 @@ class Solution {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
         
-        PriorityQueue<Integer> pq = new PriorityQueue<>((i, j) -> 
-                                                map.get(i) == map.get(j) ? 
-                                                j - i : map.get(i) - map.get(j));
+        PriorityQueue<Integer> pq = new PriorityQueue<>((i, j) -> map.get(i) == map.get(j) ? 
+                                                                    j - i : map.get(i) - map.get(j));
         for(int num : nums) {
             pq.offer(num);
         }

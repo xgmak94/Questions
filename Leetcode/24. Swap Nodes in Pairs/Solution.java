@@ -14,8 +14,8 @@ class Solution {
         if(head == null || head.next == null) return head;
         
         ListNode dummy = new ListNode(0);
-        dummy.next = head;
         ListNode curr = dummy;
+        dummy.next = head;
         
         while(curr.next != null && curr.next.next != null) { //pair to swap
             ListNode first = curr.next;

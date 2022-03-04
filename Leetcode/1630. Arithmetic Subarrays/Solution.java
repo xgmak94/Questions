@@ -25,7 +25,7 @@ In the 2nd query, the subarray is [5,9,3,7]. This can be rearranged as [3,5,7,9]
 Example 2:
 Input: nums = [-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10], l = [0,1,6,4,8,7], r = [4,4,9,7,9,10]
 Output: [false,true,false,false,true,true]
- 
+
 Constraints:
 n == nums.length
 m == l.length
@@ -55,9 +55,9 @@ class Solution {
         
         Collections.sort(list);
         
-        int delta = list.get(1) - list.get(0);
+        int delta = list.get(1) - list.get(0); //this is what the diff between elements needs to be
         for(int i = 2 ; i < list.size() ; i++) {
-            if(delta != list.get(i) - list.get(i-1)) return false;
+            if(list.get(i) - list.get(i-1) != delta) return false;
         }
         return true;
     }

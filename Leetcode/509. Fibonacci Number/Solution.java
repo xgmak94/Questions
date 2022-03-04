@@ -24,14 +24,13 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
 class Solution {
     public int fib(int n) {
-        if(n == 0) return 0;
-        if(n == 1) return 1;
+        if(n <= 1) return n; //f(0) = 0, f(1) = 1
         
         int[] fib = new int[n + 1];
         fib[0] = 0;
         fib[1] = 1;
         
-        for(int i = 2 ; i < n + 1 ; i++) {
+        for(int i = 2 ; i <= n ; i++) {
             fib[i] = fib[i-2] + fib[i-1];
         }
         return fib[n];

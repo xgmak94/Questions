@@ -6,10 +6,7 @@ Two rectangles i and j (i < j) are considered interchangeable if they have the s
 
 Return the number of pairs of interchangeable rectangles in rectangles.
 
- 
-
 Example 1:
-
 Input: rectangles = [[4,8],[3,6],[10,20],[15,30]]
 Output: 6
 Explanation: The following are the interchangeable pairs of rectangles by index (0-indexed):
@@ -19,15 +16,13 @@ Explanation: The following are the interchangeable pairs of rectangles by index 
 - Rectangle 1 with rectangle 2: 3/6 == 10/20.
 - Rectangle 1 with rectangle 3: 3/6 == 15/30.
 - Rectangle 2 with rectangle 3: 10/20 == 15/30.
-Example 2:
 
+Example 2:
 Input: rectangles = [[4,5],[7,8]]
 Output: 0
 Explanation: There are no interchangeable pairs of rectangles.
- 
 
 Constraints:
-
 n == rectangles.length
 1 <= n <= 105
 rectangles[i].length == 2

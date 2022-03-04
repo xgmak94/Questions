@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/string-compression/description/
+/* https://leetcode.com/problems/string-compression/
 
 Given an array of characters, compress it in-place.
 The length after compression must always be smaller than or equal to the original array.
@@ -47,10 +47,12 @@ class Solution {
                 index++;
                 count++;
             }
-            chars[indexWrite++] = curr; //write the char
-            if(count != 1) {
+            chars[indexWrite] = curr; //write the char always
+            indexWrite++;
+            if(count > 1) {
                 for(char c : Integer.toString(count).toCharArray()) { //write the number
-                    chars[indexWrite++] = c;
+                    chars[indexWrite] = c;
+                    indexWrite++;
                 }
             }
         }

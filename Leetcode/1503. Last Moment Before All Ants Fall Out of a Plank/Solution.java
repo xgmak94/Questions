@@ -51,10 +51,10 @@ class Solution {
     public int getLastMoment(int n, int[] left, int[] right) {
         int maxLeave = 0;
         for(int num : left) {
-            maxLeave = Math.max(maxLeave, num); //takes n time to leave if going left starting at num
+            maxLeave = Math.max(maxLeave, num); //takes num time to leave if going left starting at num
         }
         for(int num : right) {
-            maxLeave = Math.max(maxLeave, n-num);
+            maxLeave = Math.max(maxLeave, n-num); //takes n-num time to leave if going right
         }
         return maxLeave;
     }

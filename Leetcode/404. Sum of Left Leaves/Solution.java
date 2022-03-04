@@ -21,18 +21,18 @@ class Solution {
         q.add(root);
         int sum = 0;  
         while(!q.isEmpty()) {
-            TreeNode top = q.poll();
-            if(top.left != null) {
-                if(top.left.left == null && top.left.right == null) { //if leaf
-                    sum += top.left.val;
+            TreeNode node = q.poll();
+            if(node.left != null) {
+                if(node.left.left == null && node.left.right == null) { //if leaf
+                    sum += node.left.val;
                 }
                 else { //not a leaf add to q
-                    q.add(top.left);
+                    q.add(node.left);
                 }
             }
-            if(top.right != null) {
-                if(top.right.left != null || top.right.right != null) {
-                    q.add(top.right);
+            if(node.right != null) {
+                if(node.right.left != null || node.right.right != null) {
+                    q.add(node.right);
                 }
             }
         }

@@ -24,7 +24,7 @@ Constraints:
 
 class Solution {
     public int longestSubsequence(int[] arr, int difference) {
-       Map<Integer, Integer> map = new HashMap<>();
+       Map<Integer, Integer> map = new HashMap<>(); //val, longest subseq ending with val
         
         for(int val : arr) {
             if(!map.containsKey(val - difference)) {

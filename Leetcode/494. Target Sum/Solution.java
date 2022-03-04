@@ -27,20 +27,19 @@ Your output answer is guaranteed to be fitted in a 32-bit integer.
 
 class Solution {
     public int findTargetSumWays(int[] nums, int S) {
-        int count = calculate(nums, 0, 0, S);
-        return count;
+        return calculate(nums, 0, 0, S);
     }
     
     public int calculate(int[] nums, int i, int sum, int S) {
         int count = 0;
-        if(i == nums.length) {
+        if(i == nums.length) { //if its last index check if sum is equal to target
             if(sum == S) {
                 count++;
             }
         }
         else {
-            count += calculate(nums, i+1, sum-nums[i], S);
-            count += calculate(nums, i+1, sum+nums[i], S);
+            count += calculate(nums, i+1, sum-nums[i], S); //if we subtract the num
+            count += calculate(nums, i+1, sum+nums[i], S); //if we add the num
         }
         return count;
     }

@@ -18,12 +18,12 @@ Output: true
 
 class Solution {
      public boolean uniqueOccurrences(int[] arr) {
-        Map<Integer, Integer> count = new HashMap<>();
+        Map<Integer, Integer> count = new HashMap<>(); //num, freq
         for (int val : arr) {
             count.put(val, count.getOrDefault(val, 0) + 1);
         }
         Set<Integer> set = new HashSet<>(count.values());
-        return count.size() == set.size();
+        return count.size() == set.size(); //if num of different vals == num of different freqs
     }
 }
 

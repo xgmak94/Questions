@@ -33,8 +33,13 @@ class Solution {
             if(diff < minDiff) {
                 ret.clear();
                 minDiff = diff;
+                
+                List<Integer> pair = new ArrayList<>();
+                pair.add(arr[i]);
+                pair.add(arr[i+1]);
+                ret.add(pair);
             }
-            if(diff == minDiff) {
+            else if(diff == minDiff) {
                 List<Integer> pair = new ArrayList<>();
                 pair.add(arr[i]);
                 pair.add(arr[i+1]);

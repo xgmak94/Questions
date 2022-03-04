@@ -31,16 +31,16 @@ Constraints:
 
 class Solution {
     public int minDeletionSize(String[] A) {
-        int num = 0;
+        int count = 0;
         
         for(int col = 0 ; col < A[0].length() ; col++) {
             for(int word = 0 ; word < A.length-1 ; word++) {
                 if(A[word].charAt(col) > A[word+1].charAt(col)) {
-                    num++; //this col is not non-decreasing count and go next
+                    count++; //this col is not non-decreasing count and go next
                     break;
                 }
             }
         }
-        return num;
+        return count;
     }
 }

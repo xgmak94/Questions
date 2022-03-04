@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/
+/* https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
 There are a number of spherical balloons spread in two-dimensional space. 
 For each balloon, provided input is the start and end coordinates of the horizontal diameter. 
@@ -22,8 +22,7 @@ One way is to shoot one arrow for example at x = 6 (bursting the balloons [2,8] 
 
 class Solution {
     public int findMinArrowShots(int[][] points) {
-        if(points == null || points.length == 0)
-            return 0;
+        if(points == null || points.length == 0) return 0;
         
         Arrays.sort(points, (a,b) -> a[1]-b[1]);
         

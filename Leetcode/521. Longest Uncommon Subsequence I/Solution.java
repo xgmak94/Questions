@@ -24,12 +24,7 @@ public class Solution {
             return -1;
         }
         else {
-        	if(a.length() > b.length()) {
-        		return a.length();
-        	}
-        	else {
-        		return b.length();
-        	}
+            return Math.max(a.length(), b.length());
         }
     }
 }

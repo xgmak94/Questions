@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/asteroid-collision/description/
+/* https://leetcode.com/problems/asteroid-collision/
 
 We are given an array asteroids of integers representing asteroids in a row.
 For each asteroid, the absolute value represents its size, and the sign represents its direction (positive meaning right, negative meaning left). Each asteroid moves at the same speed.
@@ -45,7 +45,7 @@ class Solution {
             }
             else if(s.peek() < -roid) { //the top is smaller than the next one
                 s.pop();
-                i--; // check this roid again
+                i--; // check this roid again survived collision
             }
             else if(s.peek() == -roid) { // same size both destroyed
                 s.pop();

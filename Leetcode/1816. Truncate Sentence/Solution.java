@@ -24,7 +24,7 @@ Hence, you should return "What is the solution".
 Example 3:
 Input: s = "chopper is not a tanuki", k = 5
 Output: "chopper is not a tanuki"
- 
+
 Constraints:
 1 <= s.length <= 500
 k is in the range [1, the number of words in s].
@@ -35,7 +35,7 @@ There are no leading or trailing spaces.
 
 class Solution {
     public String truncateSentence(String s, int k) {
-        String[] arr = s.split(" ");
+        String[] arr = s.split(" +");
         StringBuilder sb = new StringBuilder();
         for(int i = 0 ; i < k ; i++) {
             sb.append(arr[i] + " ");

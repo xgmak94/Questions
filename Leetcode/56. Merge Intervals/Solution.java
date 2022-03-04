@@ -16,10 +16,10 @@ class Solution {
         int currStart = intervals[0][0];
         int currEnd = intervals[0][1];
         for(int[] interval : intervals) {
-            if(interval[0] <= currEnd) { //merge
+            if(interval[0] <= currEnd) { //merge, previous interval overlaps with new interval
                 currEnd = Math.max(currEnd, interval[1]);
             }
-            else {
+            else { //intervals do not overlap, add previous interval
                 list.add(new int[]{currStart, currEnd});
                 currStart = interval[0];
                 currEnd = interval[1];

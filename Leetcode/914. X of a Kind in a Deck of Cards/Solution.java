@@ -5,7 +5,7 @@ Return true if and only if you can choose X >= 2 such that it is possible to spl
 
 Each group has exactly X cards.
 All the cards in each group have the same integer.
- 
+
 Example 1:
 Input: deck = [1,2,3,4,4,3,2,1]
 Output: true
@@ -13,7 +13,7 @@ Explanation: Possible partition [1,1],[2,2],[3,3],[4,4].
 
 Example 2:
 Input: deck = [1,1,1,2,2,2,3,3]
-Output: false´
+Output: false
 Explanation: No possible partition.
 
 Example 3:
@@ -27,11 +27,9 @@ Output: true
 Explanation: Possible partition [1,1].
 
 Example 5:
-
 Input: deck = [1,1,2,2,2,2]
 Output: true
 Explanation: Possible partition [1,1],[2,2],[2,2].
- 
 
 Constraints:
 1 <= deck.length <= 10^4
@@ -49,9 +47,7 @@ class Solution {
         for(int i = 1 ; i < 10000 ; i++) {
             gcd = getGCD(vals[i], gcd);
         }
-        
-        if(gcd < 2) return false;
-        return true;
+        return gcd >= 2;
     }
     
     public int getGCD(int a, int b) {

@@ -6,30 +6,25 @@ A move is defined as selecting three consecutive characters of s and converting 
 
 Return the minimum number of moves required so that all the characters of s are converted to 'O'.
 
- 
-
 Example 1:
-
 Input: s = "XXX"
 Output: 1
 Explanation: XXX -> OOO
 We select all the 3 characters and convert them in one move.
-Example 2:
 
+Example 2:
 Input: s = "XXOX"
 Output: 2
 Explanation: XXOX -> OOOX -> OOOO
 We select the first 3 characters in the first move, and convert them to 'O'.
 Then we select the last 3 characters and convert them so that the final string contains all 'O's.
-Example 3:
 
+Example 3:
 Input: s = "OOOO"
 Output: 0
 Explanation: There are no 'X's in s to convert.
- 
 
 Constraints:
-
 3 <= s.length <= 1000
 s[i] is either 'X' or 'O'.
 */
@@ -41,10 +36,10 @@ class Solution {
         int count = 0;
         
         while(i < n) {
-            if(s.charAt(i) == 'O') {
+            if(s.charAt(i) == 'O') { //dont need to convert this character
                 i++;
             }
-            else {
+            else { //convert the next 3 characters to O and skip ahead
                 count++;
                 i += 3;
             }

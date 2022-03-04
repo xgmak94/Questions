@@ -25,9 +25,9 @@ Constraints:
 class Solution {
     public String generateTheString(int n) {
         char[] str = new char[n];
-        Arrays.fill(str, 'a');
+        Arrays.fill(str, 'a'); //all A's
 
-        if(n % 2 == 0) { //if even amount we need 1B + (n-1)A, else nA
+        if(n % 2 == 0) { //if n is even then we can have (1) B's + (n-1) A's
             str[0] = 'b';
         }
         return new String(str);

@@ -45,9 +45,7 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         int[] charCount = new int[26];
         
-        for(char c : s.toCharArray()) {
-            charCount[c-'a']++;
-        }
+        for(char c : s.toCharArray()) charCount[c-'a']++;
         
         while(sb.length() != s.length()) {
             for(int i = 0 ; i < 26 ; i++) {

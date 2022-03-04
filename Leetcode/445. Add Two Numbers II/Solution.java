@@ -2,7 +2,7 @@
 
 You are given two non-empty linked lists representing two non-negative integers. 
 The most significant digit comes first and each of their nodes contain a single digit.
- Add the two numbers and return it as a linked list.
+Add the two numbers and return it as a linked list.
 
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
@@ -16,15 +16,15 @@ Output: 7 -> 8 -> 0 -> 7
 
 public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        Stack<ListNode> num1 = new Stack<>();
-        Stack<ListNode> num2 = new Stack<>();
+        Stack<Integer> num1 = new Stack<>();
+        Stack<Integer> num2 = new Stack<>();
         
         while(l1 != null) {
-            num1.push(l1);
+            num1.push(l1.val);
             l1 = l1.next;
         }
         while(l2 != null) {
-            num2.push(l2);
+            num2.push(l2.val);
             l2 = l2.next;
         }
 
@@ -33,16 +33,14 @@ public class Solution {
         
         int sum = 0;
         while(!num1.isEmpty() || !num2.isEmpty()) {
-            if(!num1.isEmpty()) sum += num1.pop().val;
-            if(!num2.isEmpty()) sum += num2.pop().val;
+            if(!num1.isEmpty()) sum += num1.pop();
+            if(!num2.isEmpty()) sum += num2.pop();
             
             curr = new ListNode(sum % 10);
             curr.next = list;
             list = curr;
             
-            // sum = (sum >= 10) ? 1 : 0;
-            if(sum >= 10) sum = 1; // carry to next place
-            else sum = 0;
+            sum /= 10;
         }
         
         if(sum == 1) {

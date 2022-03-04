@@ -26,7 +26,7 @@ Explanation: Concatenate [91] then [4,64] then [78]
 Example 5:
 Input: arr = [1,3,5,7], pieces = [[2,4,6,8]]
 Output: false
- 
+
 Constraints:
 1 <= pieces.length <= arr.length <= 100
 sum(pieces[i].length) == arr.length

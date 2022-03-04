@@ -15,9 +15,9 @@ class Solution {
         //jumbo + small = cheeseSlices
         //4jumbo + 2small = tomatoSlices
         
-        //jumbo = cheeseSlices - small        
+        //jumbo = cheeseSlices - small
         //4(cheeseSlices - small) + 2small = tomatoSlices
-        //4cheeseSlices - 2small = tomatoSlices       
+        //4cheeseSlices - 2small = tomatoSlices
         //small = 2cheeseSlices - tomatoSlices/2
         
         //jumbo + (2cheeseSlices - tomatoSLices/2) = cheeseSlices

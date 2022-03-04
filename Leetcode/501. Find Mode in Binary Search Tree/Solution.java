@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/find-mode-in-binary-search-tree/description/
+/* https://leetcode.com/problems/find-mode-in-binary-search-tree/
 
 Given a binary search tree (BST) with duplicates, find all the mode(s) (the most frequently occurred element) in the given BST.
 
@@ -18,20 +18,9 @@ return [2].
 
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
 public class Solution {
     public int[] findMode(TreeNode root) {
-        if(root == null)
-            return new int[0];
+        if(root == null) return new int[0];
         
         Map<Integer, Integer> map = new HashMap<>();
         Queue<TreeNode> q = new LinkedList<>();
@@ -40,24 +29,21 @@ public class Solution {
         int maxCount = 0;
         q.add(root);
         while(!q.isEmpty()) {           
-            TreeNode top = q.poll();
-            if(top.left != null) q.add(top.left);
-            if(top.right != null) q.add(top.right);
+            TreeNode node = q.poll();
+            if(node.left != null) q.add(node.left);
+            if(node.right != null) q.add(node.right);
             
-            map.put(top.val, map.getOrDefault(top.val, 0) + 1);
+            map.put(node.val, map.getOrDefault(node.val, 0) + 1);
 
-            if(map.get(top.val) > maxCount) {
-                maxCount = map.get(top.val);
+            if(map.get(node.val) > maxCount) {
+                maxCount = map.get(node.val);
                 list.clear();
+                list.add(node.val);
             }
-            
-            if(map.get(top.val) == maxCount)
-                list.add(top.val);
+            else if(map.get(node.val) == maxCount) {
+                list.add(node.val);
+            }
         }
-        
-        int[] ret = new int[list.size()];
-        for(int i = 0 ; i < list.size() ; i++) 
-            ret[i] = list.get(i);
-        return ret;
+        return list.stream().mapToInt(i->i).toArray();
     }
 }

@@ -27,11 +27,18 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         
         int carry = 0;
-        for(int i = num1.length()-1, j = num2.length()-1 ; i >= 0 || j >= 0 ; i--, j--) { //i>= 0 || j>=0 to keep going until done with both right to left
-            int a = (i >= 0) ? num1.charAt(i) - '0' : 0; //adding 0's once we reach the end of the shorter num
-            int b = (j >= 0) ? num2.charAt(j) - '0' : 0;
-            sb.append((a+b+carry) % 10);
-            carry = (a+b+carry) / 10;
+        int i = num1.length() - 1;
+        int j = num2.length() - 1;
+        while(i >= 0 || j >= 0) { //i>= 0 || j>=0 to keep going until done with both right to left
+            int sum = carry;
+            if(i >= 0) sum += num1.charAt(i) - '0';
+            if(j >= 0) sum += num2.charAt(j) - '0';
+
+            sb.append(sum % 10);
+
+            carry = sum / 10;
+            i--;
+            j--;
         }
         if(carry != 0) sb.append(carry);
         return sb.reverse().toString();

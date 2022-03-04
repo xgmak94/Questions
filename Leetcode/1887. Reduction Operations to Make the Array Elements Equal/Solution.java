@@ -28,7 +28,7 @@ Explanation: It takes 4 operations to make all elements in nums equal:
 2. largest = 2 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1,2,2].
 3. largest = 2 at index 3. nextLargest = 1. Reduce nums[3] to 1. nums = [1,1,1,1,2].
 4. largest = 2 at index 4. nextLargest = 1. Reduce nums[4] to 1. nums = [1,1,1,1,1].
- 
+
 Constraints:
 1 <= nums.length <= 5 * 104
 1 <= nums[i] <= 5 * 104

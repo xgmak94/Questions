@@ -14,7 +14,7 @@ Explanation: Both the red and the blue area are optimal.
 Example 2:
 Input: points = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]
 Output: 3
- 
+
 Constraints:
 n == points.length
 2 <= n <= 105
@@ -24,7 +24,7 @@ points[i].length == 2
 
 class Solution {
     public int maxWidthOfVerticalArea(int[][] points) {
-        Arrays.sort(points, (a,b) -> a[0] - b[0]);
+        Arrays.sort(points, (a,b) -> a[0] - b[0]); //sort by x coord y coord doesnt even matter
         int maxDiff = 0;
         
         for(int i = 1 ; i < points.length ; i++) {

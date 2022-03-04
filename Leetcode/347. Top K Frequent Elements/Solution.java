@@ -11,8 +11,9 @@ class Solution {
         List<Integer> list = new ArrayList<>();
         Map<Integer, Integer> map = new HashMap<>();
         
-        for (int n : nums)
+        for (int n : nums) {
             map.put(n, map.getOrDefault(n, 0) + 1);
+        }
         
         Queue<Map.Entry<Integer, Integer>> q = new PriorityQueue<>(
             new Comparator<Map.Entry<Integer, Integer>>() {

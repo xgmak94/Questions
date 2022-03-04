@@ -32,15 +32,17 @@ class Solution {
                 int k = j+1;
                 if(rating[i] > rating[j]) {
                     while(k < rating.length) {
-                        if(rating[j] > rating[k]) 
+                        if(rating[j] > rating[k]) {
                             count++;
+                        }
                         k++;
                     }
                 }
                 else if(rating[i] < rating[j]) {
                     while(k < rating.length) {
-                        if(rating[j] < rating[k]) 
+                        if(rating[j] < rating[k]) {
                             count++;
+                        }
                         k++;
                     }
                 }

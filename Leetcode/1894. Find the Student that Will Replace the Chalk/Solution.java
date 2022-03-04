@@ -7,7 +7,6 @@ You are given a 0-indexed integer array chalk and an integer k. There are initia
 Return the index of the student that will replace the chalk.
 
 Example 1:
-
 Input: chalk = [5,1,5], k = 22
 Output: 0
 Explanation: The students go in turns as follows:
@@ -44,12 +43,14 @@ chalk.length == n
 class Solution {
     public int chalkReplacer(int[] chalk, int k) {
         long sum = 0;
-        for(int num : chalk) sum += num;
-        
-        k %= sum;
+        for(int num : chalk) {
+            sum += num;
+        }
+        k %= sum; //skip to last cycle
+
         for(int i = 0 ; i < chalk.length ; i++) {
             k -= chalk[i];
-            if(k < 0) return i;
+            if(k < 0) return i; // k == 0 is fine, next student has to replace
         }
         return -1;
     }

@@ -25,9 +25,9 @@ class Solution {
         int[] secs = new int[60];
         
         for(int t : time) {
-            int currSecs = t % 60;
-            numPairs += secs[(60 - currSecs) % 60];
-            secs[t % 60]++;
+            int sec = t % 60;
+            numPairs += secs[(60 - sec) % 60];
+            secs[sec % 60]++;
         }
         return numPairs;
     }

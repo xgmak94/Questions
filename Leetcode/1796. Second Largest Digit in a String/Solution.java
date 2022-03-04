@@ -13,7 +13,7 @@ Example 2:
 Input: s = "abc1111"
 Output: -1
 Explanation: The digits that appear in s are [1]. There is no second largest digit. 
- 
+
 Constraints:
 1 <= s.length <= 500
 s consists of only lowercase English letters and/or digits.

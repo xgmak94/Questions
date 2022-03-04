@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/sort-characters-by-frequency/description/
+/* https://leetcode.com/problems/sort-characters-by-frequency/
 
 Given a string, sort it in decreasing order based on the frequency of characters.
 
@@ -30,6 +30,28 @@ Explanation:
 Note that 'A' and 'a' are treated as two different characters.
 */
 
+public class Solution {
+    public String frequencySort(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        
+        for (char c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        
+        PriorityQueue<Map.Entry<Character, Integer>> q = new PriorityQueue<>((a,b) -> b.getValue() - a.getValue());
+        
+        q.addAll(map.entrySet());
+        StringBuilder sb = new StringBuilder();
+        while (!q.isEmpty()) {
+            Map.Entry e = q.remove();
+            for (int i = 0 ; i < (int) e.getValue(); i++) {
+                sb.append(e.getKey());
+            }
+        }
+        return sb.toString();
+    }
+}
+
 class Solution {
     public String frequencySort(String s) {
         StringBuilder sb = new StringBuilder();
@@ -55,33 +77,6 @@ class Solution {
                     }
                 }
             }
-        }
-        return sb.toString();
-    }
-}
-
-public class Solution {
-    public String frequencySort(String s) {
-        Map<Character, Integer> map = new HashMap<>();
-        
-        for (char c : s.toCharArray())
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        
-        Queue<Map.Entry<Character, Integer>> q = new PriorityQueue<>(
-            new Comparator<Map.Entry<Character, Integer>>() {
-                @Override
-                public int compare(Map.Entry<Character, Integer> a, Map.Entry<Character, Integer> b) {
-                    return b.getValue() - a.getValue(); // key, value pairs character, count pairs
-                }
-            }
-        );
-        
-        q.addAll(map.entrySet());
-        StringBuilder sb = new StringBuilder();
-        while (!q.isEmpty()) {
-            Map.Entry e = q.remove();
-            for (int i = 0 ; i < (int) e.getValue(); i++)
-                sb.append(e.getKey());
         }
         return sb.toString();
     }

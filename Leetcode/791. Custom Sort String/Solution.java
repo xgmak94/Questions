@@ -17,15 +17,15 @@ Since "d" does not appear in S, it can be at any position in T. "dcba", "cdba", 
 */
 
 class Solution {
-    public String customSortString(String S, String T) {
+    public String customSortString(String order, String s) {
         StringBuilder sb = new StringBuilder();
         int[] count = new int[26];
         
-        for(char c : T.toCharArray()) {
+        for(char c : s.toCharArray()) {
             count[c-'a']++;
         }
         
-        for(char d : S.toCharArray()) {
+        for(char d : order.toCharArray()) {
             while(count[d-'a']-- > 0) {
                 sb.append(d);
             }

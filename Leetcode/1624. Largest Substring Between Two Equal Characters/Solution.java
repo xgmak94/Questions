@@ -23,7 +23,7 @@ Example 4:
 Input: s = "cabbac"
 Output: 4
 Explanation: The optimal substring here is "abba". Other non-optimal substrings include "bb" and "".
- 
+
 Constraints:
 1 <= s.length <= 300
 s contains only lowercase English letters.
@@ -35,13 +35,12 @@ class Solution {
         Arrays.fill(index, -1);
         int maxLength = -1;
         
-        for(int i = 0 ; i < s.length() ; i++) {
-            char c = s.charAt(i);
-            index[c-'a'] = i;
+        for(int i = 0 ; i < s.length() ; i++) { //find the last index of each character
+            index[s.charAt(i) -'a'] = i;
         }
         
-        for(int i = 0 ; i < 26 ; i++) {
-            maxLength = Math.max(maxLength, index[i] - s.indexOf((char)(i+'a')) - 1);
+        for(char c = 'a' ; c <= 'z' ; c++) {
+            maxLength = Math.max(maxLength, index[c-'a'] - s.indexOf(c) - 1);
         }
         return maxLength;
     }

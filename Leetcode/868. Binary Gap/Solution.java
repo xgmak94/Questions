@@ -48,7 +48,6 @@ class Solution {
                 lastOne = i;
             }
         }
-        
         return dist;
     }
 }

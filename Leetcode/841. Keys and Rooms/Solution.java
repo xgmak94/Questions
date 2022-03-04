@@ -26,6 +26,25 @@ Explanation: We can't enter the room with number 2.
 class Solution {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         int n = rooms.size();
+        Set<Integer> entered = new HashSet<>();
+        Queue<Integer> q = new LinkedList<>();
+
+        entered.add(0); //we can enter room 0
+        q.addAll(rooms.get(0)); //add all the keys in room 0
+        while(!q.isEmpty()) { //while we have a key
+            int room = q.poll();
+            if(!entered.contains(room)) {
+                entered.add(room);
+                q.addAll(rooms.get(room));
+            }
+        }
+        return entered.size() == rooms.size();
+    }
+}
+
+class Solution {
+    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+        int n = rooms.size();
         boolean[] enter = new boolean[n];
         Arrays.fill(enter, false);
         enter[0] = true; //we have the key to room 0
@@ -34,10 +53,10 @@ class Solution {
         q.addAll(rooms.get(0)); //add all the keys in room 0
         
         while(!q.isEmpty()) { //while we have a key
-            int curr = q.poll();
-            if(enter[curr] == false) { //if we have not entered this room yet, it is new
-                enter[curr] = true;  
-                q.addAll(rooms.get(curr));
+            int room = q.poll();
+            if(enter[room] == false) { //if we have not entered this room yet, it is new
+                enter[room] = true;  
+                q.addAll(rooms.get(room));
             }
         }
         return canEnterAll(enter);

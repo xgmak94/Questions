@@ -21,7 +21,7 @@ class Solution {
     public int[] constructRectangle(int area) {
         int[] ret = new int[2];
         
-        for(int i = 1 ; i*i <= area ; i++) { //kep going until most square
+        for(int i = 1 ; i*i <= area ; i++) { //keep going until most square
             if(area % i == 0) { // if area is correct
                 ret[0] = area / i;
                 ret[1] = i;

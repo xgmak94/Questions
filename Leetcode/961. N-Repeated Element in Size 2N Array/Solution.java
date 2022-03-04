@@ -22,10 +22,9 @@ class Solution {
     public int repeatedNTimes(int[] A) {
         Set<Integer> set = new HashSet<>();
         for(int num : A) {
-            if(set.contains(num)) {
+            if(!set.add(num)) { //only 1 number is repeated at all
                 return num;
             }
-            set.add(num);
         }
         return -1;
     }

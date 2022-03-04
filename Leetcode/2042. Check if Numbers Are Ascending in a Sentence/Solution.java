@@ -7,36 +7,23 @@ Given a string s representing a sentence, you need to check if all the numbers i
 
 Return true if so, or false otherwise.
 
- 
-
 Example 1:
-
-example-1
 Input: s = "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
 Output: true
 Explanation: The numbers in s are: 1, 3, 4, 6, 12.
 They are strictly increasing from left to right: 1 < 3 < 4 < 6 < 12.
-Example 2:
 
+Example 2:
 Input: s = "hello world 5 x 5"
 Output: false
 Explanation: The numbers in s are: 5, 5. They are not strictly increasing.
-Example 3:
 
-example-3
+Example 3:
 Input: s = "sunset is at 7 51 pm overnight lows will be in the low 50 and 60 s"
 Output: false
 Explanation: The numbers in s are: 7, 51, 50, 60. They are not strictly increasing.
-Example 4:
-
-Input: s = "4 5 11 26"
-Output: true
-Explanation: The numbers in s are: 4, 5, 11, 26.
-They are strictly increasing from left to right: 4 < 5 < 11 < 26.
- 
 
 Constraints:
-
 3 <= s.length <= 200
 s consists of lowercase English letters, spaces, and digits from 0 to 9, inclusive.
 The number of tokens in s is between 2 and 100, inclusive.
@@ -50,10 +37,10 @@ class Solution {
     public boolean areNumbersAscending(String s) {
         int prev = 0;
         for(String word : s.split(" ")) {
-            if(word.charAt(0) >= '0' && word.charAt(0) <= '9') {
-                int num = Integer.parseInt(word);
+            if(word.charAt(0) >= '0' && word.charAt(0) <= '9') { //only need to check integers
+                int num = Integer.parseInt(word); //parse the whole word
                 
-                if(num <= prev) return false;
+                if(num <= prev) return false; //make sure larger than previous num
                 prev = num;
             }
         }

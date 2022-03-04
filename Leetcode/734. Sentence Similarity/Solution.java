@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/sentence-similarity/description/
+/* https://leetcode.com/problems/sentence-similarity/
 
 Given two sentences words1, words2 (each represented as an array of strings), and a list of similar word pairs pairs, determine if two sentences are similar.
 
@@ -24,22 +24,15 @@ class Solution {
             String first = sim[0];
             String second = sim[1];
             
-            if(!map.containsKey(first)) {
-                map.put(first, new HashSet<>());
-            }
+            map.putIfAbsent(first, new HashSet<>();
             map.get(first).add(second);
                 
-            
-            if(!map.containsKey(second)) {
-                map.put(second, new HashSet<>());
-            }
+            map.putIfAbsent(second, new HashSet<>());
             map.get(second).add(first);
         }
         
         for(int i = 0 ; i < words1.length ; i++) {
-            if(words1[i].equals(words2[i])) {
-                continue;
-            }
+            if(words1[i].equals(words2[i])) continue; //word is same
             
             if(!map.containsKey(words1[i]) || !map.get(words1[i]).contains(words2[i])) {
                 return false;

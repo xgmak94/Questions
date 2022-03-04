@@ -21,7 +21,7 @@ Example 3:
 Input: nums = [1,1,1,1,1,1,1,1,1,1], target = 1, start = 0
 Output: 0
 Explanation: Every value of nums is 1, but nums[0] minimizes abs(i - start), which is abs(0 - 0) = 0.
- 
+
 Constraints:
 1 <= nums.length <= 1000
 1 <= nums[i] <= 104

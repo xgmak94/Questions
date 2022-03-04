@@ -28,8 +28,9 @@ class Solution {
         if(root1 != null) q.add(root1);
         if(root2 != null) q.add(root2);
         while(!q.isEmpty()) {
-            TreeNode top = q.remove();
+            TreeNode top = q.poll();
             ret.add(top.val);
+
             if(top.left != null) q.add(top.left);
             if(top.right != null) q.add(top.right);
         }

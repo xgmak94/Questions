@@ -12,7 +12,7 @@ Explanation: As shown in the figure above, node 2 is connected to every other no
 Example 2:
 Input: edges = [[1,2],[5,1],[1,3],[1,4]]
 Output: 1
- 
+
 Constraints:
 3 <= n <= 105
 edges.length == n - 1
@@ -23,8 +23,12 @@ The given edges represent a valid star graph.
 */
 
 class Solution {
-    public int findCenter(int[][] edges) {
-        if(edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) return edges[0][0];
-        else return edges[0][1];
+    public int findCenter(int[][] edges) { //center node appears in every edge
+        if(edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) { // first node appears in second edge
+            return edges[0][0];
+        }
+        else { //second node
+            return edges[0][1];
+        }
     }
 }

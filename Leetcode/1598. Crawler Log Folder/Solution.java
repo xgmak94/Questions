@@ -25,7 +25,7 @@ Output: 3
 Example 3:
 Input: logs = ["d1/","../","../","../"]
 Output: 0
- 
+
 Constraints:
 1 <= logs.length <= 103
 2 <= logs[i].length <= 10

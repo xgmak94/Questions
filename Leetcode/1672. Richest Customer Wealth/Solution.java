@@ -24,7 +24,6 @@ The 2nd customer is the richest with a wealth of 10.
 Example 3:
 Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
 Output: 17
- 
 
 Constraints:
 m == accounts.length
@@ -37,11 +36,11 @@ class Solution {
     public int maximumWealth(int[][] accounts) {
         int max = 0;
         for(int[] customer : accounts) {
-            int sum = 0;
-            for(int i = 0 ; i < customer.length ; i++) {
-                sum += customer[i];
+            int wealth = 0;
+            for(int acc : customer) {
+                wealth += acc;
             }
-            max = Math.max(sum, max);
+            max = Math.max(wealth, max);
         }
         return max;
     }

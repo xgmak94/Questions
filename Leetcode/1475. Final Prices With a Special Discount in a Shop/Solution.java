@@ -4,7 +4,6 @@ Given the array prices where prices[i] is the price of the ith item in a shop. T
 
 Return an array where the ith element is the final price you will pay for the ith item of the shop considering the special discount.
 
-
 Example 1:
 Input: prices = [8,4,6,2,3]
 Output: [4,2,4,2,3]

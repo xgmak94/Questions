@@ -27,31 +27,26 @@ Output: 3
 
 class Solution {
     public int maxScore(String s) {
-        int len = s.length();
-        int[] countZeros = new int[len];
-        int[] countOnes = new int[len];
+        int[] countZeros = new int[s.length()];
+        int[] countOnes = new int[s.length()];
         Arrays.fill(countZeros, 0);
         Arrays.fill(countOnes, 0);
                 
         if(s.charAt(0) == '0') countZeros[0] = 1;
-        for(int i = 1 ; i < len ; i++) {
-            char c = s.charAt(i);
+        for(int i = 1 ; i < s.length() ; i++) {
             countZeros[i] = countZeros[i-1];
-            if(c == '0') countZeros[i] += 1;
+            if(s.charAt(i) == '0') countZeros[i] += 1;
         }
         
-        if(s.charAt(len-1) == '1') countOnes[len-1] = 1;
-        for(int i = len-2 ; i >= 0 ; i--) {
-            char c = s.charAt(i);
+        if(s.charAt(s.length()-1) == '1') countOnes[s.length()-1] = 1;
+        for(int i = s.length()-2 ; i >= 0 ; i--) {
             countOnes[i] = countOnes[i+1];
-            if(c == '1') countOnes[i] += 1;
+            if(s.charAt(i) == '1') countOnes[i] += 1;
         }
         
         int maxScore = 0;
-        for(int i = 0 ; i < len-1 ; i++) {
-            int score = countZeros[i] + countOnes[i+1];
-            
-            maxScore = Math.max(score, maxScore);
+        for(int i = 0 ; i < s.length()-1 ; i++) {
+            maxScore = Math.max(countZeros[i] + countOnes[i+1], maxScore);
         }
         return maxScore;
     }

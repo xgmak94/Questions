@@ -28,10 +28,10 @@ class Solution {
         if(timeSeries == null || timeSeries.length == 0 || duration == 0) return 0;
 
         int length = 0;
-        int start = timeSeries[0];
-        int end = timeSeries[0] + duration;
+        int start = 0;
+        int end = 0;
 
-        for(int i = 1 ; i < timeSeries.length ; i++) {
+        for(int i = 0 ; i < timeSeries.length ; i++) {
             if(timeSeries[i] <= end) { //extended
                 end = timeSeries[i] + duration;
             }
@@ -41,8 +41,7 @@ class Solution {
                 end = timeSeries[i] + duration;
             }
         }
-        length += end-start;
-        
+        length += end-start; //final duration
         return length;
     }
 }

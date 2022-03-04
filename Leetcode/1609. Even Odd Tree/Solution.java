@@ -38,7 +38,7 @@ Output: true
 Example 5:
 Input: root = [11,8,6,1,3,9,11,30,20,18,16,12,10,4,2,17]
 Output: true
- 
+
 Constraints:
 The number of nodes in the tree is in the range [1, 10^5].
 1 <= Node.val <= 10^6

@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/toeplitz-matrix/description/
+/* https://leetcode.com/problems/toeplitz-matrix/
 
 A matrix is Toeplitz if every diagonal from top-left to bottom-right has the same element.
 
@@ -22,13 +22,9 @@ The diagonal "[1, 2]" has different elements.
 
 class Solution {
     public boolean isToeplitzMatrix(int[][] matrix) {
-        if(matrix == null || matrix.length == 1 || matrix[0].length == 1) {
-            return true;
-        }
-        
-        for(int i = 1 ; i < matrix.length ; i++) {
-            for(int j = 1 ; j < matrix[0].length ; j++) {
-                if(matrix[i][j] != matrix[i-1][j-1]) {
+        for(int i = 0 ; i < matrix.length-1 ; i++) {
+            for(int j = 0 ; j < matrix[0].length-1 ; j++) {
+                if(matrix[i][j] != matrix[i+1][j+1]) {
                     return false;
                 }
             }

@@ -24,7 +24,6 @@ Output: 7
 Example 4:
 Input: n = 10, start = 5
 Output: 2
- 
 
 Constraints:
 1 <= n <= 1000

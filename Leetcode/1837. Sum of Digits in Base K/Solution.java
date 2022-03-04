@@ -13,7 +13,7 @@ Example 2:
 Input: n = 10, k = 10
 Output: 1
 Explanation: n is already in base 10. 1 + 0 = 1.
- 
+
 Constraints:
 1 <= n <= 100
 2 <= k <= 10

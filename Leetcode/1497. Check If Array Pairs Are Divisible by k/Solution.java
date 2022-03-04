@@ -48,11 +48,11 @@ class Solution {
             freq[remain]++;
         }
         
-        for(int i = 1 ; i < k/2 ; i++) { // for k == 5, 1-4, 2-3, 0-5 are both mod 0 check separate
+        for(int i = 1 ; i < k/2 ; i++) { // each remainder should pair up
             if(freq[i] != freq[k-i]) {
                 return false;
             }
         }
-        return freq[0] % 2 == 0; // we can pair up evenly
+        return freq[0] % 2 == 0; // 0 remainder pairs to itself so it needs to be even
     }
 }

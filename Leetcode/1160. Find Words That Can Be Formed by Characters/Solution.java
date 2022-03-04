@@ -19,7 +19,35 @@ The strings that can be formed are "hello" and "world" so the answer is 5 + 5 = 
 */
 
 class Solution {
-     public static int countCharacters(String[] words, String chars) {
+    public int countCharacters(String[] words, String chars) {
+       int[] seen = new int[26];
+       int count = 0;
+
+       for(char c : chars.toCharArray()) seen[c - 'a']++;
+
+       for(String word : words) {
+           int[] tSeen = seen.clone();
+           if(check(word, tSeen)) {
+               count += word.length();
+           }
+       }
+       return count;
+   }
+   public boolean check(String word, int[] seen) {
+       for(char c : word.toCharArray()) {
+           if(seen[c-'a'] > 0) {
+               seen[c-'a']--;
+           }
+           else {
+               return false;
+           }
+       }
+       return true;
+   }
+}
+
+class Solution {
+     public int countCharacters(String[] words, String chars) {
         int[] seen = new int[26];
         int count = 0;
 
@@ -42,36 +70,5 @@ class Solution {
             }
         }
         return count;
-    }
-}
-
-class Solution {
-    public int countCharacters(String[] words, String chars) {
-        Map<Character, Integer> map = new HashMap<>();
-        for(int i = 0 ; i < chars.length() ; i++) {
-            char c = chars.charAt(i);
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
-        
-        int length = 0;
-        
-        for(int i = 0 ; i < words.length ; i++) {
-            Map<Character, Integer> clone = new HashMap<>(map);
-            if(check(words[i], clone)) {
-                length += words[i].length();
-            }
-        }
-        return length;
-    }
-    
-    public boolean check(String word, Map<Character, Integer> map) {
-        for(int i = 0 ; i < word.length() ; i++) {
-            char c = word.charAt(i);
-            if(map.get(c) == null || map.get(c) < 1) {
-                return false;
-            }
-            map.put(c, map.get(c) - 1);
-        }
-        return true;
     }
 }

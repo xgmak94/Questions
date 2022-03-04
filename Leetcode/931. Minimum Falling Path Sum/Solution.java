@@ -1,18 +1,23 @@
 /* https://leetcode.com/problems/minimum-falling-path-sum/
 
-Given a square array of integers A, we want the minimum sum of a falling path through A.
+Given an n x n array of integers matrix, return the minimum sum of any falling path through matrix.
 
-A falling path starts at any element in the first row, and chooses one element from each row.  The next row's choice must be in a column that is different from the previous row's column by at most one.
+A falling path starts at any element in the first row and chooses the element in the next row that is either directly below or diagonally left/right. Specifically, the next element from position (row, col) will be (row + 1, col - 1), (row + 1, col), or (row + 1, col + 1).
 
 Example 1:
-Input: [[1,2,3],[4,5,6],[7,8,9]]
-Output: 12
-Explanation: 
-The possible falling paths are:
-[1,4,7], [1,4,8], [1,5,7], [1,5,8], [1,5,9]
-[2,4,7], [2,4,8], [2,5,7], [2,5,8], [2,5,9], [2,6,8], [2,6,9]
-[3,5,7], [3,5,8], [3,5,9], [3,6,8], [3,6,9]
-The falling path with the smallest sum is [1,4,7], so the answer is 12.
+Input: matrix = [[2,1,3],[6,5,4],[7,8,9]]
+Output: 13
+Explanation: There are two falling paths with a minimum sum as shown.
+
+Example 2:
+Input: matrix = [[-19,57],[-40,-5]]
+Output: -59
+Explanation: The falling path with a minimum sum is shown.
+
+Constraints:
+n == matrix.length == matrix[i].length
+1 <= n <= 100
+-100 <= matrix[i][j] <= 100
 */
 
 //can also just modify original array

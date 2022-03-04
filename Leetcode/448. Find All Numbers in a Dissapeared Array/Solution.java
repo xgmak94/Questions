@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/#/description
+//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 /*
 Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 
@@ -13,7 +13,7 @@ class Solution {
         int n = nums.length;
         for(int i = 0 ; i < n ; i++) {
             int idx = Math.abs(nums[i]) - 1;
-            nums[idx] = Math.abs(nums[idx]) * -1; //if the idx is negative it is in the array
+            nums[idx] = -Math.abs(nums[idx]); //if the idx is negative it is in the array
         }
         
         List<Integer> dissapeared = new ArrayList<>();

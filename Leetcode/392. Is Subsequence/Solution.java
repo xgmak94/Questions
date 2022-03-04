@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/is-subsequence/description/
+/* https://leetcode.com/problems/is-subsequence/
 
 Given a string s and a string t, check if s is subsequence of t.
 You may assume that there is only lower case English letters in both s and t. 
@@ -20,8 +20,7 @@ In this scenario, how would you change your code?
 
 class Solution {
     public boolean isSubsequence(String s, String t) {
-        if(s.length() == 0)
-            return true;
+        if(s.length() == 0) return true;
         
         int indexS = 0;
         int indexT = 0;

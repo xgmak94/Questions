@@ -30,8 +30,8 @@ class MyCalendar {
         Integer prev = calendar.floorKey(start); //next smallest start
         Integer next = calendar.ceilingKey(start); //next biggest start
         
-        if ((prev == null || calendar.get(prev) <= start) && (next == null || end <= next)) {
-            // the previous one does not end after this starts or the next one does not start before this one ends
+        if ((prev == null || calendar.get(prev) <= start) && // next smaller ends before start of this booking
+            (next == null || end <= next)) { //next biggest starts after end of this booking
             calendar.put(start, end);
             return true;
         }

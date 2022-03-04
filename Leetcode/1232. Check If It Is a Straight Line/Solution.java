@@ -29,7 +29,7 @@ class Solution {
             //  (y2-y1)       (y3-y1)
             //  -------  ==   ------
             //  (x2-x1)       (x3-x1)
-            if(((y2-y1)*(x3-x1)) != ((y3-y1)*(x2-x1))) { //slope is same from i to i+1, i to i+2
+            if(((y2-y1)*(x3-x1)) != ((y3-y1)*(x2-x1))) { //slope is same from point pt (x0,y0) to (xi,yi) AND (x1,y1) to (xi,yi)
                return false;
             }
         }

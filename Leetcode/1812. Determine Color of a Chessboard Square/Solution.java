@@ -1,8 +1,6 @@
-/* httpsleetcode.comproblemsdetermine-color-of-a-chessboard-square
+/* https://leetcode.com/problems/determine-color-of-a-chessboard-square/
 
 You are given coordinates, a string that represents the coordinates of a square of the chessboard. Below is a chessboard for your reference.
-
-
 
 Return true if the square is white, and false if the square is black.
 
@@ -21,7 +19,7 @@ Explanation: From the chessboard above, the square with coordinates "h3" is whit
 Example 3:
 Input: coordinates = "c7"
 Output: false
- 
+
 Constraints:
 coordinates.length == 2
 'a' <= coordinates[0] <= 'h'
@@ -30,9 +28,9 @@ coordinates.length == 2
 
 class Solution {
     public boolean squareIsWhite(String coordinates) {
-        int a = (int)(coordinates.charAt(0) - 'a');
-        int b = Integer.parseInt(coordinates.charAt(1)+"");
+        int x = (int)(coordinates.charAt(0) - 'a');
+        int y = Integer.parseInt(coordinates.substring(1));
         
-        return (a+b) % 2 == 0;
+        return (x+y) % 2 == 0; //true is white
     }
 }

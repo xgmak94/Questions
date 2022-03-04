@@ -21,14 +21,14 @@ Output: [3,2,0,1]
 */
 
 class Solution {
-    public int[] diStringMatch(String S) {
-        int n = S.length();
-        int[] res = new int[n+1];
-        int low = 0, high = n;
-        for(int i = 0 ; i < n ; i++) {
-            res[i] = S.charAt(i) == 'I' ? low++ : high--;
+    public int[] diStringMatch(String s) {
+        int[] res = new int[s.length()+1];
+        int low = 0;
+        int high = s.length();
+        for(int i = 0 ; i < s.length() ; i++) {
+            res[i] = s.charAt(i) == 'I' ? low++ : high--;
         }
-        res[n] = high;
+        res[s.length()] = high;
         return res;
     }
 }

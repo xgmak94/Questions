@@ -38,6 +38,7 @@ class Solution {
                 sb.append(word.substring(0, 1)); //append first letter at end
             }
             sb.append("ma");
+            
             for(int i = 0 ; i < numWord ; i++) { 
                 sb.append("a");
             }

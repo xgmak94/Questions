@@ -20,7 +20,7 @@ Example 3:
 Input: s = "aabaa", cost = [1,2,3,4,1]
 Output: 2
 Explanation: Delete the first and the last character, getting the string ("aba").
- 
+
 Constraints:
 s.length == cost.length
 1 <= s.length, cost.length <= 10^5
@@ -34,11 +34,11 @@ class Solution {
         int cost = 0;
         
         for(int i = 0 ; i < s.length() ; i++) {
-            if(!stack.isEmpty() && s.charAt(i) == s.charAt(stack.peek())) {
-                if(costs[i] < costs[stack.peek()]) {
+            if(!stack.isEmpty() && s.charAt(i) == s.charAt(stack.peek())) { //decide which of the repeats to delete
+                if(costs[i] < costs[stack.peek()]) { //delete the new character
                     cost += costs[i];
                 }
-                else {
+                else { //delete the prev character on stack
                     cost += costs[stack.peek()];
                     stack.pop();
                     stack.push(i);

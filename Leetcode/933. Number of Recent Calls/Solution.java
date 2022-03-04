@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/number-of-recent-calls/description
+/* https://leetcode.com/problems/number-of-recent-calls/
 
 Write a class RecentCounter to count recent requests.
 
@@ -13,7 +13,6 @@ It is guaranteed that every call to ping uses a strictly larger value of t than 
 Example 1:
 Input: inputs = ["RecentCounter","ping","ping","ping","ping"], inputs = [[],[1],[100],[3001],[3002]]
 Output: [null,1,2,3,3]
-
 */
 
 class RecentCounter {

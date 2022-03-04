@@ -13,7 +13,7 @@ class Solution {
     public int countSegments(String s) {
         int count = 0;
         for(int i = 0 ; i < s.length() ; i++) {
-            if(s.charAt(i) != ' ' && (i == length - 1 || s.charAt(i + 1) == ' ')) { // count the last letter of each word
+            if(s.charAt(i) != ' ' && (i == length - 1 || s.charAt(i + 1) == ' ')) { // count the last letter of each word and last character of entire string
                 count++;
             }
         }

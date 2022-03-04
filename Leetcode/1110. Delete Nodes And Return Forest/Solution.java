@@ -25,23 +25,24 @@ class Solution {
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
         List<TreeNode> list = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
-        Queue<TreeNode> q = new LinkedList<>();
-        
         for(int num : to_delete) set.add(num);
         
-        q.add(root);
-        while(!q.isEmpty()) {
-            TreeNode node = q.poll();
-            
-            if(node.left != null) q.add(node.left);
-            if(node.right != null) q.add(node.right);
-            
-            if(set.contains(node.val)) {
-                list.add(node.left);
-                list.add(node.right);
-                node = null;
-            }
-        }
+        if (!set.contains(root.val)) list.add(root);
+        dfs(root, list, set);
         return list;
+    }
+    
+    public TreeNode dfs(TreeNode root, List<TreeNode> list, Set<Integer> set) {
+        if(root == null) return null;
+        
+        root.left = dfs(root.left, list, set);
+        root.right = dfs(root.right, list, set);
+        
+        if(set.contains(root.val)) {
+            if(root.left != null) list.add(root.left);
+            if(root.right != null) list.add(root.right);
+            return null;
+        }
+        return root;
     }
 }

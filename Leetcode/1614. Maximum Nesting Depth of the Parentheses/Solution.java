@@ -30,7 +30,7 @@ Output: 1
 Example 4:
 Input: s = "1"
 Output: 0
- 
+
 Constraints:
 1 <= s.length <= 100
 s consists of digits 0-9 and characters '+', '-', '*', '/', '(', and ')'.

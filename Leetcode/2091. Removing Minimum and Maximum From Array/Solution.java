@@ -8,10 +8,7 @@ A deletion is defined as either removing an element from the front of the array 
 
 Return the minimum number of deletions it would take to remove both the minimum and maximum element from the array.
 
- 
-
 Example 1:
-
 Input: nums = [2,10,7,5,4,1,8,6]
 Output: 5
 Explanation: 
@@ -19,8 +16,8 @@ The minimum element in the array is nums[5], which is 1.
 The maximum element in the array is nums[1], which is 10.
 We can remove both the minimum and maximum by removing 2 elements from the front and 3 elements from the back.
 This results in 2 + 3 = 5 deletions, which is the minimum number possible.
-Example 2:
 
+Example 2:
 Input: nums = [0,-4,19,1,8,-2,-3,5]
 Output: 3
 Explanation: 
@@ -28,17 +25,15 @@ The minimum element in the array is nums[1], which is -4.
 The maximum element in the array is nums[2], which is 19.
 We can remove both the minimum and maximum by removing 3 elements from the front.
 This results in only 3 deletions, which is the minimum number possible.
-Example 3:
 
+Example 3:
 Input: nums = [101]
 Output: 1
 Explanation:  
 There is only one element in the array, which makes it both the minimum and maximum element.
 We can remove it with 1 deletion.
- 
 
 Constraints:
-
 1 <= nums.length <= 105
 -105 <= nums[i] <= 105
 The integers in nums are distinct.
@@ -46,12 +41,10 @@ The integers in nums are distinct.
 
 class Solution {
     public int minimumDeletions(int[] nums) {
-        int n = nums.length;
-        
         int minIndex = 0;
         int maxIndex = 0;
         
-        for(int i = 0 ; i < n ; i++) {
+        for(int i = 0 ; i < nums.length ; i++) {
             if(nums[i] < nums[minIndex]) minIndex = i;
             if(nums[i] > nums[maxIndex]) maxIndex = i;
         }
@@ -59,8 +52,8 @@ class Solution {
         int lowIndex = Math.min(minIndex, maxIndex);
         
         int removeFront = highIndex+1; //remove both from front
-        int removeBack = n - lowIndex; //remove both from back
-        int removeBoth = (n - highIndex) + (lowIndex+1); //remove from back + remove from front
+        int removeBack = nums.length - lowIndex; //remove both from back
+        int removeBoth = (nums.length - highIndex) + (lowIndex+1); //remove from back + remove from front
         
         return Math.min(Math.min(removeFront, removeBack), removeBoth);
     }

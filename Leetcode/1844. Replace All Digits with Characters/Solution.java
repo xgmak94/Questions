@@ -25,7 +25,7 @@ Explanation: The digits are replaced as follows:
 - s[3] -> shift('b',2) = 'd'
 - s[5] -> shift('c',3) = 'f'
 - s[7] -> shift('d',4) = 'h'
- 
+
 Constraints:
 1 <= s.length <= 100
 s consists only of lowercase English letters and digits.

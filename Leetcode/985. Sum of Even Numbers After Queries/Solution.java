@@ -1,45 +1,52 @@
 /* https://leetcode.com/problems/sum-of-even-numbers-after-queries/
 
-We have an array A of integers, and an array queries of queries.
+You are given an integer array nums and an array queries where queries[i] = [vali, indexi].
 
-For the i-th query val = queries[i][0], index = queries[i][1], we add val to A[index].  Then, the answer to the i-th query is the sum of the even values of A.
+For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.
 
-(Here, the given index = queries[i][1] is a 0-based index, and each query permanently modifies the array A.)
-
-Return the answer to all queries.  Your answer array should have answer[i] as the answer to the i-th query.
+Return an integer array answer where answer[i] is the answer to the ith query.
 
 Example 1:
-Input: A = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
+Input: nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
 Output: [8,6,2,4]
-Explanation: 
-At the beginning, the array is [1,2,3,4].
-After adding 1 to A[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
-After adding -3 to A[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
-After adding -4 to A[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
-After adding 2 to A[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+Explanation: At the beginning, the array is [1,2,3,4].
+After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
+After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
+After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.
+After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.
+
+Example 2:
+Input: nums = [1], queries = [[4,0]]
+Output: [0]
+
+Constraints:
+1 <= nums.length <= 104
+-104 <= nums[i] <= 104
+1 <= queries.length <= 104
+-104 <= vali <= 104
+0 <= indexi < nums.length
 */
 
 class Solution {
-    public int[] sumEvenAfterQueries(int[] A, int[][] queries) {
+    public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
         int currSum = 0;
         int[] sums = new int[queries.length];
         
-        for(int n : A) { //get even sum before queries
+        for(int n : nums) { //get even sum before queries
             if(n % 2 == 0) currSum += n;
         }
         
         for(int i = 0 ; i < queries.length ; i++) {
-            int val; = queries[i][0];
-            int idx = queries[i][1];
-            
-            if(A[idx] % 2 == 0) 
-                currSum -= A[idx]; //if val is even remove it, will be added back if still even
-            
-            A[idx] += val; //update query
-            
-            if(A[idx] % 2 == 0) 
-                currSum += A[idx]; //if new val is even update sum
-            
+            int val = query[i][0];
+            int idx = query[i][1];
+
+            if(nums[idx] % 2 == 0) { //if val is even remove from sum
+                currSum -= nums[idx];
+            }
+            nums[idx] += val; //update the idx
+            if(nums[idx] % 2 == 0) { //if new val is even update sum
+                currSum += nums[idx];
+            }
             sums[i] = currSum;
         }
         return sums;

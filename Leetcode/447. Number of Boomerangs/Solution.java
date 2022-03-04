@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/number-of-boomerangs/description/
+/* https://leetcode.com/problems/number-of-boomerangs/
 
 Given n points in the plane that are all pairwise distinct, a "boomerang" is a tuple of points (i, j, k) such that the distance between i and j equals the distance between i and k (the order of the tuple matters).
 
@@ -28,10 +28,10 @@ class Solution {
                 int d = getDistance(points[i], points[j]);
                 map.put(d, map.getOrDefault(d, 0) + 1);
             }
-            for(int count : map.values()) {
-                res += count * (count-1);
+            for(int dist : map.values()) {
+                res += dist * (dist-1);
             }
-            map.clear();
+            map.clear(); //clear map for next point
         }
         return res;
     }

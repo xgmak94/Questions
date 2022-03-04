@@ -35,13 +35,13 @@ class Solution {
         if(palindrome.length() <= 1) return "";
         char[] arr = palindrome.toCharArray();
         
-        for(int i = 0 ; i < arr.length ; i++) {
+        for(int i = 0 ; i < arr.length ; i++) { //replace first non A character with A
             if(arr[i] != 'a') {
                 arr[i] = 'a';
                 return new String(arr);
             }
         }
-        arr[arr.length - 1] = 'b';
+        arr[arr.length - 1] = 'b'; //if we couldnt find a non A then replace last A with B
         return new String(arr);
     }
 }

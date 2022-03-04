@@ -7,11 +7,10 @@ public class Solution {
     public int maximumProduct(int[] nums) {
         int prod = Integer.MIN_VALUE;
         Arrays.sort(nums);
-        int size = nums.length;
         
-        int max1 = nums[size - 1];
-        int max2 = nums[size - 2];
-        int max3 = nums[size - 3];
+        int max1 = nums[nums.length - 1];
+        int max2 = nums[nums.length - 2];
+        int max3 = nums[nums.length - 3];
         
         int min1 = nums[0];
         int min2 = nums[1];

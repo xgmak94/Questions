@@ -36,11 +36,13 @@ It is guaranteed there exists an answer.
 class Solution {
     public int[] fairCandySwap(int[] A, int[] B) {
         Set<Integer> set = new HashSet<>();
-      
         int sumA = 0;
-        for(int x : A) sumA += x;
-        
         int sumB = 0;
+
+        for(int x : A) {
+            sumA += x;
+        }
+
         for(int x : B) {
             set.add(x);
             sumB += x;

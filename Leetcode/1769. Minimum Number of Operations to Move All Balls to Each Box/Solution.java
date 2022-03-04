@@ -19,7 +19,7 @@ Explanation: The answer for each box is as follows:
 Example 2:
 Input: boxes = "001011"
 Output: [11,8,5,4,3,4]
- 
+
 Constraints:
 n == boxes.length
 1 <= n <= 2000
@@ -28,16 +28,15 @@ boxes[i] is either '0' or '1'.
 
 class Solution {
     public int[] minOperations(String boxes) {
-        int len = boxes.length();
-        int[] arr = new int[len];
+        int[] arr = new int[boxes.length()];
         
-        for(int i = 0, cnt = 0, ops = 0 ; i < len ; i++) {
+        for(int i = 0, cnt = 0, ops = 0 ; i < boxes.length() ; i++) {
             arr[i] += ops;
             if(boxes.charAt(i) == '1') cnt++;
             ops += cnt;
         }
         
-        for(int j = len - 1, cnt = 0 , ops = 0 ; j >= 0 ; j--) {
+        for(int j = boxes.length() - 1, cnt = 0 , ops = 0 ; j >= 0 ; j--) {
             arr[j] += ops;
             if(boxes.charAt(j) == '1') cnt++;
             ops += cnt;

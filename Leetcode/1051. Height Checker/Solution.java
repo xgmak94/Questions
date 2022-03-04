@@ -35,6 +35,7 @@ Constraints:
 1 <= heights.length <= 100
 1 <= heights[i] <= 100
 */
+
 import java.util.*;
 class Solution {
     public static int heightChecker(int[] heights) {

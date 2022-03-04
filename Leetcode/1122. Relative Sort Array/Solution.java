@@ -26,7 +26,7 @@ class Solution {
         }
 
         for(int num : arr2) {
-            while(count[num] > 0) {
+            while(count[num] > 0) { //add the elements in order that appear in arr2
                 ret[idx] = num;
                 idx++;
                 count[num]--;

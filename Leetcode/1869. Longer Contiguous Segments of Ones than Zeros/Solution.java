@@ -28,7 +28,7 @@ Explanation:
 The longest contiguous segment of 1s has length 2: "110100010"
 The longest contiguous segment of 0s has length 3: "110100010"
 The segment of 1s is not longer, so return false.
- 
+
 Constraints:
 1 <= s.length <= 100
 s[i] is either '0' or '1'.

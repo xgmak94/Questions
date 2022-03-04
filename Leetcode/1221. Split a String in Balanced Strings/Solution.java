@@ -23,13 +23,13 @@ Explanation: s can be split into "LLLLRRRR".
 class Solution {
     public int balancedStringSplit(String s) {
         int numSplits = 0;
-        int currL = 0;
+        int l = 0;
         
         for(char c : s.toCharArray()) {
-            if(c == 'L') currL++;
-            else if(c == 'R') currL--;
+            if(c == 'L') l++;
+            else l--;
             
-            if(currL == 0) numSplits++;
+            if(l == 0) numSplits++;
         }
         return numSplits;
     }

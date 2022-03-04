@@ -21,11 +21,9 @@ class Solution {
     public int[] findDiagonalOrder(int[][] matrix) {
         if(matrix.length == 0 || matrix[0].length == 0) return new int[]{};
         Map<Integer, List<Integer>> map = new HashMap<>();
-        int m = matrix.length;
-        int n = matrix[0].length;
         int maxKey = 0;
-        for(int i = 0 ; i < m ; i++) {
-            for(int j = 0 ; j < n ; j++) {
+        for(int i = 0 ; i < matrix.length ; i++) {
+            for(int j = 0 ; j < matrix[0].length ; j++) {
                 int key = i+j;
                 map.putIfAbsent(key, new ArrayList<>());
                 map.get(key).add(matrix[i][j]);
@@ -35,16 +33,11 @@ class Solution {
         }
         
         List<Integer> list = new ArrayList<>();
-        for(int i = 0 ; i <= maxKey ; i++) {
+        for(int i = 0 ; i < maxKey ; i++) {
             List<Integer> curr = map.get(i);
             if(i % 2 == 0) Collections.reverse(curr);
             list.addAll(curr);
         }
-        
-        int[] ret = new int[list.size()];
-        for(int i = 0 ; i < list.size() ; i++) {
-            ret[i] = list.get(i);
-        }
-        return ret;
+        return list.stream().mapToInt(i->i).toArray();
     }
 }

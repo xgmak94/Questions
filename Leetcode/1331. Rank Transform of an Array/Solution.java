@@ -30,7 +30,7 @@ class Solution {
         Arrays.sort(sorted);
         
         for(int val : sorted) {
-            map.putIfAbsent(val, map.size() + 1); //puts first occurence of val
+            map.putIfAbsent(val, map.size() + 1); //will only put 1st occurence of val
         }
         
         for(int i = 0 ; i < arr.length ; i++) {

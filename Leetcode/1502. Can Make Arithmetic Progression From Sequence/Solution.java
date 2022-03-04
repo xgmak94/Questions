@@ -13,7 +13,7 @@ Example 2:
 Input: arr = [1,2,4]
 Output: false
 Explanation: There is no way to reorder the elements to obtain an arithmetic progression.
- 
+
 Constraints:
 2 <= arr.length <= 1000
 -10^6 <= arr[i] <= 10^6

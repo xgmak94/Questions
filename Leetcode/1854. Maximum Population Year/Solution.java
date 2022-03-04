@@ -17,7 +17,7 @@ Output: 1960
 Explanation: 
 The maximum population is 2, and it had happened in years 1960 and 1970.
 The earlier year between them is 1960.
- 
+
 Constraints:
 1 <= logs.length <= 100
 1950 <= birthi < deathi <= 2050
@@ -30,8 +30,8 @@ class Solution {
             int birth = log[0];
             int death = log[1];
             
-            years[birth]++;
-            years[death]--;
+            years[birth]++; //gained this many people at birth year
+            years[death]--; //lost this many people at death year
         }
         
         int maxYear = 0;

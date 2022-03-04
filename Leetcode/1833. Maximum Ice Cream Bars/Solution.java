@@ -34,12 +34,10 @@ class Solution {
     public int maxIceCream(int[] costs, int coins) {
         Arrays.sort(costs);
         int idx = 0;
-        int count = 0;
-        while(idx < costs.length && coins >= costs[idx]) {
+        while(idx < costs.length && coins >= costs[idx]) { // greedy, buy cheapest ice cream
             coins -= costs[idx];
             idx++;
-            count++;
         }
-        return count;
+        return idx;
     }
 }

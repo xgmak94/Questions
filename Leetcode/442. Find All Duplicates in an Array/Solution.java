@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
+/* https://leetcode.com/problems/find-all-duplicates-in-an-array/
 
 Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 
@@ -27,7 +27,7 @@ class Solution {
                 list.add(num);
             }
             else {
-                nums[idx] *= -1;
+                nums[idx] = -nums[idx];
             }
         }
         return list;

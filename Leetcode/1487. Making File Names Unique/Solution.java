@@ -37,7 +37,7 @@ Example 5:
 Input: names = ["kaido","kaido(1)","kaido","kaido(1)"]
 Output: ["kaido","kaido(1)","kaido(2)","kaido(1)(1)"]
 Explanation: Please note that system adds the suffix (k) to current name even it contained the same suffix before.
- 
+
 Constraints:
 1 <= names.length <= 5 * 10^4
 1 <= names[i].length <= 20
@@ -54,13 +54,11 @@ class Solution {
             if(map.containsKey(file)) {
             	StringBuilder mod = new StringBuilder(file);
                 Integer val = map.get(file);
-                mod.append("(" + val + ")");
                 
-                while(map.containsKey(mod.toString())) {
+                while(map.containsKey(mod.toString() + "(" + val + ")")) {
                     val++;
-                    mod = new StringBuilder(file);
-                    mod.append("(" + val + ")");
                 }
+                mod.append("(" + val + ")");
                 
                 ret[i] = mod.toString();
                 map.put(mod.toString(), 1); //file(1) add so that we can do file(1)(1), file(1)(2)

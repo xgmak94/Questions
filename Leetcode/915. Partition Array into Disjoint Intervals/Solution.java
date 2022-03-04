@@ -33,7 +33,7 @@ class Solution {
         }
         
         int[] minRight = new int[A.length];
-        m = A[A.length-1];
+        int m = A[A.length-1];
         for(int i = A.length-1 ; i >= 0 ; i--) { //minRight = min number to the right including index
             m = Math.min(A[i], m);
             minRight[i] = m;

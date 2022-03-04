@@ -30,21 +30,19 @@ Example 5:
 Input: n = 1000, k = 3
 Output: 4
 Explanation: Factors list is [1, 2, 4, 5, 8, 10, 20, 25, 40, 50, 100, 125, 200, 250, 500, 1000].
- 
+
 Constraints:
 1 <= k <= n <= 1000
 */
 
 class Solution {
     public int kthFactor(int n, int k) {
-        List<Integer> factors = new ArrayList<>();
         for(int i = 1 ; i <= n ; i++) {
             if(n % i == 0) {
-                factors.add(i);
+                k--;
+                if(k == 0) return i;
             }
         }
-        return (k > factors.size()) ? -1 : factors.get(k-1);
-        // if(k > factors.size()) return -1;
-        // else return factors.get(k-1);
+        return -1;
     }
 }

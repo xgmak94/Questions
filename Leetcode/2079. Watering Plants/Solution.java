@@ -11,10 +11,7 @@ You are initially at the river (i.e., x = -1). It takes one step to move one uni
 
 Given a 0-indexed integer array plants of n integers, where plants[i] is the amount of water the ith plant needs, and an integer capacity representing the watering can capacity, return the number of steps needed to water all the plants.
 
- 
-
 Example 1:
-
 Input: plants = [2,2,3,3], capacity = 5
 Output: 14
 Explanation: Start at the river with a full watering can:
@@ -25,8 +22,8 @@ Explanation: Start at the river with a full watering can:
 - Since you cannot completely water plant 3, walk back to the river to refill (3 steps).
 - Walk to plant 3 (4 steps) and water it.
 Steps needed = 1 + 1 + 2 + 3 + 3 + 4 = 14.
-Example 2:
 
+Example 2:
 Input: plants = [1,1,1,4,2,3], capacity = 4
 Output: 30
 Explanation: Start at the river with a full watering can:
@@ -35,16 +32,14 @@ Explanation: Start at the river with a full watering can:
 - Water plant 4 (5 steps). Return to river (5 steps).
 - Water plant 5 (6 steps).
 Steps needed = 3 + 3 + 4 + 4 + 5 + 5 + 6 = 30.
-Example 3:
 
+Example 3:
 Input: plants = [7,7,7,7,7,7,7], capacity = 8
 Output: 49
 Explanation: You have to refill before watering each plant.
 Steps needed = 1 + 1 + 2 + 2 + 3 + 3 + 4 + 4 + 5 + 5 + 6 + 6 + 7 = 49.
- 
 
 Constraints:
-
 n == plants.length
 1 <= n <= 1000
 1 <= plants[i] <= 106

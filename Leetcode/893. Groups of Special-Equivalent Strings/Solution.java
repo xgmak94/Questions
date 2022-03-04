@@ -36,7 +36,6 @@ All A[i] consist of only lowercase letters.
 class Solution {
     public int numSpecialEquivGroups(String[] A) {
         Set<String> set = new HashSet<>(); //use a set to differentiate the different sigs we generate
-        
         for(String s : A) {
             set.add(generate(s));
         }

@@ -23,7 +23,7 @@ Output: 3500.00000
 Example 4:
 Input: salary = [8000,9000,2000,3000,6000,1000]
 Output: 4750.00000
- 
+
 Constraints:
 3 <= salary.length <= 100
 10^3 <= salary[i] <= 10^6
@@ -42,6 +42,7 @@ class Solution {
             max = Math.max(max, num);
             min = Math.min(min, num);
         }
-        return (sum - max - min) / (salary.length - 2);
+        sum -= (max+min); //remove max and min
+        return sum / (salary.length - 2); //we removed 2 elements
     }
 }
