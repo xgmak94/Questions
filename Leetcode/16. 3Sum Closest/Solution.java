@@ -13,23 +13,28 @@ class Solution {
         if(nums.length < 3) return -1; //need 3 elements
         
         Arrays.sort(nums);
-        int res = nums[0] + nums[1] + nums[2];
+        int closest = nums[0] + nums[1] + nums[nums.length-1];
         
         for(int i = 0 ; i < nums.length - 2 ; i++) {
-            int j = i + 1;
-            int k = nums.length - 1;
-            while(j < k) {
-                int sum = nums[i] + nums[j] + nums[k];
-
-                if(sum > target)
-                    k--;
-                else
-                    j++;
+            int l = i + 1;
+            int r = nums.length - 1;
+            while(l < r) {
+                int sum = nums[i] + nums[l] + nums[r];
+                if(sum == target) {
+                    closest = sum;
+                    break;
+                }
+                else if(sum < target) {
+                    l++;
+                }
+                else {
+                    r--;
+                }
                 
-                if(Math.abs(sum - target) < Math.abs(res - target))
-                    res = sum;
+                if(Math.abs(sum - target) < Math.abs(closest - target))
+                    closest = sum;
             }
         }
-        return res;
+        return closest;
     }      
 }

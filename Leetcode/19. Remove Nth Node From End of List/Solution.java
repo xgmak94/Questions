@@ -13,18 +13,18 @@ class Solution {
         ListNode fast = head;
         ListNode prev = slow;
         
-        for(int i = 0 ; i < n ; i++) {
+        for(int i = 0 ; i < n ; i++) { //move fast to n steps ahead
             fast = fast.next;
         }
         
-        while(fast != null) {
+        while(fast != null) { //move until the fast ptr is at the end, slow is at the node we need to remove
             fast = fast.next;
             
             prev = slow;
             slow = slow.next;
         }
-        prev.next = slow.next;
-        return (slow == head) ? head.next : head;
+        prev.next = slow.next; //link the prev node to next node
+        return (slow == head) ? head.next : head; //if we removed the head then the new head is the next node
     }
 }
 

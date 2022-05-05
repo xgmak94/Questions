@@ -18,7 +18,7 @@ class Solution {
             else if(c == '[') {
                 stack.push(']');
             }
-            else if(stack.isEmpty() || stack.pop() != c) { //if it is a right side paren and stack is empty/wrong
+            else if(stack.isEmpty() || stack.pop() != c) {
                 return false;
             }
         }

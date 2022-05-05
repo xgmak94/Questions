@@ -8,10 +8,8 @@ Given a list of non-negative integers representing the amount of money of each h
 
 class Solution {
     public int rob(int[] nums) {
-        if(nums == null || nums.length == 0)
-            return 0;
-        if(nums.length == 1)
-            return nums[0];
+        if(nums == null || nums.length == 0) return 0;
+        if(nums.length == 1) return nums[0];
         
         int max1 = help(nums, 0, nums.length - 2);
         int max2 = help(nums, 1, nums.length - 1);
@@ -19,18 +17,17 @@ class Solution {
         return Math.max(max1, max2);
     }
     
-    public int help(int[] nums, int n, int m) {
-        if(n == m)
-            return nums[n];
+    public int help(int[] nums, int l, int r) {
+        if(l == r) return nums[l];
         
-        int[] memo = new int[nums.length];
-        memo[n] = nums[n];
-        memo[n + 1] = Math.max(nums[n], nums[n+1]);
+        int[] dp = new int[nums.length];
+        dp[l] = nums[l];
+        dp[l + 1] = Math.max(nums[l], nums[l+1]);
         
-        for(int i = n + 2 ; i <= m ; i++) {
-            memo[i] = Math.max(memo[i-2] + nums[i], memo[i-1]);
+        for(int i = l + 2 ; i <= r ; i++) {
+            dp[i] = Math.max(dp[i-2] + nums[i], dp[i-1]);
         }
-        return memo[m];
+        return dp[r];
     }
         
 }

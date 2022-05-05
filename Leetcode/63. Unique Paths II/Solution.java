@@ -17,6 +17,7 @@ There is one obstacle in the middle of a 3x3 grid as illustrated below.
 The total number of unique paths is 2.
 */
 
+//same as 62. Unique Paths, add in obstacles that are 0 ways to get to
 class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m = obstacleGrid.length;
@@ -28,7 +29,7 @@ class Solution {
         dp[0][0] = 1;
         
         for(int i = 1 ; i < m ; i++) {
-            if(dp[i-1][0] == 0 || obstacleGrid[i][0] == 1) {
+            if(dp[i-1][0] == 0 || obstacleGrid[i][0] == 1) { //if there is/was an obstacle
                 dp[i][0] = 0;
             }
             else {
@@ -37,7 +38,7 @@ class Solution {
         }
         
         for(int j = 1 ; j < n ; j++) {
-            if(dp[0][j-1] == 0 || obstacleGrid[0][j] == 1) {
+            if(dp[0][j-1] == 0 || obstacleGrid[0][j] == 1) { //if there is/was an obstacle
                 dp[0][j] = 0;
             }
             else {
@@ -47,7 +48,7 @@ class Solution {
         
         for(int i = 1 ; i < m ; i++) {
             for(int j = 1 ; j < n ; j++) {
-                if(obstacleGrid[i][j] == 1) {
+                if(obstacleGrid[i][j] == 1) { //if there is an obstacle
                     dp[i][j] = 0;
                 }
                 else {

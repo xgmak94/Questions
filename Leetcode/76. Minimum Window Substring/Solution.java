@@ -21,7 +21,7 @@ class Solution {
         }
 
         int l = 0; int r = 0;
-        int minl = 0;
+        int minleft = 0;
         int minLen = Integer.MAX_VALUE;
         int count = 0;
         while(r < s.length()) {
@@ -32,9 +32,10 @@ class Solution {
                 
                 while(count == t.length()) {
                     char lChar = s.charAt(l);
-                    if(r-l+1 < minLen) {
-                        minl = l;
-                        minLen = r-l+1;
+                    int len = r-l+1;
+                    if(len < minLen) {
+                        minleft = l;
+                        minLen = len;
                     }
                     if(map.containsKey(lChar)) {
                         map.put(lChar, map.get(lChar)+1);
@@ -47,7 +48,7 @@ class Solution {
             }
             r++;
         }
-        return (minLen == Integer.MAX_VALUE) ? "" : s.substring(minl, minl + minLen);
+        return (minLen == Integer.MAX_VALUE) ? "" : s.substring(minleft, minleft + minLen);
         // if(minLen>s.length()) return ""; //did not find a matching substring
         // return s.substring(minl,minl+minLen);
     }

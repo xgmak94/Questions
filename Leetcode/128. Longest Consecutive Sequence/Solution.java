@@ -1,4 +1,4 @@
-/* https://leetcode.com/problems/longest-consecutive-sequence/description/
+/* https://leetcode.com/problems/longest-consecutive-sequence/
 
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 
@@ -19,17 +19,18 @@ class Solution {
         }
         
         for(int n : nums) {
-            if(set.contains(n-1)) { //this number is part of a longer sequence
-               continue; 
-            }
+            int left = n-1;
+            int right = n+1;
             
-            int i = 1;
-            int streak = 1; //counting n
-            while(set.contains(n+i)) {
-                i++;
-                streak++;
+            while(set.remove(left)) {
+                left--;
             }
-            longest = Math.max(streak, longest);
+            while(set.remove(right)) {
+                right++;
+            }
+            longest = Math.max(right-left-1, longest);
+            
+            if(set.isEmpty()) break;
         }
         return longest;
     }

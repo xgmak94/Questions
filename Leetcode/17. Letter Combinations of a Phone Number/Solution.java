@@ -11,9 +11,10 @@ Note:
 
 Although the above answer is in lexicographical order, your answer could be in any order you want.
 */
+//refer to image for mapping
 
 class Solution {
-    String[] map = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    String[] map = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}; //the mapping of digits to letters
     public List<String> letterCombinations(String digits) {
         List<String> list = new ArrayList<>();
         if(digits.length() == 0) return list;
@@ -28,7 +29,7 @@ class Solution {
             return;
         }
         else {
-            int digit = Character.getNumericValue(digits.charAt(idx));
+            int digit = digits.charAt(idx) - '0';
             for(char c : map[digit].toCharArray()) {
                 mapping += c;
                 backtrack(list, mapping, digits, idx+1);
