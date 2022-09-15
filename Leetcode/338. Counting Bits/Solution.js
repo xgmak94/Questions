@@ -36,17 +36,19 @@ It is very easy to come up with a solution with a runtime of O(n log n). Can you
 Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
 */
 
-class Solution {
-    public int[] countBits(int n) {
-        int[] arr = new int[n+1];
-        int pow2 = 1;
-        for(int i = 1 ; i <= n ; i++) {
-            if(pow2 * 2 == i) {
-                pow2 = i;
-            }
-            arr[i] = 1 + arr[i-pow2];
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
+var countBits = function(n) {
+    let arr = [];
+    arr[0] = 0;
+    let pow = 1;
+    for(let i = 1 ; i <= n ; i++) {
+        if(i === 2*pow) {
+            pow = i;
         }
-        
-        return arr;
+        arr[i] = arr[i-pow] + 1;
     }
-}
+    return arr;
+};
