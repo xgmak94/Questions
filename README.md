@@ -380,6 +380,7 @@
 1005 | [Maximize Sum Of Array After K Negations](https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/) | [Java](./Leetcode/1005.%20Maximize%20Sum%20Of%20Array%20After%20K%20Negations/Solution.java)
 1007 | [Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/) | [Java](./Leetcode/1007.%20Minimum%20Domino%20Rotations%20For%20Equal%20Row/Solution.java)
 1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/) | [Java](./Leetcode/1009.%20Complement%20of%20Base%2010%20Integer/Solution.java)
+1011 | [Capacity To Ship Packages Within D Days](http://leetcode.com/problems/capacity-to-ship-packages-within-d-days) | [Java](./Leetcode/1011.%20Capacity%20To%20Ship%20Packages%20Within%20D%20Days/Solution.java)
 1013 | [Pairs of Songs With Total Durations Divisible by 60](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) | [Java](./Leetcode/1013.%20Pairs%20of%20Songs%20With%20Total%20Durations%20Divisible%20by%2060/Solution.java)
 1014 | [Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/) | [Java](./Leetcode/1014.%20Best%20Sightseeing%20Pair/Solution.java)
 1018 | [Binary Prefix Divisible By 5](https://leetcode.com/problems/binary-prefix-divisible-by-5/) | [Java](./Leetcode/1018.%20Binary%20Prefix%20Divisible%20By%205/Solution.java)
@@ -780,3 +781,5 @@
 2413 | [Smallest Even Multiple](http://leetcode.com/problems/smallest-even-multiple) | [js](./Leetcode/2413.%20Smallest%20Even%20Multiple/Solution.js)
 2414 | [Length of the Longest Alphabetical Continuous Substring](http://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring) | [Java](./Leetcode/2414.%20Length%20of%20the%20Longest%20Alphabetical%20Continuous%20Substring/Solution.java)
 2432 | [The Employee That Worked on the Longest Task](http://leetcode.com/problems/the-employee-that-worked-on-the-longest-task) | [Java](./Leetcode/2432.%20The%20Employee%20That%20Worked%20on%20the%20Longest%20Task/Solution.java)
+2442 | [Count Number of Distinct Integers After Reverse Operations](http://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations) | [Java](./Leetcode/2442.%20Count%20Number%20of%20Distinct%20Integers%20After%20Reverse%20Operations/Solution.java)
+2443 | [Sum of Number and Its Reverse](http://leetcode.com/problems/sum-of-number-and-its-reverse) | [Java](./Leetcode/2443.%20Sum%20of%20Number%20and%20Its%20Reverse/Solution.java)
