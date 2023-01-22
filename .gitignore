@@ -7,3 +7,8 @@ token.*
 test.js
 ProblemViewer/
 Coding Challenges/
+node_modules/
+package.json
+package-lock.json
+postcss.config.js
+tailwind.config.js
