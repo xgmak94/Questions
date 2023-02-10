@@ -806,3 +806,7 @@
 2544 | [Alternating Digit Sum](http://leetcode.com/problems/alternating-digit-sum) | [Java](./Leetcode/2544.%20Alternating%20Digit%20Sum/Solution.java)
 2545 | [Sort the Students by Their Kth Score](http://leetcode.com/problems/sort-the-students-by-their-kth-score) | [Java](./Leetcode/2545.%20Sort%20the%20Students%20by%20Their%20Kth%20Score/Solution.java)
 2549 | [Count Distinct Numbers on Board](http://leetcode.com/problems/count-distinct-numbers-on-board) | [Java](./Leetcode/2549.%20Count%20Distinct%20Numbers%20on%20Board/Solution.java)
+2553 | [Separate the Digits in an Array](http://leetcode.com/problems/separate-the-digits-in-an-array) | [py](./Leetcode/2553.%20Separate%20the%20Digits%20in%20an%20Array/Solution.py)
+2554 | [Maximum Number of Integers to Choose From a Range I](http://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i) | [py](./Leetcode/2554.%20Maximum%20Number%20of%20Integers%20to%20Choose%20From%20a%20Range%20I/Solution.py)
+2558 | [Take Gifts From the Richest Pile](http://leetcode.com/problems/take-gifts-from-the-richest-pile) | [Java](./Leetcode/2558.%20Take%20Gifts%20From%20the%20Richest%20Pile/Solution.java)
+2559 | [Count Vowel Strings in Ranges](http://leetcode.com/problems/count-vowel-strings-in-ranges) | [Java](./Leetcode/2559.%20Count%20Vowel%20Strings%20in%20Ranges/Solution.java)
